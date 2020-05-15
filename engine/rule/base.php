@@ -11,7 +11,7 @@
 * cth : localhost/uinsuWf atau http://haxorsprogramming.id
 * apabila di upload di hosting, perhatikan http/https nya, karena akan berpengaruh
 */
-$homeBase = 'http://localhost/Nadha-Laundry/';
+$homeBase = 'http://localhost/Nadha-School/';
 
 /**
 * Site name (nama situs web)

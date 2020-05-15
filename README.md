@@ -1,5 +1,9 @@
 
 <h2>Aplikasi Sistem Infomasi Sekolah</h2>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2832f12-2941-413e-87b8-e335e1bb920b/deploy-status)](https://app.netlify.com/sites/practical-villani-9032cb/deploys)
+
+
 By : NadhaMedia
 <br/><br/>
 <b>Teknologi yang digunakan</b>

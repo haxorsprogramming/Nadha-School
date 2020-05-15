@@ -1,6 +1,5 @@
-<img src='https://github.com/haxorsprogramming/Nadha-Laundry/blob/master/ladun/login/images/nadha_laundry.jpg?raw=true' width='300px'>
 
-<h2>Aplikasi manajemen laundry</h2>
+<h2>Aplikasi Sistem Infomasi Sekolah</h2>
 By : NadhaMedia
 <br/><br/>
 <b>Teknologi yang digunakan</b>
@@ -11,16 +10,13 @@ By : NadhaMedia
 <li>Cloud Serverless : Firebase</li>
 <br/>
 <b>Fitur</b>
-<li> Manajemen cucian</li>
-<li> Manajemen pelanggan</li>
-<li> Level user</li>
-<li> Sistem promo & diskon</li>
-<li> Sistem point cucian</li>
-<li> Notifikasi status cucian ke pelanggan (default : email)</li>
-<li> Manajemen pengeluaran laundry</li>
-<li> Manajemen pembukuan laundry</li>
-<li> Manajemen laporan</li>
-<li> Multilevel user</li>
+<li> Manajemen data siswa</li>
+<li> Manajemen data guru & pegawai</li>
+<li> Sistem absensi</li>
+<li> Manajemen pembayaran uang sekolah</li>
+<li> Sistem penerimaan siswa baru</li>
+<li> Notifikasi status siswa ke orang tua</li>
+<li> Sistem ujian online</li>
 <br/>
 <b>Developer Team</b>
 <li> Project Manager : Hasnah Nur Ardita</li>
@@ -30,46 +26,4 @@ By : NadhaMedia
 <b>Tampilan Aplikasi</b>
 <br/>
 
->> Login
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/login.png?raw=true'>
-
->> Beranda
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/beranda.png?raw=true'>
-
->> Kartu Cucian
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/kartu_laundry.png?raw=true'>
-
->> Detail Kartu Cucian 
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/detail_kartu_laundry.png?raw=true'>
-
->> Laundry Room
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/laundry_room.png?raw=true'>
-
->> Manajemen Pelanggan
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/manajemen_pelanggan.png?raw=true'>
-
->> Manajemen Produk
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/manajemen_produk.png?raw=true'>
-
->> Invoice
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/invoice.png?raw=true'>
-
->> Form Pembayaran
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/pembayaran.png?raw=true'>
-
->>Struk
-
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/ss/print_struk.png?raw=true'>
-
-<br/>
-
-Apabila anda tertarik menggunakan aplikasi ini, dapat menghubungi kami melalui email alditha.forum@gmail.com.
+Aplikasi ini di dedikasikan untuk sekolah sekolah yang membutuhkan, dan 100% gratis, kami hanya meminta beri bintang untuk repo ini. Apabila anda tertarik menggunakan aplikasi ini, dapat menghubungi kami melalui email alditha.forum@gmail.com.

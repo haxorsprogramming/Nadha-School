@@ -5,7 +5,7 @@
 <br>
 <span align="center">
 
-![PHP Composer](https://github.com/haxorsprogramming/Nadha-Laundry/workflows/PHP%20Composer/badge.svg) [![Twitter](https://img.shields.io/twitter/follow/nadha_alditha.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=nadha_alditha) ![GitHub last commit](https://img.shields.io/github/last-commit/haxorsprogramming/Nadha-Laundry.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
+![PHP Composer](https://github.com/haxorsprogramming/Nadha-School/workflows/PHP%20Composer/badge.svg) [![Twitter](https://img.shields.io/twitter/follow/nadha_alditha.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=nadha_alditha) ![GitHub last commit](https://img.shields.io/github/last-commit/haxorsprogramming/Nadha-School.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
 
 </span>
 </p>
@@ -35,4 +35,5 @@
 <b>Tampilan Aplikasi</b>
 <br/>
 
-Aplikasi ini di dedikasikan untuk sekolah sekolah yang membutuhkan, dan 100% gratis, kami hanya meminta beri bintang untuk repo ini. Apabila anda tertarik menggunakan aplikasi ini, dapat menghubungi kami melalui email alditha.forum@gmail.com.
+
+Bantu support kami untuk pengembangan club melalui link saweria di <a href='https://saweria.co/donate/haxorsprogramming'>sini</a>, sedikit banyaknya donasi dapat memberi kontribusi yang positif bagi perkembangan club ini. Terima kasih, salam koding .. ^_^

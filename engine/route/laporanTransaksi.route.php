@@ -15,7 +15,7 @@ class laporanTransaksi extends Route{
         $data['jumlahHari'] = $this -> ambilHari($bulan);
         $this -> bind('dasbor/laporanTransaksi/laporanTransaksi', $data);
     }
-
+asdasd
     public function getDefaultReport()
     {
         $dbdata = array();

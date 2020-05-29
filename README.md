@@ -1,10 +1,15 @@
+<p align="center">
+<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/nadha_school_logo.jpg?raw=true' width='300px'>
+</p>
+<h1 align="center">Aplikasi Manajemen Sekolah</h1>
+<br>
+<span align="center">
 
-<h2>Aplikasi Sistem Infomasi Sekolah</h2>
+![PHP Composer](https://github.com/haxorsprogramming/Nadha-Laundry/workflows/PHP%20Composer/badge.svg) [![Twitter](https://img.shields.io/twitter/follow/nadha_alditha.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=nadha_alditha) ![GitHub last commit](https://img.shields.io/github/last-commit/haxorsprogramming/Nadha-Laundry.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a2832f12-2941-413e-87b8-e335e1bb920b/deploy-status)](https://app.netlify.com/sites/practical-villani-9032cb/deploys)
+</span>
+</p>
 
-
-By : NadhaMedia
 <br/><br/>
 <b>Teknologi yang digunakan</b>
 <li>Front End : HTML, Bootstrap</li>

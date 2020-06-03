@@ -3,7 +3,7 @@
  <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <title>Nadha Laundry - Dashboard</title>
+   <title>Nadha School - Dashboard</title>
    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
    <!-- General CSS Files -->
    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
@@ -72,7 +72,7 @@
        <div class="main-content">
          <section class="section">
            <div class="section-header">
-             <h1 id='capUtama'> Nadha Laundry - {{judulForm}}</h1>
+             <h1 id='capUtama'> Nadha School - {{judulForm}}</h1>
 
            </div>
            

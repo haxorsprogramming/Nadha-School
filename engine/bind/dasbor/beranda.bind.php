@@ -18,7 +18,7 @@ $dibalik = array_reverse($rentangSeminggu);
         <div class="card-wrap">
           <div class="card-header">
       <h3 id='capTotalUji'>{{jlhCucian}}</h3>
-            <h4>Cucian</h4>
+            <h4>Siswa</h4>
           </div>
           <div class="card-body">
 
@@ -34,7 +34,7 @@ $dibalik = array_reverse($rentangSeminggu);
         <div class="card-wrap">
           <div class="card-header">
           <h3 id='capTotalGejala'>{{jlhPelanggan}}</h3>
-            <h4>Pelanggan</h4>
+            <h4>Guru & Pegawai</h4>
           </div>
           <div class="card-body">
 
@@ -50,7 +50,7 @@ $dibalik = array_reverse($rentangSeminggu);
         <div class="card-wrap">
           <div class="card-header">
         <h3 id='capTotalGejala'>70%</h3>
-            <h4>Profit Bulanan</h4>
+            <h4>Jam Pelajaran</h4>
           </div>
           <div class="card-body">
 

@@ -2,11 +2,6 @@
 
 class Login extends Route{
 
-    public function __construct()
-    {
-    $this -> st = new state;
-    }
-
     public function index()
     {       
         $this -> bind('/login/loginPage');
@@ -16,10 +11,9 @@ class Login extends Route{
         $user = $this -> inp('username');
         $password = $this -> inp('password');
         $passHash = md5($password);
-        $this -> st -> query("SELECT id FROM tbl_user WHERE username='$user' AND password='$passHash';");
-        $data['jlh'] = $this -> st -> numRow();
+        $data['jlh'] = $this -> state('login_st') -> loginProses($user, $passHash);
         if($data['jlh'] > 0){
-            $this -> setses('userSes',$user);
+            $this -> setses('userSes', $user);
         }else{
 
         }

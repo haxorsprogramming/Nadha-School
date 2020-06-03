@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit="no">
   <title>Nadha School - Aplikasi Manajemen Sekolah</title>
@@ -70,7 +69,6 @@
   <!-- endinject -->
   <!-- inject:js -->
   <script src="<?=STYLEBASE; ?>/login/js/template.js"></script>
- 
   <!-- endinject -->
 </body>
 

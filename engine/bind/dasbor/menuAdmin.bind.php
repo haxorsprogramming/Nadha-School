@@ -10,6 +10,7 @@
       <li><a class="nav-link" href="#!" v-on:click=''>Rombel (Kelas)</a></li>
       <li><a class="nav-link" href="#!" v-on:click=''>Jurusan</a></li>
       <li><a class="nav-link" href="#!" v-on:click=''>Mata Pelajaran</a></li>
+      <li><a class="nav-link" href="#!" v-on:click=''>Ekstrakurikuler</a></li>
     </ul>
   </li>
   <li><a class="nav-link " href="#!" v-on:click=''><i class="fas fa-newspaper"></i> <span>Data Transaksi</span></a></li>
@@ -20,6 +21,7 @@
       <li><a class="nav-link" href="#!" v-on:click=''>Ujian Online</a></li>
       <li><a class="nav-link" href="#!" v-on:click=''>Pembayaran SPP</a></li>
       <li><a class="nav-link" href="#!" v-on:click=''>E-Rapor</a></li>
+      <li><a class="nav-link" href="#!" v-on:click=''>PPDB</a></li>
     </ul>
   </li>
   <li class="dropdown">

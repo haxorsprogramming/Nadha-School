@@ -49,7 +49,7 @@ $dibalik = array_reverse($rentangSeminggu);
         </div>
         <div class="card-wrap">
           <div class="card-header">
-        <h3 id='capTotalGejala'>70%</h3>
+        <h3 id='capTotalGejala'></h3>
             <h4>Jam Pelajaran</h4>
           </div>
           <div class="card-body">
@@ -65,8 +65,8 @@ $dibalik = array_reverse($rentangSeminggu);
         </div>
         <div class="card-wrap">
           <div class="card-header">
-          <h3 id='capTotalUji'><?=$data['jlhTransaksiHarian']; ?></h3>
-            <h4>Transaksi Harian</h4>
+          <h3 id='capTotalUji'></h3>
+            <h4>Kehadiran Siswa</h4>
           </div>
           <div class="card-body">
 
@@ -91,29 +91,7 @@ $dibalik = array_reverse($rentangSeminggu);
                       <tr>
                         <th>Tanggal</th><th>Transaksi</th><th>Nominal</th>
                       </tr>
-                      <?php
-                      //perulangan - kapan lah ini bisa di masukkan ke dalam model
-                        for ($x = 0; $x < 7; $x++) {
-                          $tanggalToExplode = $dibalik[$x];
-                          $tglResultExplode = explode("/",$tanggalToExplode);
-                          $tanggalFNow = $tglResultExplode[0]."-".$tglResultExplode[1]."-".$tglResultExplode[2];
-                          $tglDayTambahSatu = $tglResultExplode[2] + 1;
-                          $tanggalToExplodeFNext = $tglResultExplode[0]."-".$tglResultExplode[1]."-".$tglDayTambahSatu;
-                          $tglStart = $tanggalFNow." 00:00:01";
-                          $tglAkhir = $tanggalToExplodeFNext." 00:00:00";
-                          $this -> st -> query("SELECT * FROM tbl_pembayaran WHERE (waktu BETWEEN '$tglStart' AND '$tglAkhir');");
-                          $totalTransaksi = $this -> st -> numRow();
-                          //cari total transaksi 
-                          $qTotal = $this -> st -> queryAll();
-                          $total = 0;
-                          foreach($qTotal as $crTotal){
-                              $totalTemp = $crTotal['total_final'];
-                              $total = $total + $totalTemp;
-                          }
-                          $capTotal = number_format($total);
-                          echo "<tr><td>".$tanggalFNow."</td><td>".$totalTransaksi."</td><td> Rp. ".$capTotal."</td></tr>";
-                        }
-                      ?>
+                     
                   </table>
                 </div>
               </div>
@@ -129,24 +107,7 @@ $dibalik = array_reverse($rentangSeminggu);
                 </div>
                 <div class="card-body">
                   <ul class="list-unstyled list-unstyled-border">
-                    <?php 
-                      foreach($rankPelanggan as $rp):
-                        $username = $rp['username'];
-                        $levelPelanggan = $rp['level'];
-                        //cari total cuci pelanggan 
-                        $this -> st -> query("SELECT id FROM tbl_kartu_laundry WHERE pelanggan='$username';");
-                        $jlhTransaksi = $this -> st -> numRow();
-                    ?>
-                    <li class="media">
-                      
-                      <img class="mr-3 rounded-circle" width="50" src="<?=STYLEBASE; ?>/dasbor/img/avatar-1.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right"><?=$levelPelanggan; ?></div>
-                        <h6 class="media-title"><a href="#!" v-on:click="pelangganProfile('<?=$username;?>')"><?=$rp['nama_lengkap']; ?></a></h6>
-                        <div class="text-small text-muted"><?=$jlhTransaksi; ?> Total Cuci <div class="bullet"></div> <span class="text-primary"><?=$rp['poin_real'] ;?> Poin</span></div>
-                      </div>
-                    </li>
-                      <?php endforeach; ?>
+                   
                   </ul>
                 </div>
               </div>

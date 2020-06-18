@@ -1,9 +1,8 @@
 <?php
-class login_st{
 
-    private $tbl = 'tbl_user';
+class loginData{
+    
     private $st;
-
 
     public function __construct()
     {
@@ -12,8 +11,10 @@ class login_st{
 
     public function loginProses($user, $passHash)
     {
-        $this -> st -> query("SELECT id FROM tbl_user WHERE username='$user' AND password='$passHash';");
+        $this -> st -> query("SELECT id FROM tbl_user WHERE username='$user' AND password='$passHash' AND active='1';");
         return $this -> st -> numRow();
     }
+
+
 
 }

@@ -1,5 +1,5 @@
 <p align="center">
-<img src='https://github.com/haxorsprogramming/All-Project/blob/master/nadha_produk/nadha_school_logo.jpg?raw=true' width='300px'>
+<img src='https://github.com/haxorsprogramming/Haxors-Contributors/blob/master/haxors_project/nadha_school_logo.jpg?raw=true' width='300px'>
 </p>
 <h1 align="center">Aplikasi Manajemen Sekolah</h1>
 <br>

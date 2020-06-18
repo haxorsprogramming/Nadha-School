@@ -13,7 +13,7 @@ $dibalik = array_reverse($rentangSeminggu);
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-nadha-primary">
-          <i class="fas fa-water"></i>
+          <i class="fas fa-book-reader"></i>
         </div>
         <div class="card-wrap">
           <div class="card-header">
@@ -29,7 +29,7 @@ $dibalik = array_reverse($rentangSeminggu);
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-nadha-primary">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-chalkboard-teacher"></i>
         </div>
         <div class="card-wrap">
           <div class="card-header">
@@ -45,7 +45,7 @@ $dibalik = array_reverse($rentangSeminggu);
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-nadha-primary">
-          <i class="	fas fa-chart-line"></i>
+          <i class="fas fa-calendar-alt"></i>
         </div>
         <div class="card-wrap">
           <div class="card-header">
@@ -61,7 +61,7 @@ $dibalik = array_reverse($rentangSeminggu);
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-nadha-primary">
-          <i class="fas fa-donate"></i>
+          <i class="fas fa-fax"></i>
         </div>
         <div class="card-wrap">
           <div class="card-header">
@@ -81,7 +81,7 @@ $dibalik = array_reverse($rentangSeminggu);
   <div class="col-lg-6 col-md-6 col-12">
               <div class="card card-warning">
                 <div class="card-header">
-                  <h4>Rekap transksi laundry seminggu terakhir</h4>
+                  <h4>Agenda Sekolah</h4>
                   <div class="card-header-action">
                     <a href="#!" class="btn btn-primary">Detail</a>
                   </div>
@@ -89,9 +89,8 @@ $dibalik = array_reverse($rentangSeminggu);
                 <div class="card-body">
                   <table class="table table-hover table-bordered">
                       <tr>
-                        <th>Tanggal</th><th>Transaksi</th><th>Nominal</th>
+                        <th>Agenda</th><th>Tanggal</th>
                       </tr>
-                     
                   </table>
                 </div>
               </div>
@@ -100,9 +99,9 @@ $dibalik = array_reverse($rentangSeminggu);
         <div class="col-lg-6 col-md-6 col-12">
         <div class="card card-warning">
                 <div class="card-header">
-                  <h4 class="d-inline">Ranking Pelanggan</h4>
+                  <h4 class="d-inline">Absensi guru/pegawai hari ini</h4>
                   <div class="card-header-action">
-                    <a href="#!" class="btn btn-primary">Semua</a>
+                    <a href="#!" class="btn btn-primary">Detail</a>
                   </div>
                 </div>
                 <div class="card-body">

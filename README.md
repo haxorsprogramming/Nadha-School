@@ -31,7 +31,7 @@
 <b>Developer Team</b>
 <li> Project Manager & Front End : Hasnah Nur Ardita</li>
 <li> Back End : Aditia Darma Nst</li>
-<li> Microservice : Muhammad Rizky</li>>
+<li> Microservice : Muhammad Rizky</li>
 <br/>
 <b>Tampilan Aplikasi</b>
 <br/>

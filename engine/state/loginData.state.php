@@ -15,6 +15,8 @@ class loginData{
         return $this -> st -> numRow();
     }
 
+    public function verifikasiLogin($user, $passHash)
+    {
 
-
+    }
 }

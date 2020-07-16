@@ -2,6 +2,8 @@
 
 class Login extends Route{
 
+    private $sn = 'loginData';
+
     public function index()
     {       
         $this -> bind('/login/loginPage');

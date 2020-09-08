@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit="no">
-  <title>Nadha School - Aplikasi Manajemen Sekolah</title>
+  <title><?=SITENAME; ?></title>
   <!-- base:css -->
   <link rel="stylesheet" href="<?=STYLEBASE; ?>/login/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="<?=STYLEBASE; ?>/login/vendors/base/vendor.bundle.base.css">
@@ -63,6 +63,9 @@
   </div>
   <!-- container-scroller -->
   <!-- base:js -->
+  <script>
+    const server = "<?=HOMEBASE; ?>";
+  </script>
   <script src="<?=STYLEBASE; ?>/login/js/login.js"></script>
   <script src="<?=STYLEBASE; ?>/login/vendors/base/vendor.bundle.base.js"></script>
   <script src="https://demo.getstisla.com/assets/modules/izitoast/js/iziToast.min.js"></script>

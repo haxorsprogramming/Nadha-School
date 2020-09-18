@@ -34,7 +34,7 @@ class Route{
     //membuat string random dengan parameter(jumlah)
     public function rnstr($length)
     {
-        $bahan  = 'qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNMqwertyuioplkjhgfdsazxcvbnm';
+        $bahan  = 'qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNMqwertyuioplkjhgfdsazxcvbnm1234567890987654321';
         $acak   = str_shuffle($bahan);
         $hasil  = substr($acak,0,$length);
         return $hasil;
@@ -42,7 +42,7 @@ class Route{
     //membuat int random dengan parameter(jumlah)
     public function rnint($length)
     {
-      $bahan  = '123456789012345678901234567890123456780';
+      $bahan  = '123456789012345678901234567890123456780123456789012345678901234567890123456780123456789012345678901234567890123456780';
       $acak   = str_shuffle($bahan);
       $hasil  = substr($acak, 0, $length);
       return $hasil;
@@ -55,8 +55,7 @@ class Route{
     //verify password 
     public function verifPassword($pass_1, $pass_2)
     {
-        //pass 1 = string awal
-        //pass 2 = string hash
+        //pass 1 = string awal, pass 2 = string hash
         if (password_verify($pass_1, $pass_2)) {
           return true;
         } else {
@@ -151,7 +150,6 @@ class Route{
       if(!ISSET($_SESSION[$ses])){
         header("Location:".HOMEBASE.$page);
         die();
-      }else{
       }
     }
     //fungsi hapus hapus csrf token
@@ -172,8 +170,7 @@ class Route{
     //fungsi cek apakah tanggal sudah lewat atau tidak (yyyy-mm-dd) - tanggal awal - tanggal sekarang
     function cekDateCompare($tglCompare, $tglSekarang)
     {
-      $selisih = $tglCompare - $tglSekarang;
-      if($selisih < 1){
+      if(strtotime($tglCompare) < strtotime($tglSekarang)){
         return false;
       }else{
         return true;
@@ -194,7 +191,7 @@ class Route{
     public function ambilHari($bulan)
     {
       $tahun = date('Y');
-      return cal_days_in_month(CAL_GREGORIAN,$bulan,2019);
+      return cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
     }
     //array bulan normal
     public function getListBulanInt()
@@ -284,16 +281,23 @@ class Route{
     //fungsi kirim email
     public function kirimEmail($nama,$penerima,$judul,$isi,$emailHost,$passwordHost)
     {
-        $mail = new PHPMailer(false);  
+        $mail = new PHPMailer;  
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                                   // Enable verbose debug output
+            $mail->SMTPDebug = 0;                                   // Enable verbose debug output
             $mail->isSMTP();                                        // Set mailer to use SMTP
-            $mail->Host       = 'smtp.gmail.com';                   // Specify main and backup SMTP servers
+            $mail->Host = 'tls://smtp.gmail.com:587';
+            $mail->SMTPOptions = array(
+              'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+                )
+            );                   // Specify main and backup SMTP servers
             $mail->SMTPAuth   = true;                               // Enable SMTP authentication
             $mail->Username   = $emailHost;                         // SMTP username
             $mail->Password   = $passwordHost;                      // SMTP password
-            $mail->SMTPSecure = 'tls';                              // Enable TLS encryption, `ssl` also accepted
+            $mail->SMTPSecure = 'ssl';                              // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                      // TCP port to connect to
             //Recipients
             $mail->setFrom($emailHost, 'NadhaResto');
@@ -317,20 +321,16 @@ class Route{
     $data = preg_replace('/(&#*\w+)[\x00-\x20]+;/u', '$1;', $data);
     $data = preg_replace('/(&#x*[0-9A-F]+);*/iu', '$1;', $data);
     $data = html_entity_decode($data, ENT_COMPAT, 'UTF-8');
-
     // Remove any attribute starting with "on" or xmlns
     $data = preg_replace('#(<[^>]+?[\x00-\x20"\'])(?:on|xmlns)[^>]*+>#iu', '$1>', $data);
-
     // Remove javascript: and vbscript: protocols
     $data = preg_replace('#([a-z]*)[\x00-\x20]*=[\x00-\x20]*([`\'"]*)[\x00-\x20]*j[\x00-\x20]*a[\x00-\x20]*v[\x00-\x20]*a[\x00-\x20]*s[\x00-\x20]*c[\x00-\x20]*r[\x00-\x20]*i[\x00-\x20]*p[\x00-\x20]*t[\x00-\x20]*:#iu', '$1=$2nojavascript...', $data);
     $data = preg_replace('#([a-z]*)[\x00-\x20]*=([\'"]*)[\x00-\x20]*v[\x00-\x20]*b[\x00-\x20]*s[\x00-\x20]*c[\x00-\x20]*r[\x00-\x20]*i[\x00-\x20]*p[\x00-\x20]*t[\x00-\x20]*:#iu', '$1=$2novbscript...', $data);
     $data = preg_replace('#([a-z]*)[\x00-\x20]*=([\'"]*)[\x00-\x20]*-moz-binding[\x00-\x20]*:#u', '$1=$2nomozbinding...', $data);
-
     // Only works in IE: <span style="width: expression(alert('Ping!'));"></span>
     $data = preg_replace('#(<[^>]+?)style[\x00-\x20]*=[\x00-\x20]*[`\'"]*.*?expression[\x00-\x20]*\([^>]*+>#i', '$1>', $data);
     $data = preg_replace('#(<[^>]+?)style[\x00-\x20]*=[\x00-\x20]*[`\'"]*.*?behaviour[\x00-\x20]*\([^>]*+>#i', '$1>', $data);
     $data = preg_replace('#(<[^>]+?)style[\x00-\x20]*=[\x00-\x20]*[`\'"]*.*?s[\x00-\x20]*c[\x00-\x20]*r[\x00-\x20]*i[\x00-\x20]*p[\x00-\x20]*t[\x00-\x20]*:*[^>]*+>#iu', '$1>', $data);
-
     // Remove namespaced elements (we do not need them)
     $data = preg_replace('#</*\w+:\w[^>]*+>#i', '', $data);
 
@@ -344,52 +344,32 @@ class Route{
     // we are done...
     return $data;
     }
-    //send notifikasi cucian selesai
-    public function cucianSelesaiNotif($message, $phone_no, $apiKey){
-        $message = preg_replace( "/(\n)/", "<ENTER>", $message );
-        $message = preg_replace( "/(\r)/", "<ENTER>", $message );
-        
-        $phone_no = preg_replace( "/(\n)/", ",", $phone_no );
-        $phone_no = preg_replace( "/(\r)/", "", $phone_no );
-        
-        $data = array("phone_no" => $phone_no, "key" => $apiKey, "message" => $message);
-        $data_string = json_encode($data);
-        $ch = curl_init('http://116.203.92.59/api/send_message');
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_VERBOSE, 0);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($data_string))
-        );
-        $result = curl_exec($ch);
-    }
-    //fungsi broadcast pesan
-    public function broadcastPesan($message, $phone_no, $apiKey)
+
+    //fungsi notifikasi WA (WooWa)
+    public function sendWaNotif($key, $noHp, $message)
     {
-      $message = preg_replace( "/(\n)/", "<ENTER>", $message );
-      $message = preg_replace( "/(\r)/", "<ENTER>", $message );
-      
-      $phone_no = preg_replace( "/(\n)/", ",", $phone_no );
-      $phone_no = preg_replace( "/(\r)/", "", $phone_no );
-      
-      $data = array("phone_no" => $phone_no, "key" => $apiKey, "message" => $message);
+      $url = 'http://116.203.92.59/api/send_message';
+      $data = array(
+        "phone_no"=> $noHp,
+        "key"		=> $key,
+        "message"	=> $message
+      );
       $data_string = json_encode($data);
-      $ch = curl_init('http://116.203.92.59/api/send_message');
+
+      $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_VERBOSE, 0);
       curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 0);
-      curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+      curl_setopt($ch, CURLOPT_TIMEOUT, 360);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-      'Content-Type: application/json',
-      'Content-Length: ' . strlen($data_string))
+        'Content-Type: application/json',
+        'Content-Length: ' . strlen($data_string))
       );
-      $result = curl_exec($ch);
+      curl_exec($ch);
     }
 
 }

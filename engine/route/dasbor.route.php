@@ -1,6 +1,6 @@
 <?php
 
-class Dasbor extends Route{
+class home extends Route{
 
     public function __construct()
     {

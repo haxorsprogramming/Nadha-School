@@ -1,17 +1,10 @@
 <?php
 
-class home extends Route{
-
-    public function __construct()
-    {
-    $this -> st = new state;
+class dasbor extends Route{
     
-    }
-
     public function index()
-    {     
-        $this -> cekUserLogin('userSes', 'login');
-        $this -> bind('/dasbor/index');
+    {   
+        $this -> bind('dasbor/index');
     }
  
     public function beranda()

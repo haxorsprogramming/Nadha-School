@@ -48,7 +48,7 @@
                   </div>
                   <div class="mt-2">
                   <div style='padding-top:12px;'>
-                      <h5 class="font-weight-light">2020 &copy; <a href='http://nadha.id' target='new'>NadhaMedia</a></h5>
+                      <h5 class="font-weight-light">2020 &copy; <a href='http://haxors.or.id' target='new'>NadhaMedia</a></h5>
                     </div>
                 </div>
                 </div>

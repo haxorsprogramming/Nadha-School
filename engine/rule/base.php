@@ -6,12 +6,12 @@
 /**
 * URL base, jika di upload ke hosting, perhatikan http/https, karena akan berpengaruh
 */
-$homeBase = 'http://localhost/Nadha-Resto/';
+$homeBase = 'http://localhost/Nadha-School/';
 
 /**
 * Site name (nama situs web)
 */
-$siteName = 'Nadha Resto - Aplikasi Manajemen Restoran';
+$siteName = 'Nadha School - Aplikasi Manajemen Sekolah';
 
 /**
 * Author (Pengembang / pemilik website)

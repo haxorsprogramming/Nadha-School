@@ -3,10 +3,11 @@
 class Login extends Route{
 
     private $sn = 'loginData';
+    private $su = 'utilityData';
 
     public function index()
     {       
-        $this -> bind('/login/loginPage');
+        $this -> bind('login/loginPage');
     }
 
     public function prosesLogin()

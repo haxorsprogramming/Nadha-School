@@ -6,12 +6,12 @@
 /**
 * URL base, jika di upload ke hosting, perhatikan http/https, karena akan berpengaruh
 */
-$homeBase = 'http://localhost/Nadha-School/';
+$homeBase = 'http://localhost/Nadha-Resto/';
 
 /**
 * Site name (nama situs web)
 */
-$siteName = 'Nadha-Laundry';
+$siteName = 'Nadha Resto - Aplikasi Manajemen Restoran';
 
 /**
 * Author (Pengembang / pemilik website)
@@ -31,11 +31,8 @@ $styleBase = $homeBase.'ladun';
 /**
 * Define to public
 */
-define('HOMEBASE',$homeBase);
-define('SITENAME',$siteName);
-define('AUTHOR',$author);
-define('MAINROUTE',$mainRoute);
-define('STYLEBASE',$styleBase);
-define('IMGBASE',$imgBase);
-
-
+define('HOMEBASE', $homeBase);
+define('SITENAME', $siteName);
+define('AUTHOR', $author);
+define('MAINROUTE', $mainRoute);
+define('STYLEBASE', $styleBase);

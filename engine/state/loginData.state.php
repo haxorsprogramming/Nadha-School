@@ -6,17 +6,14 @@ class loginData{
 
     public function __construct()
     {
-    $this -> st = new state;
+        $this -> st = new state;
     }
 
-    public function loginProses($user, $passHash)
+    public function getPassword($username)
     {
-        $this -> st -> query("SELECT id FROM tbl_user WHERE username='$user' AND password='$passHash' AND active='1';");
-        return $this -> st -> numRow();
+        $this -> st -> query("SELECT password FROM tbl_user WHERE username='$username';");
+        $qUser = $this -> st -> querySingle();
+        return $qUser['password'];
     }
 
-    public function verifikasiLogin($user, $passHash)
-    {
-
-    }
 }

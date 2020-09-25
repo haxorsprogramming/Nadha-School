@@ -10,7 +10,7 @@ class dasbor extends Route{
     public function beranda()
     {
         $data['aplikasi'] = '';
-        $this -> bind('/dasbor/beranda', $data);   
+        $this -> bind('dasbor/beranda', $data);   
     }
 
     public function logOut()

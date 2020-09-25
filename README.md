@@ -1,11 +1,11 @@
 <p align="center">
-<img src='https://github.com/haxorsprogramming/Haxors-Contributors/blob/master/haxors_project/nadha_school_logo.jpg?raw=true' width='300px'>
+<img src='http://asset.justhasnah.my.id/screenshoot/Logo_Project/nadha_school_logo.jpg' width='300px'>
 </p>
 <h1 align="center">Aplikasi Manajemen Sekolah</h1>
 <br>
 <span align="center">
 
-![PHP Composer](https://github.com/haxorsprogramming/Nadha-School/workflows/PHP%20Composer/badge.svg) [![Twitter](https://img.shields.io/twitter/follow/nadha_alditha.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=nadha_alditha) ![GitHub last commit](https://img.shields.io/github/last-commit/haxorsprogramming/Nadha-School.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) [![License](https://img.shields.io/github/license/haxorsprogramming/Nadha-School.svg)](LICENSE)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/73992f34e72143c58ec4fc34d4c51f8b)](https://www.codacy.com/manual/haxorsprogramming/Nadha-School?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=haxorsprogramming/Nadha-School&amp;utm_campaign=Badge_Grade) ![PHP Composer](https://github.com/haxorsprogramming/Nadha-School/workflows/PHP%20Composer/badge.svg) [![Twitter](https://img.shields.io/twitter/follow/nadha_alditha.svg?style=social&label=Follow)](https://twitter.com/intent/follow?screen_name=nadha_alditha) ![GitHub last commit](https://img.shields.io/github/last-commit/haxorsprogramming/Nadha-School.svg) ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/badges/shields.svg) [![License](https://img.shields.io/github/license/haxorsprogramming/Nadha-School.svg)](LICENSE)
 
 
 </span>

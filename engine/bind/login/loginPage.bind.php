@@ -12,14 +12,14 @@
         <meta name="author" content="Steelcoders" />
         
         <!-- Styles -->
-        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="<?=STYLEBASE; ?>/login/assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">        
+        <link href="<?=STYLEBASE; ?>/login/assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">        
 
         	
         <!-- Theme Styles -->
-        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="<?=STYLEBASE; ?>/login/assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="<?=STYLEBASE; ?>/login/assets/css/custom.css" rel="stylesheet" type="text/css"/>
         
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -79,6 +79,9 @@
                           <div class="col s12 m6 l4 offset-l4 offset-m3">
                               <div class="card white darken-1">
                                   <div class="card-content ">
+                                    <div style="text-align: center;">
+                                    <img src="<?=STYLEBASE; ?>/default/img/nadha_school.jpg" style="width:200px;">
+                                    </div>
                                       <span class="card-title">Sign In</span>
                                        <div class="row">
                                            <form class="col s12">
@@ -91,8 +94,8 @@
                                                    <label for="password">Password</label>
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
-                                                   <a href="sign-up.html" class="waves-effect waves-grey btn-flat">sign up</a>
-                                                   <a href="index.html" class="waves-effect waves-light btn teal">sign in</a>
+                                                   <a href="#!" class="waves-effect waves-grey btn-flat">sign up</a>
+                                                   <a href="#!" class="waves-effect waves-light btn teal">sign in</a>
                                                </div>
                                            </form>
                                       </div>
@@ -105,11 +108,11 @@
         </div>
         
         <!-- Javascripts -->
-        <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-        <script src="assets/plugins/materialize/js/materialize.min.js"></script>
-        <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-        <script src="assets/js/alpha.min.js"></script>
+        <script src="<?=STYLEBASE; ?>/login/assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+        <script src="<?=STYLEBASE; ?>/login/assets/plugins/materialize/js/materialize.min.js"></script>
+        <script src="<?=STYLEBASE; ?>/login/assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+        <script src="<?=STYLEBASE; ?>/login/assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="<?=STYLEBASE; ?>/login/assets/js/alpha.min.js"></script>
         
     </body>
 </html>

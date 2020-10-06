@@ -15,7 +15,7 @@
   <!-- endinject -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/izitoast/css/iziToast.min.css">
+  <link rel="stylesheet" href="http://asset.justhasnah.my.id/cdn/izi_toast/iziToast.min.css">
   
 </head>
 
@@ -48,7 +48,7 @@
                   </div>
                   <div class="mt-2">
                   <div style='padding-top:12px;'>
-                      <h5 class="font-weight-light">2020 &copy; <a href='http://haxors.or.id' target='new'>NadhaMedia</a></h5>
+                      <h5 class="font-weight-light">2020 &copy; <a href='http://haxors.or.id' target='new'>Haxorsprogrammingclub</a></h5>
                     </div>
                 </div>
                 </div>
@@ -68,7 +68,7 @@
   </script>
   <script src="<?=STYLEBASE; ?>/login/js/login.js"></script>
   <script src="<?=STYLEBASE; ?>/login/vendors/base/vendor.bundle.base.js"></script>
-  <script src="https://demo.getstisla.com/assets/modules/izitoast/js/iziToast.min.js"></script>
+  <script src="http://asset.justhasnah.my.id/cdn/izi_toast/iziToast.min.js"></script>
   <!-- endinject -->
   <!-- inject:js -->
   <script src="<?=STYLEBASE; ?>/login/js/template.js"></script>

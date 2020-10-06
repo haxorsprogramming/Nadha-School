@@ -1,78 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit="no">
-  <title><?=SITENAME; ?></title>
-  <!-- base:css -->
-  <link rel="stylesheet" href="<?=STYLEBASE; ?>/login/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="<?=STYLEBASE; ?>/login/vendors/base/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="ladun/login/css/style.css">
-  <!-- endinject -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="http://asset.justhasnah.my.id/cdn/izi_toast/iziToast.min.css">
-  
-</head>
+    <head>
+        
+        <!-- Title -->
+        <title>Alpha | Responsive Admin Dashboard Template</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Responsive Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+        
+        <!-- Styles -->
+        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">        
 
-<body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="main-panel">
-        <div class="content-wrapper d-flex align-items-center auth px-0">
-          <div class="row w-100 mx-0">
-            <div class="col-lg-4 mx-auto">
-              <div class="auth-form-light text-left py-5 px-4 px-sm-5" id='login-app'>
-                <div class="brand-logo" style='text-align:center;'>
-                  <img src="<?=STYLEBASE; ?>/login/images/nadha_school_logo.jpg" alt="logo" style='width:200px; '>
-                </div>
-                <div style='text-align:center;'>
-                <h6 class="font-weight-light">Harap masuk untuk melanjutkan.</h6>
-                <div>
-                <div class="pt-3">
-                  <div class="form-group">
-                    <input v-model='userInput' type='text' class='form-control' id='txtUsername' placeholder='Username'>
-                  </div>
-                  <div class="form-group">
-                    <input v-model='passwordInput' class="form-control" type='password' id="txtPassword" placeholder="Password">
-                  </div>
-                  <div id='capNotifLogin'>
-
-                  </div>
-                  <div class="mt-3">
-                    <a id='btnMasuk' v-on:click='klikSaya' class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="#!">Masuk</a>
-                  </div>
-                  <div class="mt-2">
-                  <div style='padding-top:12px;'>
-                      <h5 class="font-weight-light">2020 &copy; <a href='http://haxors.or.id' target='new'>Haxorsprogrammingclub</a></h5>
+        	
+        <!-- Theme Styles -->
+        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body class="signin-page">
+        <div class="loader-bg"></div>
+        <div class="loader">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
                     </div>
                 </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
                 </div>
-              </div>
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                    <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- content-wrapper ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- base:js -->
-  <script>
-    const server = "<?=HOMEBASE; ?>";
-  </script>
-  <script src="<?=STYLEBASE; ?>/login/js/login.js"></script>
-  <script src="<?=STYLEBASE; ?>/login/vendors/base/vendor.bundle.base.js"></script>
-  <script src="http://asset.justhasnah.my.id/cdn/izi_toast/iziToast.min.js"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="<?=STYLEBASE; ?>/login/js/template.js"></script>
-  <!-- endinject -->
-</body>
-
+        <div class="mn-content valign-wrapper">
+            <main class="mn-inner container">
+                <div class="valign">
+                      <div class="row">
+                          <div class="col s12 m6 l4 offset-l4 offset-m3">
+                              <div class="card white darken-1">
+                                  <div class="card-content ">
+                                      <span class="card-title">Sign In</span>
+                                       <div class="row">
+                                           <form class="col s12">
+                                               <div class="input-field col s12">
+                                                   <input id="email" type="email" class="validate">
+                                                   <label for="email">Email</label>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                   <input id="password" type="password" class="validate">
+                                                   <label for="password">Password</label>
+                                               </div>
+                                               <div class="col s12 right-align m-t-sm">
+                                                   <a href="sign-up.html" class="waves-effect waves-grey btn-flat">sign up</a>
+                                                   <a href="index.html" class="waves-effect waves-light btn teal">sign in</a>
+                                               </div>
+                                           </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Javascripts -->
+        <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+        <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+        <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+        <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="assets/js/alpha.min.js"></script>
+        
+    </body>
 </html>

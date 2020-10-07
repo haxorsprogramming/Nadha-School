@@ -6,8 +6,10 @@ class Login extends Route{
     private $su = 'utilityData';
 
     public function index()
-    {       
-        $this -> bind('login/loginPage');
+    {   
+        $foto = "12";
+        $data['cover_pic'] = substr(str_shuffle($foto),0,1);
+        $this -> bind('login/loginPage', $data);
     }
 
     public function prosesLogin()

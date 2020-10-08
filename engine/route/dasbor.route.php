@@ -19,4 +19,10 @@ class dasbor extends Route{
         $this -> goto(HOMEBASE.'login');
     }
 
+    public function cekInstall()
+    {
+        $statusFile = file_exists('INSTALL.json');
+        echo $statusFile;
+    }
+
 }

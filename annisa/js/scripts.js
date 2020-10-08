@@ -97,7 +97,7 @@ function loadStyle(href, callback) {
 </div>
 `;
 
-  $("body").append(themeColorsDom);
+  // $("body").append(themeColorsDom);
 
 
   /* Default Theme Color, Border Radius and  Direction */

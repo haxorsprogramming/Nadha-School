@@ -1,0 +1,47 @@
+$separator-color-light: #f3f3f3;
+$separator-color: #d7d7d7;
+$background-color: #f8f8f8;
+$foreground-color : white;
+$input-background: white;
+
+$dark-btn-background: #131113;
+$light-btn-background: #ececec;
+$button-text-color: #fff;
+
+$theme-color-1: #00365a;
+$theme-color-2: #184f90;
+$theme-color-3: #8a9fb4;
+$theme-color-4: #2c4d6e;
+$theme-color-5: #245794;
+$theme-color-6: #6a7b8d;
+
+$primary-color: #3a3a3a;
+$secondary-color: #8f8f8f;
+$muted-color: #909090;
+
+$gradient-color-1 : #015994;
+$gradient-color-2 : #00365a;
+$gradient-color-3 : #00538a;
+
+$lp-bg-color-1 : #001627;
+$lp-bg-color-2 : #01253d;
+$lp-bg-color-3 : #014366;
+$lp-bg-color-4 : #006da3;
+
+$shadow-offsets-top : 1 3 10 14 19;
+$shadow-blurs-top: 1.5 5 10 14 19;
+$shadow-opacities-top: 0.04 0.1 0.19 0.25 0.3;
+
+$shadow-offsets-bottom : 1 3 6 10 15;
+$shadow-blurs-bottom: 3 6 6 5 6;
+$shadow-opacities-bottom: 0.04 0.1 0.2 0.22 0.22;
+
+$logo-path: "../logos/black.svg";
+$logo-path-mobile: "../logos/mobile.svg";
+
+$lp-logo-path-pinned: "../logos/black.svg";
+$lp-logo-path: "../logos/white-full.svg";
+
+@import "../_mixins.scss";
+@import "../_dore.style.scss";
+

@@ -1,5 +1,6 @@
 // ROUTE 
-const rToLogin = server + 'login/prosesLogin';
+const rToLogin = server + "login/prosesLogin";
+const rToDasbor = server + "dasbor";
 
 // VUE OBJECT 
 const divForm = {
@@ -35,7 +36,11 @@ function prosesLogin()
         let dataSend = {'username':username, 'password':password}
         $.post(rToLogin, dataSend, function(data){
             let obj = JSON.parse(data);
-            console.log(obj);
+            if(obj.status_login === 'sukses'){
+              window.location.assign(rToDasbor);
+            }else{
+              pesanUmumApp('error', 'Kesalahan autentifikasi', 'Login gagal, username & password tidak cocok!!');
+            }
         });
     }
 }

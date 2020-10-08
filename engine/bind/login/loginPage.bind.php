@@ -6,17 +6,9 @@
 
         <title>NadhaSchool - Homepage</title>
 
-        <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta name="author" content="pixelcave">
+        <meta name="description" content="Nadha School - Aplikasi Manajemen Sekolah">
+        <meta name="author" content="haxorsprogrammingclub">
         <meta name="robots" content="noindex, nofollow">
-
-        <!-- Open Graph Meta -->
-        <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
-        <meta property="og:site_name" content="Codebase">
-        <meta property="og:description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
 
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
@@ -30,9 +22,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
         <link rel="stylesheet" id="css-main" href="<?=STYLEBASE; ?>/login/assets/css/codebase.min.css">
 
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
-        <!-- END Stylesheets -->
     </head>
     <body>
 
@@ -63,16 +52,12 @@
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to NadhaSchool</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
                                 </div>
-                                <!-- END Header -->
-
-                                <!-- Sign In Form -->
-                                <!-- jQuery Validation functionality is initialized with .js-validation-signin class in js/pages/op_auth_signin.min.js which was auto compiled from _es6/pages/op_auth_signin.js -->
-                                <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                                <form class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
+                               
+                                <div class="js-validation-signin px-30" id="divForm">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="text" class="form-control" id="txtUsername" name="login-username">
+                                                <input type="text" class="form-control" id="txtUsername">
                                                 <label for="login-username">Username</label>
                                             </div>
                                         </div>
@@ -80,33 +65,25 @@
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="login-password" name="login-password">
+                                                <input type="password" class="form-control" id="txtPassword">
                                                 <label for="login-password">Password</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                                <label class="custom-control-label" for="login-remember-me">Remember Me</label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                        <a class="btn btn-sm btn-hero btn-alt-primary" @click="loginAtc">
                                             <i class="si si-login mr-10"></i> Sign In
-                                        </button>
+                                        </a>
                                         <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="op_auth_signup2.html">
+                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#!">
                                                 <i class="fa fa-plus mr-5"></i> Create Account
                                             </a>
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="op_auth_reminder2.html">
+                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#!">
                                                 <i class="fa fa-warning mr-5"></i> Forgot Password
                                             </a>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                                 <!-- END Sign In Form -->
                             </div>
                         </div>
@@ -117,18 +94,21 @@
             <!-- END Main Container -->
         </div>
         <!-- END Page Container -->
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@next"></script>
         <script src="<?=STYLEBASE; ?>/login/assets/js/codebase.core.min.js"></script>
-
         <script src="<?=STYLEBASE; ?>/login/assets/js/codebase.app.min.js"></script>
 
         <!-- Page JS Plugins -->
         <script src="<?=STYLEBASE; ?>/login/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <!-- Page JS Code -->
         <script src="<?=STYLEBASE; ?>/login/assets/js/pages/op_auth_signin.min.js"></script>
 
         <!-- Custom JS Code  -->
+        <script>
+            const server = "<?=HOMEBASE; ?>";
+        </script>
         <script src="<?=STYLEBASE; ?>/login/assets/js/login.js"></script>
     </body>
 </html>

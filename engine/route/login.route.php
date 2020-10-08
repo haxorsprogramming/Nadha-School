@@ -1,6 +1,6 @@
 <?php
 
-class Login extends Route{
+class login extends Route{
 
     private $sn = 'loginData';
     private $su = 'utilityData';
@@ -14,9 +14,18 @@ class Login extends Route{
 
     public function prosesLogin()
     {
-        $user           = $this -> inp('username');
-        $password       = $this -> inp('password');
-        $passHash       = md5($password);
+        $user = $this -> inp('username');
+        $password = $this -> inp('password');
+        $userPasswordDb = $this -> state($this -> sn) -> getPassword($user);
+        $checkPassword  = $this -> verifPassword($password, $userPasswordDb);
+
+        if($checkPassword === true){
+            $_SESSION['userSession'] = $user;
+            $data['status_login'] = 'sukses';
+        }else{
+            $data['status_login'] = 'gagal';
+        }
+        echo json_encode($data);
     }  
 
 }

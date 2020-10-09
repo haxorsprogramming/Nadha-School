@@ -54,14 +54,14 @@
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="Pages.Auth.Login.html">
-                                        <i class="simple-icon-user-following"></i> <span
-                                            class="d-inline-block">Tambah Siswa</span>
+                                    <a href="#!">
+                                    <i class="material-icons md-48">person_add</i> 
+                                        <span class="d-inline-block">Tambah Siswa</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Pages.Auth.Register.html">
-                                        <i class="simple-icon-user-follow"></i> <span
+                                    <i class="material-icons md-48">person</i>  <span
                                             class="d-inline-block">Daftar Siswa</span>
                                     </a>
                                 </li>
@@ -77,7 +77,7 @@
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true"
                             aria-controls="collapseProduct" class="rotate-arrow-icon opacity-50">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Product</span>
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Guru & Pegawai</span>
                         </a>
                         <div id="collapseProduct" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">

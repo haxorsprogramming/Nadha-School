@@ -22,3 +22,18 @@ const divTitleMap = {
   }
 }
 Vue.createApp(divTitleMap).mount('#divTitleMap');
+
+const divMenu = {
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    dashAtc : function()
+    {
+      console.log("Haloo");
+    }
+  }
+}
+Vue.createApp(divMenu).mount('#divMenu');

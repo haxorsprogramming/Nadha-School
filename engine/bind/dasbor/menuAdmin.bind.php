@@ -1,15 +1,15 @@
-<div class="menu">
+<div class="menu" id='divMenu'>
         <div class="main-menu">
-            <div class="scroll">
+            <div class="">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">
+                        <a href="JavaScript:void(0)" @click="dashAtc">
                         <i class="material-icons md-48">dashboard</i>
                             <span>Dashboards</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#layouts">
+                        <a href="#dataMaster">
                         <i class="material-icons md-48">fact_check</i>Data Master
                         </a>
                     </li>
@@ -44,46 +44,25 @@
 
         <div class="sub-menu">
             <div class="scroll">
-                <ul class="list-unstyled" data-link="dashboard">
-                    <li>
-                        <a href="Dashboard.Default.html">
-                            <i class="simple-icon-rocket"></i> <span class="d-inline-block">Default</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Dashboard.Analytics.html">
-                            <i class="simple-icon-pie-chart"></i> <span class="d-inline-block">Analytics</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Dashboard.Ecommerce.html">
-                            <i class="simple-icon-basket-loaded"></i> <span class="d-inline-block">Ecommerce</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Dashboard.Content.html">
-                            <i class="simple-icon-doc"></i> <span class="d-inline-block">Content</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="list-unstyled" data-link="layouts" id="layouts">
+                
+                <ul class="list-unstyled" data-link="dataMaster" id="dataMaster">
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
                             aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
-                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Authorization</span>
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Siswa</span>
                         </a>
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
                                     <a href="Pages.Auth.Login.html">
                                         <i class="simple-icon-user-following"></i> <span
-                                            class="d-inline-block">Login</span>
+                                            class="d-inline-block">Tambah Siswa</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Pages.Auth.Register.html">
                                         <i class="simple-icon-user-follow"></i> <span
-                                            class="d-inline-block">Register</span>
+                                            class="d-inline-block">Daftar Siswa</span>
                                     </a>
                                 </li>
                                 <li>

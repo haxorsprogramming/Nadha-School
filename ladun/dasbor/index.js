@@ -38,6 +38,9 @@ const divMenu = {
 }
 Vue.createApp(divMenu).mount('#divMenu');
 
+// INISIALISASI 
+renderPage('dasbor/beranda');
+
 // FUNCTION 
 function renderPage(halaman)
 {

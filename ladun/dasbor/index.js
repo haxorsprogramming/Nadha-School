@@ -18,7 +18,7 @@ const divTitleMap = {
     }
   },
   methods : {
-
+    
   }
 }
 Vue.createApp(divTitleMap).mount('#divTitleMap');
@@ -32,8 +32,27 @@ const divMenu = {
   methods: {
     dashAtc : function()
     {
-      console.log("Haloo");
+      renderPage('dasbor/beranda');
     }
   }
 }
 Vue.createApp(divMenu).mount('#divMenu');
+
+// FUNCTION 
+function renderPage(halaman)
+{
+  progStart();
+  $('#divUtama').html("Memuat form ..");
+  $('#divUtama').load(server + halaman);
+  progStop();
+}
+
+function progStart()
+{
+  NProgress.start();
+}
+
+function progStop()
+{
+  NProgress.done();
+}

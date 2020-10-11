@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/vendor/perfect-scrollbar.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
+    <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
+    <link rel='stylesheet' href='<?=STYLEBASE; ?>/dasbor/nProg/nprogress.css'/>
 </head>
 
 <body id="app-container" class="menu-default show-spinner">
@@ -138,6 +140,9 @@
                         </ol>
                     </nav>
                     <div class="separator mb-5"></div>
+                    <div id='divUtama'>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,6 +181,9 @@
     <script src="annisa/js/vendor/mousetrap.min.js"></script>
     <script src="annisa/js/dore.script.js"></script>
     <script src="annisa/js/scripts.js"></script>
+    <script>
+        const server = "<?=HOMEBASE;?>"; 
+    </script>
     <script src="<?=STYLEBASE; ?>/dasbor/index.js"></script>
 </body>
 

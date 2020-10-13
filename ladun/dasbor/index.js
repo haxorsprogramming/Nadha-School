@@ -2,7 +2,8 @@
 const divFooter = {
   data(){
     return {
-      developer : 'Haxorsprogrammingclub'
+      developer : 'Haxorsprogrammingclub',
+      tahun : '2020'
     }
   },
   methods : {

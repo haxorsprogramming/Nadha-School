@@ -2,6 +2,9 @@
 
 class dasbor extends Route{
     
+    private $sn = 'dasborData';
+    private $su = 'utilityData';
+
     public function index()
     {   
         $this -> bind('dasbor/index');

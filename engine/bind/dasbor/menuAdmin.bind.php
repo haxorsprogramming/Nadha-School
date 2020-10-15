@@ -3,7 +3,7 @@
             <div class="">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="JavaScript:void(0)" @click="dashAtc">
+                        <a href="JavaScript:void(0)" @click="dashboardAtc">
                         <i class="material-icons md-48">dashboard</i>
                             <span>Dashboards</span>
                         </a>
@@ -54,32 +54,26 @@
                         <div id="collapseAuthorization" class="collapse show">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
-                                    <a href="#!">
-                                    <i class="material-icons md-48">person_add</i> 
-                                        <span class="d-inline-block">Tambah Siswa</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Pages.Auth.Register.html">
+                                    <a href="#!" @click="daftarSiswaAtc">
                                     <i class="material-icons md-48">person</i>  <span
                                             class="d-inline-block">Daftar Siswa</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="Pages.Auth.ForgotPassword.html">
-                                        <i class="simple-icon-user-unfollow"></i> <span class="d-inline-block">Forgot
-                                            Password</span>
+                                    <a href="#!">
+                                    <i class="material-icons md-48">person_add</i> 
+                                        <span class="d-inline-block">Tambah Siswa</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true"
-                            aria-controls="collapseProduct" class="rotate-arrow-icon opacity-50">
+                        <a href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="false"
+                            aria-controls="collapseProduct" class="rotate-arrow-icon opacity-50 collapsed">
                             <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Guru & Pegawai</span>
                         </a>
-                        <div id="collapseProduct" class="collapse show">
+                        <div id="collapseProduct" class="collapse">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
                                     <a href="Pages.Product.List.html">

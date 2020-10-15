@@ -1,50 +1,43 @@
 // VUE OBJECT 
-const divFooter = {
-  data(){
-    return {
-      developer : 'Haxorsprogrammingclub',
-      tahun : '2020'
-    }
+var divFooter = new Vue({
+  el : '#divFooter',
+  data : {
+    developer : 'Haxorsprogramming'
+  }
+});
+
+
+var divTitleMap = new Vue({
+  el : '#divTitleMap',
+  data : {
+    utama : '-'
+  }
+});
+
+var divMenu = new Vue({
+  el : '#divMenu',
+  data : {
+
   },
   methods : {
-      
-  }
-}
-Vue.createApp(divFooter).mount('#divFooter');
-
-const divTitleMap = {
-  data() {
-    return {
-      utama : 'Dashboard'
-    }
-  },
-  methods : {
-    
-  }
-}
-Vue.createApp(divTitleMap).mount('#divTitleMap');
-
-const divMenu = {
-  data() {
-    return {
-
-    }
-  },
-  methods: {
-    dashAtc : function()
+    dashboardAtc : function()
     {
-      renderPage('dasbor/beranda');
+      renderPage('dasbor/beranda', 'Dashboard');
+    },
+    daftarSiswaAtc : function()
+    {
+      renderPage('dasbor/beranda', 'Daftar Siswa');
     }
   }
-}
-Vue.createApp(divMenu).mount('#divMenu');
+});
 
 // INISIALISASI 
-renderPage('dasbor/beranda');
+renderPage('dasbor/beranda', 'Dashboard');
 
 // FUNCTION 
-function renderPage(halaman)
+function renderPage(halaman, titleMap)
 {
+  divTitleMap.utama = titleMap;
   progStart();
   $('#divUtama').html("Memuat form ..");
   $('#divUtama').load(server + halaman);

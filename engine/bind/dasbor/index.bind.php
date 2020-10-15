@@ -131,12 +131,8 @@
                     <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
                         <ol class="breadcrumb pt-0">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="#!">Nadha School - Aplikasi Manajemen Sekolah</a>
                             </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Library</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
                         </ol>
                     </nav>
                     <div class="separator mb-5"></div>
@@ -158,13 +154,13 @@
                     <div class="col-sm-6 d-none d-sm-block">
                         <ul class="breadcrumb pt-0 pr-0 float-right">
                             <li class="breadcrumb-item mb-0">
-                                <a href="#" class="btn-link">Review</a>
+                                <a href="#" class="btn-link">Server Status</a>
                             </li>
                             <li class="breadcrumb-item mb-0">
-                                <a href="#" class="btn-link">Purchase</a>
+                                <a href="#" class="btn-link">Haxorsprogramming</a>
                             </li>
                             <li class="breadcrumb-item mb-0">
-                                <a href="#" class="btn-link">Docs</a>
+                                <a href="#" class="btn-link">Update</a>
                             </li>
                         </ul>
                     </div>
@@ -175,7 +171,7 @@
 
 
     <script src="annisa/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="annisa/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="annisa/js/vendor/perfect-scrollbar.min.js"></script>
     <script src="annisa/js/vendor/mousetrap.min.js"></script>

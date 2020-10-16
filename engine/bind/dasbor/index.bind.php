@@ -174,6 +174,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="annisa/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="annisa/js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="annisa/js/vendor/datatables.min.js"></script>
     <script src="annisa/js/vendor/mousetrap.min.js"></script>
     <script src="annisa/js/dore.script.js"></script>
     <script src="annisa/js/scripts.js"></script>

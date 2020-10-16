@@ -12,7 +12,7 @@ class siswa extends Route{
 
     public function daftarSiswa()
     {
-        echo "Daftar siswa";
+        $this -> bind('dasbor/siswa/daftarSiswa');
     }
  
 }

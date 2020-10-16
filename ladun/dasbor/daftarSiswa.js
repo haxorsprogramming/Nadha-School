@@ -1,0 +1,3 @@
+$('#tblDaftarSiswa').dataTable({
+    "searching": false
+});

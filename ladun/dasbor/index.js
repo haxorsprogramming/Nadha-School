@@ -10,7 +10,7 @@ var divFooter = new Vue({
 var divTitleMap = new Vue({
   el : '#divTitleMap',
   data : {
-    utama : '-'
+    utama : ''
   }
 });
 

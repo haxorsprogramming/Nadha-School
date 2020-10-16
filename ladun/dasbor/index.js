@@ -26,7 +26,7 @@ var divMenu = new Vue({
     },
     daftarSiswaAtc : function()
     {
-      renderPage('dasbor/beranda', 'Daftar Siswa');
+      renderPage('siswa/daftarSiswa', 'Daftar Siswa');
     }
   }
 });

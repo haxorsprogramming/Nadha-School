@@ -47,11 +47,11 @@
                 
                 <ul class="list-unstyled" data-link="dataMaster" id="dataMaster">
                     <li>
-                        <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
-                            aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                        <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="false"
+                            aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50 collapsed">
                             <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Siswa</span>
                         </a>
-                        <div id="collapseAuthorization" class="collapse show">
+                        <div id="collapseAuthorization" class="collapse">
                             <ul class="list-unstyled inner-level-menu">
                                 <li>
                                     <a href="#!" @click="daftarSiswaAtc">

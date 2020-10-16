@@ -28,9 +28,4 @@ class dasbor extends Route{
         echo $statusFile;
     }
 
-    public function sepuluhTambah2Ribu()
-    {
-
-    }
-
 }

@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card" id="divDaftarSiswa">
     <div class="card-body">
     <div style="margin-bottom:20px;">
-        <a href="#!" class="btn btn-primary"> Tambah Siswa</a>
+        <a href="#!" class="btn btn-primary" @click="tambahAtc"> {{capButtonTambah}}</a>
     </div>
     <table id="tblDaftarSiswa">
         <thead>

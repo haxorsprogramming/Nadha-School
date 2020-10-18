@@ -72,6 +72,31 @@
                             </ul>
                         </div>
                     </li>
+
+                    <!-- ROMBEL  -->
+                    <li>
+                        <a href="#!" data-toggle="collapse" data-target="#tahunAjaranCollapse" aria-expanded="false"
+                            aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50 collapsed">
+                            <i class="simple-icon-arrow-down"></i> <span class="d-inline-block">Tahun Ajaran</span>
+                        </a>
+                        <div id="tahunAjaranCollapse" class="collapse">
+                            <ul class="list-unstyled inner-level-menu">
+                                <li>
+                                    <a href="#!" @click="daftarSiswaAtc">
+                                    <i class="material-icons md-48">person</i>  <span
+                                            class="d-inline-block">Daftar Rombel</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                    <i class="material-icons md-48">person_add</i> 
+                                        <span class="d-inline-block">Tambah Rombel</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
                 </ul>
                 <!-- AKTIVITAS  -->
                 <ul class="list-unstyled" data-link="aktivitas" id="aktivitas">

@@ -1,7 +1,7 @@
 <div class="card" id="divDaftarSiswa">
     <div class="card-body">
         <div style="margin-bottom:20px;">
-            <a href="#!" class="btn btn-primary" @click="tambahAtc"> {{capButtonTambah}}</a>
+            <a href="#!" class="btn btn-primary" @click="tambahAtc"> <i class="glyph-icon simple-icon-user"></i> {{capButtonTambah}}</a>
         </div>
         <table id="tblDaftarSiswa" class="table table-bordered table-hover">
             <thead>
@@ -21,7 +21,7 @@
                     <td>{{dt.nama}}</td>
                     <td>{{dt.rombel}}</td>
                     <td>{{dt.status}}</td>
-                    <td><a href="#!" class="btn btn-success"><i class="glyph-icon simple-icon-user"></i> <b>Detail</b></a></td>
+                    <td><a href="#!" class="btn btn-success"><i class="glyph-icon iconsminds-add"></i> <b>Detail</b></a></td>
                 </tr>
             </tbody>
         </table>

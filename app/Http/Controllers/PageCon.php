@@ -15,7 +15,10 @@ class PageCon extends Controller
 
     public function login()
     {
-        return view('login.login');
+        $pic = "12";
+        $pic = substr(str_shuffle($pic), 0, 1);
+
+        return view('login.login', ['pic' => $pic]);
     }
 
     public function prosesLogin(Request $request)

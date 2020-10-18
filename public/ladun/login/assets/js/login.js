@@ -1,55 +1,27 @@
-// ROUTE 
-const rToLogin = server + "login/prosesLogin";
-const rToDasbor = server + "dasbor";
-
 // VUE OBJECT 
 const divForm = {
-    data() {
-      return {
-        developer : 'Haxorsprogrammingclub'
-      }
-    },
-    methods : {
-        loginAtc : function()
-        {
-            prosesLogin();
-        }
+  data() {
+    return {
+      developer : 'Haxorsprogrammingclub'
     }
+  },
+  methods : {
+      loginAtc : function()
+      {
+          prosesLogin();
+      }
   }
+}
 Vue.createApp(divForm).mount('#divForm');
 
 // INISIALISASI 
-$(document).ready(function(){
-    setTimeout(function(){
-        $('#txtUsername').focus();
-    }, 500);
-});
+setTimeout(function (){
+  document.querySelector('#txtUsername').focus();
+}, 200);
 
-// FUNCTION
+// FUNCTION 
 function prosesLogin()
 {
-    let username = document.querySelector('#txtUsername').value;
-    let password = document.querySelector('#txtPassword').value;
-    if(username === '' || password === ''){
-        pesanUmumApp('warning', 'Isi field!!', 'Isi username & password!!');
-    }else{
-        let dataSend = {'username':username, 'password':password}
-        $.post(rToLogin, dataSend, function(data){
-            let obj = JSON.parse(data);
-            if(obj.status_login === 'sukses'){
-              window.location.assign(rToDasbor);
-            }else{
-              pesanUmumApp('error', 'Kesalahan autentifikasi', 'Login gagal, username & password tidak cocok!!');
-            }
-        });
-    }
+  let dataSend = {'nama':'Aditia'}
+  console.log(dataSend);
 }
-
-function pesanUmumApp(icon, title, text)
-{
-  Swal.fire({
-    icon : icon,
-    title : title,
-    text : text
-  });
-} 

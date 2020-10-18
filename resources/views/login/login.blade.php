@@ -26,7 +26,7 @@
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
-                <div class="bg-image" style='background-image: url("{{ asset('ladun/login/assets/media/photos/cover_1.jpg') }}");'>
+                <div class="bg-image" style='background-image: url("{{ asset('ladun/login/assets/media/photos/cover_'.$pic.'.jpg') }}");'>
                     <div class="row mx-0 bg-black-op">
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
@@ -106,7 +106,7 @@
             const server = "{{ url('') }}";
         </script>
 
-    <script src="{{ asset('ladun/login/js/login.js') }}"></script>
+    <script src="{{ asset('ladun/login/assets/js/login.js') }}"></script>
 </body>
 
 </html>

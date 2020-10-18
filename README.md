@@ -14,7 +14,7 @@
 <br/><br/>
 <b>Teknologi yang digunakan</b>
 <li>Front End : HTML, Bootstrap</li>
-<li>Backend : Uinsu Web Framework</li>
+<li>Backend : Laravel 8</li>
 <li>Javascript : Vue JS, Native Javascript, & Jquery</li>
 <li>Bootstrap Theme By [Stisla](https://demo.getstisla.com/index.html)</li>
 <li>Cloud Serverless : Firebase</li>

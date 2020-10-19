@@ -22,4 +22,4 @@ Route::post('/login/prosesLogin', 'loginCon@prosesLogin');
 Route::get('/dashboard', 'mainCon@dashboard');
 
 // LOGOUT 
-Route::post('/logout', 'PageCon@logout');
+Route::get('/logout', 'PageCon@logout');

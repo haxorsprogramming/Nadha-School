@@ -8,10 +8,10 @@ class mainCon extends Controller
 {
     public function dashboard(Request $request)
     {
-        if ($request->session()->has('username')) {
-            echo "Sudah login";
+        if($request->session()->has('username')) {
+            return view('home.dashboard');
         }else{
-            echo "Belum login";
+            return redirect('login');
         }
     }
 }

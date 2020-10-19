@@ -21,15 +21,10 @@ class PageCon extends Controller
         return view('login.login', ['pic' => $pic]);
     }
 
-    public function dashboard()
+    public function logOut(Request $request)
     {
-        return view('home.dashboard');
-    }
-
-    public function logout(Request $request)
-    {
-        session_destroy();
-        return redirect()->route('login');
+        $request->session()->flush();
+        return redirect('login');
     }
     
 }

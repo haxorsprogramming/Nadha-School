@@ -12,11 +12,12 @@
         <meta name="robots" content="noindex, nofollow">
 
         <!-- Stylesheets -->
+
         <!-- Fonts and Codebase framework -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
         <link rel="stylesheet" id="css-main" href="{{ asset('ladun/login/assets/css/codebase.min.css') }}">
-        <!-- <link rel="stylesheet" id="css-main" href="/login/assets/css/codebase.min.css"> -->
-        
+        <link rel="stylesheet" id="css-main" href="{{ asset('ladun/login/assets/css/login.css') }}">
+
 </head>
 
 <body>
@@ -42,8 +43,8 @@
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
-                                    <div style="text-align: center;">
-                                        <img src="{{ asset('ladun/default/img/nadha_school.jpg') }}" style="width: 200px;">
+                                    <div class="teksTengah">
+                                        <img src="{{ asset('ladun/default/img/nadha_school.jpg') }}" class="wd200">
                                     </div>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to NadhaSchool</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>

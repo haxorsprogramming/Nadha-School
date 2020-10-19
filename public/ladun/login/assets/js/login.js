@@ -33,6 +33,19 @@ function prosesLogin() {
     let password = document.querySelector('#txtPassword').value;
     let dataSend = {'username':username, 'password':password}
     $.post(rToLoginProses, dataSend, function(data){
-      console.log(data);
+      if(data.status === 'success'){
+        window.location.assign('/dashboard');
+      }else{
+        pesanUmumApp('error', 'Kesalahan autentifikasi', 'Login gagal!! periksa kembali username & password ..');
+      }
     });
+}
+
+function pesanUmumApp(icon, title, text)
+{
+  Swal.fire({
+    icon : icon,
+    title : title,
+    text : text
+  });
 }

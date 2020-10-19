@@ -25,5 +25,11 @@ class PageCon extends Controller
     {
         return view('home.dashboard');
     }
+
+    public function logout(Request $request)
+    {
+        session_destroy();
+        return redirect()->route('login');
+    }
     
 }

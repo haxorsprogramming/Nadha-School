@@ -20,3 +20,6 @@ Route::post('/login/prosesLogin', 'loginCon@prosesLogin');
 
 // DASHBOARD 
 Route::get('/dashboard', 'mainCon@dashboard');
+
+// LOGOUT 
+Route::post('/logout', 'PageCon@logout');

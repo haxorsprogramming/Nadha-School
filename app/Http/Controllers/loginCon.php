@@ -18,12 +18,12 @@ class loginCon extends Controller
 
         if($cju > 0){
             $ud = UserMdl::where('username', $userForm) -> first();
-            $user = $ud -> username;
             $pass = $ud -> password;
             $cp = password_verify($passForm, $pass);
     
             if($cp === true){
                 $st = 'success';
+                session(['username' => $userForm]);
             }else{
                 $st = 'error';
             }

@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// HALAMAN UTAMA 
 Route::get('/', 'PageCon@home');
-
+// HALAMAN LOGIN 
 Route::get('/login', 'PageCon@login');
-Route::post('/prosesLogin', 'PageCon@prosesLogin');
+Route::post('/login/prosesLogin', 'loginCon@prosesLogin');
 
-Route::get('/dashboard', 'PageCon@dashboard');
+// DASHBOARD 
+Route::get('/dashboard', 'mainCon@dashboard');

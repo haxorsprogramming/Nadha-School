@@ -103,7 +103,7 @@
 
         <!-- Custom JS Code  -->
         <script>
-            const server = "{{ url('') }}";
+            const server = "{{ url('') }}/";
         </script>
 
     <script src="{{ asset('ladun/login/assets/js/login.js') }}"></script>

@@ -16,7 +16,7 @@ class PageCon extends Controller
 
     public function login()
     {
-        $arrPic = ['1', '2'];
+        $arrPic = ['1','2'];
         $pic = Arr::random($arrPic);
 
         return view('login.login', ['pic' => $pic]);

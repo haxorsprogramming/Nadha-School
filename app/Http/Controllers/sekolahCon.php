@@ -19,8 +19,11 @@ class sekolahCon extends Controller
     public function detaildatasekolah(Request $request)
     {
         $kodeData = $request -> id;
+
         $dataDetail = SekolahMdl::where('kd_data',$kodeData) -> first();
+        
         $dr = [ 'data' =>  $dataDetail ];
+        
         return \Response::json($dr);
     }
 }

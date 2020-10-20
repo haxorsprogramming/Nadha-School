@@ -15,12 +15,16 @@
                     <td>{{ $sekolah -> caption}}</td>
                     <td>{{ $sekolah -> value}}</td>
                     <td>
-                        <a href="#!" class="btn btn-primary" @click="editAtc('{{ $sekolah -> kd_data }}')"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#!" class="btn btn-primary btnSide" @click="editAtc('{{ $sekolah -> kd_data }}')"><i class="fas fa-edit"></i> Edit</a>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+</div>
+
+<div class="row" id="divEditDataSekolah">
+
 </div>
 
 <script src="{{ asset('ladun/dasbor/sekolah/datasekolah.js') }}"></script>

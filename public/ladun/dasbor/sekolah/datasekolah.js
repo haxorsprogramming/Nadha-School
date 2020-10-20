@@ -11,11 +11,15 @@ var divDataSekolah = new Vue({
         editAtc : function(id)
         {
             let dataSend = {'id':id}
+            $('.btnSide').addClass('disabled');
+            progStart();
             $.post(rToGetDetailSekolah, dataSend, function(data){
                 console.log(data);
+                progStop();
             });
         }
     }
 });
 // INISIALISASI 
 $('#tblDataSekolah').dataTable();
+$('#divEditDataSekolah').hide();

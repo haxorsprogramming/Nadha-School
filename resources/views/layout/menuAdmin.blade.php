@@ -4,7 +4,7 @@
     <li class="dropdown">
         <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-newspaper"></i> <span>Data Master</span></a>
         <ul class="dropdown-menu">
-            <li><a class="nav-link" href="#!" @click=''>Sekolah</a></li>
+            <li><a class="nav-link" href="#!" @click='dataSekolahAtc'>Sekolah</a></li>
             <li><a class="nav-link" href="#!" @click=''>Siswa</a></li>
             <li><a class="nav-link" href="#!" @click=''>Guru & Pegawai</a></li>
             <li><a class="nav-link" href="#!" @click=''>Rombel</a></li>

@@ -1,5 +1,7 @@
 // ROUTE 
 const beranda = 'dashboard/beranda';
+const datasekolah = 'sekolah/datasekolah';
+
 const rToLogout = server + 'logout';
 
 // VUE OBJECT 
@@ -17,6 +19,10 @@ var app = new Vue({
         berandaAtc : function ()
         {
             renderMenu(beranda);
+        },
+        dataSekolahAtc : function ()
+        {
+          renderMenu(datasekolah);
         },
         logoutAtc : function ()
         {

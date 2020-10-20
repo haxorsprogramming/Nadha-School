@@ -1,15 +1,22 @@
 // ROUTE 
+const beranda = 'dashboard/beranda';
 const rToLogout = server + 'logout';
+
 // VUE OBJECT 
 var app = new Vue({
     el : '#app',
     data : {
-        activeForm : 'Dashboard'
+        activeForm : '',
+        developer : 'Haxorsprogrammingclub'
     },
     methods : {
         dashboardAtc : function()
         {
-            
+            renderMenu(beranda, 'Dashboard');
+        },
+        berandaAtc : function ()
+        {
+            renderMenu(beranda);
         },
         logoutAtc : function ()
         {
@@ -19,8 +26,22 @@ var app = new Vue({
 });
 
 // INISIALISASI 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+renderMenu(beranda, 'Dashboard');
 
 // FUNCTION 
+function renderMenu(halaman, titleForm){
+    progStart();
+    $('#divUtama').html("Memuat form ..");
+    app.activeForm = titleForm;
+    $('#divUtama').load(server + halaman);
+    progStop();
+}
+
 function pesanUmumApp(icon, title, text)
 {
   Swal.fire({

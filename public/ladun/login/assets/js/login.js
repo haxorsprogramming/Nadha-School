@@ -1,6 +1,6 @@
 // ROUTE 
 const rToLoginProses = server + 'login/prosesLogin';
-
+const rToDashboard = server + 'dashboard';
 // VUE OBJECT
 const divForm = {
     data() {
@@ -34,7 +34,7 @@ function prosesLogin() {
     let dataSend = {'username':username, 'password':password}
     $.post(rToLoginProses, dataSend, function(data){
       if(data.status === 'success'){
-        window.location.assign('/dashboard');
+        window.location.assign(rToDashboard);
       }else{
         pesanUmumApp('error', 'Kesalahan autentifikasi', 'Login gagal!! periksa kembali username & password ..');
       }

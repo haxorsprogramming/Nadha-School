@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title></title>
+    <title>Nadha School - Homepage</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- General CSS Files -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/iziToast.min.css">
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/jqvmap.min.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/summernote-bs4.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/wl.theme.default.min.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/datatables.min.css">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/jqvmap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/summernote-bs4.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/datatables.min.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/style.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/nadharesto.css">
-    <link rel="stylesheet" href="ladun/dasbor/stisla/css/components.css">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/nadharesto.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/nProg/nprogress.css') }}" />
+
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
-    <link rel='stylesheet' href='ladun/dasbor/nProg/nprogress.css' />
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    
 
 </head>
 
@@ -67,7 +67,7 @@
                             <div class="d-sm-none d-lg-inline-block">Hi, </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="dasbor/logOut" id='btnLogOutTop' class="dropdown-item has-icon text-danger">
+                            <a href="{{ url('/logout') }}" id="" class="dropdown-item has-icon text-danger">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
                         </div>
@@ -78,7 +78,7 @@
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
                         <a href="#!" style='height:30px;'>
-                            <img src='ladun/login/images/nadha_resto.png' style="width: 100px;">
+                            <img src="{{ asset('ladun/default/img/nadha_school.jpg') }}" style="width: 100px;">
                         </a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
@@ -92,7 +92,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1 id='capUtama'> Nadha Resto - </h1>
+                        <h1 id="capUtama"> Nadha Resto - </h1>
 
                     </div>
 
@@ -103,7 +103,7 @@
 
             </div>
         </div>
-        <footer class="main-footer" id='divFooter'>Copyright &copy; - </footer>
+        <footer class="main-footer" id="divFooter">Copyright &copy; - </footer>
         <!-- General JS Scripts -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

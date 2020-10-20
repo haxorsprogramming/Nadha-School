@@ -12,7 +12,15 @@ class sekolahCon extends Controller
         $dataSekolah = SekolahMdl::all();
 
         $data = [ 'dataSekolah' =>  $dataSekolah  ];
-        
+
         return view('home.sekolah.datasekolah', $data);
+    }
+
+    public function detaildatasekolah(Request $request)
+    {
+        $kodeData = $request -> id;
+        $dataDetail = SekolahMdl::where('kd_data',$kodeData) -> first();
+        $dr = [ 'data' =>  $dataDetail ];
+        return \Response::json($dr);
     }
 }

@@ -1,3 +1,6 @@
+// ROUTE 
+var rToGetDetailSekolah = server + 'sekolah/datasekolah/detail';
+
 // VUE OBJECT 
 var divDataSekolah = new Vue({
     el : '#divDataSekolah',
@@ -7,7 +10,10 @@ var divDataSekolah = new Vue({
     methods : {
         editAtc : function(id)
         {
-            console.log(id);
+            let dataSend = {'id':id}
+            $.post(rToGetDetailSekolah, dataSend, function(data){
+                console.log(data);
+            });
         }
     }
 });

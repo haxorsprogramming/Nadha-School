@@ -7,22 +7,14 @@ use Illuminate\Http\Request;
 class mainCon extends Controller
 {
 
-    public function dashboard(Request $request)
+    public function dashboard()
     {
-        if($request->session()->has('username')) {
-            return view('home.dashboard');
-        }else{
-            return redirect('login');
-        }
+        return view('home.dashboard');
     }
 
     public function beranda(Request $request)
     {
-        if($request->session()->has('username')) {
-            return view('home.beranda');
-        }else{
-            return redirect('login');
-        }
+        return view('home.beranda');
     }
 
 }

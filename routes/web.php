@@ -20,12 +20,14 @@ Route::get('/', 'PageCon@home');
 Route::get('/login', 'PageCon@login');
 Route::post('/login/prosesLogin', 'loginCon@prosesLogin');
 
-// DASHBOARD 
-Route::get('/dashboard', 'mainCon@dashboard');
-Route::get('/dashboard/beranda', 'mainCon@beranda');
-
-// DATA MASTER 
-Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
+Route::group(['middleware' => 'CekUser'], function () {
+    // DASHBOARD 
+    Route::get('/dashboard', 'mainCon@dashboard');
+    Route::get('/dashboard/beranda', 'mainCon@beranda');
+    // DATA MASTER (SEKOLAh) 
+    Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
+    Route::post('/sekolah/datasekolah/detail', 'sekolahCon@detaildatasekolah');
+});
 
 // LOGOUT 
 Route::get('/logout', 'PageCon@logout');

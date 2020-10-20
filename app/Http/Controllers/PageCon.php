@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\UserMdl;
- 
+use Illuminate\Support\Arr;
+
 class PageCon extends Controller
 {
     public function home()
@@ -15,8 +16,8 @@ class PageCon extends Controller
 
     public function login()
     {
-        $pic = "12";
-        $pic = substr(str_shuffle($pic), 0, 1);
+        $arrPic = ['1', '2'];
+        $pic = Arr::random($arrPic);
 
         return view('login.login', ['pic' => $pic]);
     }
@@ -24,6 +25,7 @@ class PageCon extends Controller
     public function logOut(Request $request)
     {
         $request->session()->flush();
+
         return redirect('login');
     }
     

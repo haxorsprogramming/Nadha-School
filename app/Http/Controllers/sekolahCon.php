@@ -12,6 +12,7 @@ class sekolahCon extends Controller
         $dataSekolah = SekolahMdl::all();
 
         $data = [ 'dataSekolah' =>  $dataSekolah  ];
+        
         return view('home.sekolah.datasekolah', $data);
     }
 }

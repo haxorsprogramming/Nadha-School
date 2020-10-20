@@ -22,7 +22,7 @@ var app = new Vue({
         },
         dataSekolahAtc : function ()
         {
-          renderMenu(datasekolah);
+            renderMenu(datasekolah, 'Data Sekolah');
         },
         logoutAtc : function ()
         {

@@ -24,5 +24,8 @@ Route::post('/login/prosesLogin', 'loginCon@prosesLogin');
 Route::get('/dashboard', 'mainCon@dashboard');
 Route::get('/dashboard/beranda', 'mainCon@beranda');
 
+// DATA MASTER 
+Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
+
 // LOGOUT 
 Route::get('/logout', 'PageCon@logout');

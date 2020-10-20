@@ -107,7 +107,8 @@
             const server = "{{ url('') }}/";
         </script>
 
-    <script src="{{ asset('ladun/login/assets/js/login.js') }}"></script>
+        <script src="{{ asset('ladun/login/assets/js/login.js') }}"></script>
+
 </body>
 
 </html>

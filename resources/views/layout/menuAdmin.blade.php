@@ -12,18 +12,11 @@
         </ul>
     </li>
     <li class="dropdown">
-        <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-export"></i> <span>Pengeluaran</span></a>
+        <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chart-line"></i> <span>Manajemen Aktivitas</span></a>
         <ul class="dropdown-menu">
-            <li><a class="nav-link" href="#!" @click=''>Pembelian Bahan Baku</a></li>
-            <li><a class="nav-link" href="#!" @click=''>Pengeluaran Resto</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chart-line"></i> <span>Laporan & Statistik</span></a>
-        <ul class="dropdown-menu">
-            <li><a class="nav-link" href="#!" @click=''>Arus Kas</a></li>
-            <li><a class="nav-link" href="#!" @click=''>Laporan Transaksi</a></li>
-            <li><a class="nav-link" href="#!" @click=''>Statistik Resto</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Jadwal Pelajaran</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Agenda Sekolah</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Absensi</a></li>
         </ul>
     </li>
     <li class="dropdown">

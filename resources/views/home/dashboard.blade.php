@@ -26,8 +26,6 @@
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-    
-
 </head>
 
 <body style="font-family: 'Nunito Sans';">
@@ -65,7 +63,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="ladun/dasbor/img/avatar-1.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, </div>
+                            <div class="d-sm-none d-lg-inline-block">Hi, <?=session('username'); ?></div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="{{ url('/logout') }}" id="" class="dropdown-item has-icon text-danger">

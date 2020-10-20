@@ -36,9 +36,7 @@
                 <form class="form-inline mr-auto">
                     <ul class="navbar-nav mr-3">
                         <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-
                     </ul>
-
                 </form>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown dropdown-list-toggle">
@@ -75,8 +73,8 @@
             </nav>
             <div class="main-sidebar" id='divMenu'>
                 <aside id="sidebar-wrapper">
-                    <div class="sidebar-brand">
-                        <a href="#!" style='height:30px;'>
+                    <div class="sidebar-brand" style="margin-top:12px;">
+                        <a href="#!" style="height:30px;">
                             <img src="{{ asset('ladun/default/img/nadha_school.jpg') }}" style="width: 100px;">
                         </a>
                     </div>
@@ -103,7 +101,7 @@
             </div>
         </div>
     </div>
-        <footer class="main-footer" id="divFooter">Copyright &copy; - </footer>
+        <footer class="main-footer" id="divFooter">Copyright &copy; - Haxorsprogrammingclub</footer>
         <!-- General JS Scripts -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

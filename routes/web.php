@@ -27,6 +27,7 @@ Route::group(['middleware' => 'CekUser'], function () {
     // DATA MASTER (SEKOLAh) 
     Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
     Route::post('/sekolah/datasekolah/detail', 'sekolahCon@detaildatasekolah');
+    Route::post('/sekolah/datasekolah/update', 'sekolahCon@updatedatasekolah');
 });
 
 // LOGOUT 

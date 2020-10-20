@@ -1,2 +1,0 @@
-// ROUTE 
-var routeToGetBantuan = '';

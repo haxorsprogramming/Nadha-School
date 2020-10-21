@@ -32,7 +32,9 @@ var divEditDataSekolah = new Vue({
     methods : {
         updateAtc : function()
         {
-            $.post(rToUpdateDataSekolah, function(data){
+            let captionData = document.querySelector('#txtCaptionData').value;
+            let dataSend = {'captionData':captionData}
+            $.post(rToUpdateDataSekolah, dataSend, function(data){
                 console.log(data);
             });
         }

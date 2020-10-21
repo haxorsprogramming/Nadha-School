@@ -29,7 +29,7 @@
             <div class="card-header">Edit Data Sekolah</div>
             <div class="card-body">
                 <div class="form-group">
-                    <label>Caption Data</label>
+                    <label>Nama Data</label>
                     <input type="text" class="form-control" id="txtCaptionData">
                 </div>
                 <a href="#!" class="btn btn-primary btn-icon icon-left" @click="updateAtc"><i class="fas fa-file-export"></i> Update</a>

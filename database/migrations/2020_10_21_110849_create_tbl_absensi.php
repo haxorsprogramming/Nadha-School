@@ -14,8 +14,15 @@ class CreateTblAbsensi extends Migration
     public function up()
     {
         Schema::create('tbl_absensi', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table -> id();
+            $table -> char('token', 8);
+            $table -> datetime('kd_guru_validator', 0);
+            $table -> datetime('kd_siswa_validator', 0);
+            $table -> integer('hadir');
+            $table -> integer('izin');
+            $table -> integer('tanpa_keterangan');
+            $table -> integer('sakit');
+            $table -> integer('total');
         });
     }
 

@@ -33,7 +33,10 @@ class sekolahCon extends Controller
         // {'captionData':captionData, 'kdData':kdData}
         $namaData = $request -> captionData;
         $kdData = $request -> kdData;
-        DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(['caption' => $namaData]);
+        $nilaiData = $request -> nilaiData;
+        
+        DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(['caption' => $namaData, 'value' => $nilaiData]);
+
         $dr = [ 'respon' => 'sukses'];
 
         return \Response::json($dr);

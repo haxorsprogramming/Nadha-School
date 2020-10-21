@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class BuatKamar extends Migration
+class CreateTblRuangan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,10 @@ class BuatKamar extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_ruangan', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class BuatKamar extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_ruangan');
     }
 }

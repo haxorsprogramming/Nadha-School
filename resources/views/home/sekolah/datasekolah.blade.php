@@ -33,6 +33,10 @@
                     <input type="text" class="form-control" disabled id="txtCaptionData">
                 </div>
                 <div class="form-group">
+                    <label>Deks</label>
+                    <textarea class="form-control" disabled id="txtDeks"></textarea>
+                </div>
+                <div class="form-group">
                     <label>Nilai Data</label>
                     <input type="text" class="form-control" id="txtNilaiData">
                 </div>

@@ -35,11 +35,12 @@ var divEditDataSekolah = new Vue({
         updateAtc : function()
         {
             let captionData = document.querySelector('#txtCaptionData').value;
+            let nilaiData = document.querySelector('#txtNilaiData').value;
             let kdData = this.kdData;
-            let dataSend = {'captionData':captionData, 'kdData':kdData}
+            let dataSend = {'captionData':captionData, 'kdData':kdData, 'nilaiData':nilaiData}
             console.log(dataSend);
             $.post(rToUpdateDataSekolah, dataSend, function(data){
-                console.log(data);
+                app.dataSekolahAtc();
             });
         }
     }

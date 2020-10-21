@@ -16,11 +16,12 @@ var divDataSekolah = new Vue({
             divEditDataSekolah.kdData = id;
             $.post(rToGetDetailSekolah, dataSend, function(data){
                 progStop();
-                console.log(data);
                 $('#divEditDataSekolah').show();
                 $('#divDataSekolah').hide();
                 document.querySelector('#txtCaptionData').value = data.respon.caption;
                 document.querySelector('#txtNilaiData').value = data.respon.value;
+                document.querySelector('#txtDeks').value = data.respon.deks;
+                document.querySelector('#txtNilaiData').focus();
             });
         }
     }
@@ -38,10 +39,14 @@ var divEditDataSekolah = new Vue({
             let nilaiData = document.querySelector('#txtNilaiData').value;
             let kdData = this.kdData;
             let dataSend = {'captionData':captionData, 'kdData':kdData, 'nilaiData':nilaiData}
-            console.log(dataSend);
             $.post(rToUpdateDataSekolah, dataSend, function(data){
+                pesanUmumApp('success', 'Sukses update ...', 'Data berhasil di update ...');
                 app.dataSekolahAtc();
             });
+        },
+        kembaliAtc : function()
+        {
+            
         }
     }
 });

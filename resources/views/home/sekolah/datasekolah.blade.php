@@ -30,7 +30,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Nama Data</label>
-                    <input type="text" class="form-control" id="txtCaptionData">
+                    <input type="text" class="form-control" disabled id="txtCaptionData">
+                </div>
+                <div class="form-group">
+                    <label>Nilai Data</label>
+                    <input type="text" class="form-control" id="txtNilaiData">
                 </div>
                 <a href="#!" class="btn btn-primary btn-icon icon-left" @click="updateAtc"><i class="fas fa-file-export"></i> Update</a>
             </div>

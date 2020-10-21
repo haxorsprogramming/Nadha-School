@@ -13,12 +13,14 @@ var divDataSekolah = new Vue({
             let dataSend = {'id':id}
             $('.btnSide').addClass('disabled');
             progStart();
+            divEditDataSekolah.kdData = id;
             $.post(rToGetDetailSekolah, dataSend, function(data){
                 progStop();
                 console.log(data);
                 $('#divEditDataSekolah').show();
                 $('#divDataSekolah').hide();
                 document.querySelector('#txtCaptionData').value = data.respon.caption;
+                document.querySelector('#txtNilaiData').value = data.respon.value;
             });
         }
     }
@@ -27,13 +29,15 @@ var divDataSekolah = new Vue({
 var divEditDataSekolah = new Vue({
     el : '#divEditDataSekolah',
     data : {
-
+        kdData : ''
     },
     methods : {
         updateAtc : function()
         {
             let captionData = document.querySelector('#txtCaptionData').value;
-            let dataSend = {'captionData':captionData}
+            let kdData = this.kdData;
+            let dataSend = {'captionData':captionData, 'kdData':kdData}
+            console.log(dataSend);
             $.post(rToUpdateDataSekolah, dataSend, function(data){
                 console.log(data);
             });

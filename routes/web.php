@@ -24,7 +24,7 @@ Route::group(['middleware' => 'CekUser'], function () {
     // DASHBOARD 
     Route::get('/dashboard', 'mainCon@dashboard');
     Route::get('/dashboard/beranda', 'mainCon@beranda');
-    // DATA MASTER (SEKOLAh) 
+    // DATA MASTER (SEKOLAH) 
     Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
     Route::post('/sekolah/datasekolah/detail', 'sekolahCon@detaildatasekolah');
     Route::post('/sekolah/datasekolah/update', 'sekolahCon@updatedatasekolah');

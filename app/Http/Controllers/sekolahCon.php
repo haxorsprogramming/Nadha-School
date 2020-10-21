@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\SekolahMdl;
 
 class sekolahCon extends Controller
@@ -11,7 +12,7 @@ class sekolahCon extends Controller
     {
         $dataSekolah = SekolahMdl::all();
 
-        $data = [ 'dataSekolah' =>  $dataSekolah  ];
+        $data = [ 'dataSekolah' =>  $dataSekolah ];
 
         return view('home.sekolah.datasekolah', $data);
     }
@@ -29,6 +30,10 @@ class sekolahCon extends Controller
 
     public function updatedatasekolah(Request $request)
     {
+        // {'captionData':captionData, 'kdData':kdData}
+        $namaData = $request -> captionData;
+        $kdData = $request -> kdData;
+        DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(['caption' => $namaData]);
         $dr = [ 'respon' => 'sukses'];
 
         return \Response::json($dr);

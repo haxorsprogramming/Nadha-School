@@ -15,7 +15,7 @@ class CreateTblSemester extends Migration
     {
         Schema::create('tbl_semester', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+           
         });
     }
 

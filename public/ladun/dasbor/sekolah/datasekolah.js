@@ -39,14 +39,18 @@ var divEditDataSekolah = new Vue({
             let nilaiData = document.querySelector('#txtNilaiData').value;
             let kdData = this.kdData;
             let dataSend = {'captionData':captionData, 'kdData':kdData, 'nilaiData':nilaiData}
-            $.post(rToUpdateDataSekolah, dataSend, function(data){
-                pesanUmumApp('success', 'Sukses update ...', 'Data berhasil di update ...');
-                app.dataSekolahAtc();
-            });
+            if(nilaiData === ''){
+                pesanUmumApp('warning', 'Isi field!!', 'Harap isi semua field ... !!');
+            }else{
+                $.post(rToUpdateDataSekolah, dataSend, function(data){
+                    pesanUmumApp('success', 'Sukses update ...', 'Data berhasil di update ...');
+                    app.dataSekolahAtc();
+                });
+            }
         },
         kembaliAtc : function()
         {
-            
+            app.dataSekolahAtc();
         }
     }
 });

@@ -15,7 +15,7 @@ class CreateTblProsesBelajar extends Migration
     {
         Schema::create('tbl_proses_belajar', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

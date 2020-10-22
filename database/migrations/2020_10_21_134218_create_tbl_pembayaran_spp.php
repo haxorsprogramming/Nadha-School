@@ -15,7 +15,7 @@ class CreateTblPembayaranSpp extends Migration
     {
         Schema::create('tbl_pembayaran_spp', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

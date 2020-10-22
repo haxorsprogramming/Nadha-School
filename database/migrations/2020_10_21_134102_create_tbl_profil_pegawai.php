@@ -15,7 +15,7 @@ class CreateTblProfilPegawai extends Migration
     {
         Schema::create('tbl_profil_pegawai', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

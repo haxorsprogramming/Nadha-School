@@ -15,7 +15,7 @@ class CreateTblRombel extends Migration
     {
         Schema::create('tbl_rombel', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

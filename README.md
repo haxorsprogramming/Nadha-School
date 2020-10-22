@@ -16,7 +16,7 @@
 <li>Front End : HTML, Bootstrap</li>
 <li>Backend : Laravel 8</li>
 <li>Javascript : Vue JS, Native Javascript, & Jquery</li>
-<li>Bootstrap Theme By [Stisla](https://demo.getstisla.com/index.html)</li>
+<li>Bootstrap Theme By <a href="https://demo.getstisla.com/index.html">Stisla</a></li>
 <li>Cloud Serverless : Firebase</li>
 <br/>
 <b>Fitur</b>

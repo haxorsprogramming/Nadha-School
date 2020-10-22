@@ -15,7 +15,7 @@ class CreateTblPengeluaranSekolah extends Migration
     {
         Schema::create('tbl_pengeluaran_sekolah', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

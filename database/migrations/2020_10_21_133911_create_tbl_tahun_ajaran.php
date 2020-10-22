@@ -15,7 +15,7 @@ class CreateTblTahunAjaran extends Migration
     {
         Schema::create('tbl_tahun_ajaran', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            
         });
     }
 

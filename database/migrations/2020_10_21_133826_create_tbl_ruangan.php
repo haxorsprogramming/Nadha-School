@@ -15,7 +15,7 @@ class CreateTblRuangan extends Migration
     {
         Schema::create('tbl_ruangan', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+           
         });
     }
 

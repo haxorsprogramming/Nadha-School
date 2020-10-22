@@ -28,6 +28,8 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::get('/sekolah/datasekolah', 'sekolahCon@datasekolah');
     Route::post('/sekolah/datasekolah/detail', 'sekolahCon@detaildatasekolah');
     Route::post('/sekolah/datasekolah/update', 'sekolahCon@updatedatasekolah');
+    // DATA ROMBEL 
+    Route::get('/rombel/datarombel', 'rombelCon@datarombel');
 });
 
 // LOGOUT 

@@ -9,12 +9,12 @@ class mainCon extends Controller
 
     public function dashboard()
     {
-        return view('home.dashboard');
+        return view('dasbor.dashboard');
     }
 
     public function beranda(Request $request)
     {
-        return view('home.beranda');
+        return view('dasbor.beranda');
     }
 
 }

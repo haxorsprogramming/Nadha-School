@@ -9,18 +9,21 @@
             <li><a class="nav-link" href="#!" @click=''>Guru & Pegawai</a></li>
             <li><a class="nav-link" href="#!" @click=''>Rombel</a></li>
             <li><a class="nav-link" href="#!" @click=''>Semester / Tahun Ajaran</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Inventori Sekolah</a></li>
         </ul>
     </li>
     <li class="dropdown">
         <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chart-line"></i> <span>Manajemen Aktivitas</span></a>
         <ul class="dropdown-menu">
+            <li><a class="nav-link" href="#!" @click=''>Rombel Siswa</a></li>
             <li><a class="nav-link" href="#!" @click=''>Jadwal Pelajaran</a></li>
             <li><a class="nav-link" href="#!" @click=''>Agenda Sekolah</a></li>
             <li><a class="nav-link" href="#!" @click=''>Absensi</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Audit Inventori</a></li>
         </ul>
     </li>
     <li class="dropdown">
-        <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-cogs"></i> <span>Setting Resto</span></a>
+        <a href="#!" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-cogs"></i> <span>Setting Aplikasi</span></a>
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="#!" @click=''>Pengaturan Umum</a></li>
             <li><a class="nav-link" href="#!" @click=''>Manajemen User</a></li>

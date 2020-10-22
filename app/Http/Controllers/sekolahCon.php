@@ -14,7 +14,7 @@ class sekolahCon extends Controller
 
         $data = [ 'dataSekolah' =>  $dataSekolah ];
 
-        return view('home.sekolah.datasekolah', $data);
+        return view('dasbor.sekolah.datasekolah', $data);
     }
 
     public function detaildatasekolah(Request $request)
@@ -30,7 +30,6 @@ class sekolahCon extends Controller
 
     public function updatedatasekolah(Request $request)
     {
-        // {'captionData':captionData, 'kdData':kdData}
         $namaData = $request -> captionData;
         $kdData = $request -> kdData;
         $nilaiData = $request -> nilaiData;

@@ -8,6 +8,6 @@ class rombelCon extends Controller
 {
     public function datarombel()
     {
-        echo "Data rombel";
+        return view('dasbor.rombel.datarombel');
     }
 }

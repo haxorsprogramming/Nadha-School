@@ -1,4 +1,5 @@
-<div class="row" id="divDataSekolah">
+<div class="card card-primary" id="divDataSekolah">
+    <div class="card-body">
     <table class="table table-hovered" id="tblDataSekolah">
         <thead>
             <tr>
@@ -21,6 +22,8 @@
             @endforeach
         </tbody>
     </table>
+    </div>
+    
 </div>
 
 <div class="row" id="divEditDataSekolah">

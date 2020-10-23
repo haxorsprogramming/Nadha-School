@@ -12,7 +12,7 @@ var app = new Vue({
         developer : 'Haxorsprogrammingclub'
     },
     methods : {
-        dashboardAtc : function()
+        dashboardAtc : function ()
         {
             renderMenu(beranda, 'Dashboard');
         },
@@ -24,7 +24,7 @@ var app = new Vue({
         {
             renderMenu(datasekolah, 'Data Sekolah');
         },
-        dataRombelAtc : function()
+        dataRombelAtc : function ()
         {
           renderMenu(datarombel, 'Data Rombel (Kelas)');
         },

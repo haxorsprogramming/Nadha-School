@@ -1,0 +1,2 @@
+// INISIALISASI 
+$('#tblDataTahunAjaran').dataTable();

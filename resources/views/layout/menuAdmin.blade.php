@@ -9,7 +9,8 @@
             <li><a class="nav-link" href="#!" @click=''>Guru & Pegawai</a></li>
             <li><a class="nav-link" href="#!" @click='dataRombelAtc'>Rombel</a></li>
             <li><a class="nav-link" href="#!" @click=''>Jurusan</a></li>
-            <li><a class="nav-link" href="#!" @click=''>Semester / Tahun Ajaran</a></li>
+            <li><a class="nav-link" href="#!" @click=''>Semester</a></li>
+            <li><a class="nav-link" href="#!" @click='tahunAjaranAtc'>Tahun Ajaran</a></li>
             <li><a class="nav-link" href="#!" @click=''>Inventori Sekolah</a></li>
         </ul>
     </li>

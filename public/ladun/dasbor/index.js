@@ -3,6 +3,7 @@ const beranda = 'dashboard/beranda';
 const datasekolah = 'sekolah/datasekolah';
 const datarombel = 'rombel/datarombel';
 const datatahunajaran = 'tahunajaran/datatahunajaran';
+const datasemester = 'semester/datasemester';
 
 const rToLogout = server + 'logout';
 
@@ -33,6 +34,10 @@ var app = new Vue({
         tahunAjaranAtc : function ()
         {
           renderMenu(datatahunajaran, 'Data Tahun Ajaran');
+        },
+        semesterAtc : function ()
+        {
+          renderMenu(datasemester, 'Data Semester');
         },
         logoutAtc : function ()
         {

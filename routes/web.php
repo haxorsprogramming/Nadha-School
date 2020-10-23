@@ -30,8 +30,12 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::post('/sekolah/datasekolah/update', 'sekolahCon@updatedatasekolah');
     // DATA ROMBEL 
     Route::get('/rombel/datarombel', 'rombelCon@datarombel');
+    // DATA SEMESTER
+    Route::get('/semester/datasemester', 'semesterCon@datasemester');
     // DATA TAHUN AJARAN 
     Route::get('/tahunajaran/datatahunajaran', 'tahunAjaranCon@datatahunajaran');
+    // DATA MATA PELAJARAN 
+
 });
 
 // LOGOUT 

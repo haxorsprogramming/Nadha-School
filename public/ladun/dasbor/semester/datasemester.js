@@ -1,0 +1,2 @@
+// INISIALISASI 
+$("#tblDataSemester").dataTable();

@@ -10,6 +10,10 @@ class semesterCon extends Controller
 {
     public function datasemester(Request $request)
     {
-        return view('dasbor.semester.datasemester');
+        $semester = SemesterMdl::all();
+        
+        $data = ['datasemester' => $semester];
+
+        return view('dasbor.semester.datasemester', $data);
     }
 }

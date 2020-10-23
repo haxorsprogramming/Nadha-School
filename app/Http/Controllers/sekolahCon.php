@@ -31,7 +31,9 @@ class sekolahCon extends Controller
     public function updatedatasekolah(Request $request)
     {
         $namaData = $request -> captionData;
+
         $kdData = $request -> kdData;
+        
         $nilaiData = $request -> nilaiData;
         
         DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(['caption' => $namaData, 'value' => $nilaiData]);

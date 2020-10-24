@@ -1,4 +1,5 @@
 <div class="card card-primary" id="divDataTahunAjaran" style="padding-top: 20px;">
+
     <div style="margin-bottom: 20px;">
         <a href="#!" class="btn btn-primary btn-icon icon-left">Tambah Tahun Ajaran</a>
     </div>
@@ -16,25 +17,12 @@
         </thead>
         <tbody>
             @foreach($datatahunajaran as $tahunajaran)
-
-            <?php
-
-            $tglMulai = $tahunajaran->mulai_tanggal;
-
-            $tglMulaiCap = date("j F Y", strtotime($tglMulai));
-
-            $tglAkhir = $tahunajaran->akhir_tanggal;
-
-            $tglAkhirCap = date("j F Y", strtotime($tglAkhir));
-
-            ?>
-
             <tr>
                 <td>{{ $loop -> iteration }}</td>
                 <td>{{ $tahunajaran -> kd_tahun_ajaran }}</td>
                 <td>{{ $tahunajaran -> nama_tahun_ajaran }}</td>
-                <td>{{ $tglMulaiCap }}</td>
-                <td>{{ $tglAkhirCap }}</td>
+                <td><?=date("j F Y", strtotime( $tahunajaran -> mulai_tanggal )); ?></td>
+                <td><?=date("j F Y", strtotime( $tahunajaran -> akhir_tanggal )); ?></td>
                 <td>{{ $tahunajaran -> status }}</td>
                 <td>
                     <a href="#!" class="btn btn-primary btn-icon icon-left">Edit</a>

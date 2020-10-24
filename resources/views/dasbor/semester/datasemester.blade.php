@@ -7,6 +7,9 @@
                     <th>Kd Semester</th>
                     <th>Semester</th>
                     <th>Tahun Ajaran</th>
+                    <th>Mulai</th>
+                    <th>Akhir</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +23,11 @@
                     <td>{{ $semester -> kd_semester }}</td>
                     <td>{{ $semester -> nama }}</td>
                     <td>{{ $tahunAjaran -> nama_tahun_ajaran }}</td>
+                    <td>{{ $semester -> mulai_tanggal }}</td>
+                    <td>{{ $semester -> akhir_tanggal }}</td>
+                    <td>
+                        <a href='#!'>Edit</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

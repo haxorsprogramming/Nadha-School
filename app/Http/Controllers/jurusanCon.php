@@ -7,6 +7,7 @@ use App\JurusanMdl;
 
 class jurusanCon extends Controller
 {
+
     public function datajurusan(Request $request)
     {
         $dataJurusan = JurusanMdl::all();
@@ -15,4 +16,10 @@ class jurusanCon extends Controller
 
         return view('dasbor.jurusan.datajurusan', $data);
     }
+
+    public function tambahdatajurusan(Request $request)
+    {
+        
+    }
+
 }

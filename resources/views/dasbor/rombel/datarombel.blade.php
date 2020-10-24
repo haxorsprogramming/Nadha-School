@@ -5,11 +5,26 @@
         <table id="tblDataRombel" class="table">
             <thead>
                 <tr>
-                    <td>No</td>
-                    <td>Kd Rombel</td>
-                    <td>Nama Rombel</td>
+                    <th>No</th>
+                    <th>Nama Rombel</th>
+                    <th>Jurusan</th>
+                    <th>Total Siswa</th>
                 </tr>
             </thead>
+            <tbody>
+                @foreach($datarombel as $rombel)
+                <?php 
+                    $kdJurusan = $rombel -> kd_jurusan;
+                    $jurusan = DB::table('tbl_jurusan') -> where('kd_jurusan', $kdJurusan) -> first();
+                ?>
+                    <tr>
+                        <td>{{ $loop -> iteration }}</td>
+                        <td>{{ $rombel -> nama_rombel }}</td>
+                        <td>{{ $jurusan -> nama_jurusan }}</td>
+                        <td></td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
     </div>
 </div>
@@ -19,11 +34,11 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="form-group">
-                    <label>Nama Kelas</label>
-                    <input type="text" class="form-control" id="txtNamaKelas">
+                    <label>Nama Rombel</label>
+                    <input type="text" class="form-control" id="txtNamaRombel">
                 </div>
                 <div class="form-group">
-                    <label>Deksripsi Kelas</label>
+                    <label>Deksripsi Rombel</label>
                     <textarea style="resize: none;" class="form-control" id="txtDeks"></textarea>
                 </div>
                 <div class="form-group">

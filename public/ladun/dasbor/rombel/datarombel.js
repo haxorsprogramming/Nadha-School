@@ -1,4 +1,8 @@
 // ROUTE 
+var rToTambahDataRombel = server + "rombel/datarombel/tambah";
+
+// MESSAGE 
+var msgSuksesTambahRombel = "Berhasil menambahkan data rombel ...";
 
 // VUE OBJECT 
 var divDataRombel = new Vue({
@@ -12,7 +16,7 @@ var divDataRombel = new Vue({
             $('#divFormTambahRombel').show();
             $('#divDataRombel').hide();
             app.activeForm = "Tambah data rombel";
-            document.querySelector('#txtNamaKelas').focus();
+            document.querySelector('#txtNamaRombel').focus();
         }
     }
 });
@@ -25,7 +29,10 @@ var divFormTambahRombel = new Vue({
     methods : {
         prosesTambahAtc : function ()
         {
+            $('#btnSimpan').addClass("disabled");
             $("#divLoading").show();
+            this.capBtnSimpan = "Menyimpan data jurusan ...";
+            prosesTambahRombel();
         }
     }
 });
@@ -37,3 +44,16 @@ $('#divFormTambahRombel').hide();
 $('#divLoading').hide();
 
 // FUNCTION 
+function prosesTambahRombel()
+{
+    let namaRombel = document.querySelector('#txtNamaRombel').value;
+    let jurusan = document.querySelector('#txtJurusan').value;
+    let deks = document.querySelector('#txtDeks').value;
+    let dataSend = {'namaRombel':namaRombel, 'jurusan':jurusan, 'deks':deks}
+
+    $.post(rToTambahDataRombel, dataSend, function(data){
+        pesanUmumApp('success', 'Sukses ...', msgSuksesTambahRombel);
+        app.dataRombelAtc();
+    });
+
+}

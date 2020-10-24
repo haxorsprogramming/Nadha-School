@@ -22,6 +22,7 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::post('/jurusan/datajurusan/tambah','jurusanCon@tambahdatajurusan');
     // DATA ROMBEL 
     Route::get('/rombel/datarombel', 'rombelCon@datarombel');
+    Route::post('/rombel/datarombel/tambah', 'rombelCon@tambahdatarombel');
     // DATA SEMESTER
     Route::get('/semester/datasemester', 'semesterCon@datasemester');
     // DATA TAHUN AJARAN 

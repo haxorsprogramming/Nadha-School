@@ -11,7 +11,7 @@ class PageCon extends Controller
 {
     public function home()
     {
-        return view('home.home');
+        echo "ke login aja dulu ces ...";
     }
 
     public function login()

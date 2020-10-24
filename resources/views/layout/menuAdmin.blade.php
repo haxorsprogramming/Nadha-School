@@ -8,7 +8,7 @@
             <li><a class="nav-link" href="#!" @click=''>Siswa</a></li>
             <li><a class="nav-link" href="#!" @click=''>Guru & Pegawai</a></li>
             <li><a class="nav-link" href="#!" @click='dataRombelAtc'>Rombel</a></li>
-            <li><a class="nav-link" href="#!" @click=''>Jurusan</a></li>
+            <li><a class="nav-link" href="#!" @click='jurusanAtc'>Jurusan</a></li>
             <li><a class="nav-link" href="#!" @click='semesterAtc'>Semester</a></li>
             <li><a class="nav-link" href="#!" @click='tahunAjaranAtc'>Tahun Ajaran</a></li>
             <li><a class="nav-link" href="#!" @click=''>Inventori Sekolah</a></li>

@@ -4,6 +4,7 @@ const datasekolah = 'sekolah/datasekolah';
 const datarombel = 'rombel/datarombel';
 const datatahunajaran = 'tahunajaran/datatahunajaran';
 const datasemester = 'semester/datasemester';
+const datajurusan = 'jurusan/datajurusan';
 
 const rToLogout = server + 'logout';
 
@@ -30,6 +31,10 @@ var app = new Vue({
         dataRombelAtc : function ()
         {
           renderMenu(datarombel, 'Data Rombel (Kelas)');
+        },
+        jurusanAtc: function ()
+        {
+          renderMenu(datajurusan, 'Data Jurusan');
         },
         tahunAjaranAtc : function ()
         {

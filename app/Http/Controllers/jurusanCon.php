@@ -28,7 +28,7 @@ class jurusanCon extends Controller
         
         $deks = $request -> deks;
 
-        DB::table('tbl_jurusan')->insert(
+        DB::table('tbl_jurusan') -> insert(
             ['kd_jurusan' => $kdJurusan, 'nama_jurusan' => $namaJurusan, 'prefix' => $prefix, 'deks' => $deks, 'active' => '1']
         );
 

@@ -27,24 +27,9 @@
 <br/><br/>
 
 <b>Teknologi yang digunakan</b>
-<span align="center">
-<table>
-<tr style="text-align:center;">
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/html-5.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/javascript.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/bootstrap.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/stisla.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/bootstrap.png" width="100px"></a></td>
-</tr>
-<tr style="text-align:center;">
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/vue.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/php.jpg" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/laravel.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/mysql.png" width="100px"></a></td>
-<td><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/firebase.png" width="100px"></a></td>
-</tr>
-</table>
-</span>
+
+<a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/html-5.png" width="100px"></a> <a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/javascript.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/bootstrap.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/stisla.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/vue.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/php.jpg" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/laravel.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/mysql.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/firebase.png" width="100px"></a>
+
 <br/>
 
 <b>Fitur</b>

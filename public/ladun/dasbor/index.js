@@ -1,6 +1,7 @@
 // ROUTE 
 const beranda = 'dashboard/beranda';
 const datasekolah = 'sekolah/datasekolah';
+const datasiswa = 'siswa/datasiswa';
 const datarombel = 'rombel/datarombel';
 const datatahunajaran = 'tahunajaran/datatahunajaran';
 const datasemester = 'semester/datasemester';
@@ -27,6 +28,10 @@ var app = new Vue({
         dataSekolahAtc : function ()
         {
             renderMenu(datasekolah, 'Data Sekolah');
+        },
+        dataSiswaAtc : function ()
+        {
+            renderMenu(datasiswa, 'Data Siswa');
         },
         dataRombelAtc : function ()
         {

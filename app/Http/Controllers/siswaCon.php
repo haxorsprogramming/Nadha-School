@@ -7,8 +7,8 @@ use App\SiswaMdl;
 
 class siswaCon extends Controller
 {
-    public function daftarSiswa()
+    public function datasiswa()
     {
-        echo "siswa";
+        return view('dasbor.siswa.datasiswa');
     }
 }

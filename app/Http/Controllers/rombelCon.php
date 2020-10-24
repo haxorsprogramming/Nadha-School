@@ -12,6 +12,7 @@ class rombelCon extends Controller
     public function datarombel()
     {
         $dataJurusan = JurusanMdl::all();
+        
         $dataRombel = RombelMdl::all();
 
         $data = ['datajurusan' => $dataJurusan, 'datarombel' => $dataRombel];

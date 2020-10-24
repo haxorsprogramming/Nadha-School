@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons"> -->
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/jqvmap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/summernote-bs4.css') }}">

@@ -12,35 +12,34 @@ class sekolahCon extends Controller
     {
         $dataSekolah = SekolahMdl::all();
 
-        $data = [ 'dataSekolah' =>  $dataSekolah ];
+        $data = ['dataSekolah' =>  $dataSekolah];
 
         return view('dasbor.sekolah.datasekolah', $data);
     }
 
     public function detaildatasekolah(Request $request)
     {
-        $kodeData = $request -> id;
+        $kodeData = $request->id;
 
-        $dataDetail = SekolahMdl::where('kd_data',$kodeData) -> first();
-        
-        $dr = [ 'respon' =>  $dataDetail ];
-        
+        $dataDetail = SekolahMdl::where('kd_data', $kodeData)->first();
+
+        $dr = ['respon' =>  $dataDetail];
+
         return \Response::json($dr);
     }
 
     public function updatedatasekolah(Request $request)
     {
-        $namaData = $request -> captionData;
+        $namaData = $request->captionData;
 
-        $kdData = $request -> kdData;
-        
-        $nilaiData = $request -> nilaiData;
-        
-        DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(['caption' => $namaData, 'value' => $nilaiData]);
+        $kdData = $request->kdData;
 
-        $dr = [ 'respon' => 'sukses'];
+        $nilaiData = $request->nilaiData;
+
+        DB::table('tbl_data_sekolah')->where('kd_data', $kdData)->update(['caption' => $namaData, 'value' => $nilaiData]);
+
+        $dr = ['respon' => 'sukses'];
 
         return \Response::json($dr);
     }
-
 }

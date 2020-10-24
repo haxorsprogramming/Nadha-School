@@ -32,7 +32,7 @@ var app = new Vue({
         {
           renderMenu(datarombel, 'Data Rombel (Kelas)');
         },
-        jurusanAtc: function ()
+        jurusanAtc : function ()
         {
           renderMenu(datajurusan, 'Data Jurusan');
         },

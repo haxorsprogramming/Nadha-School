@@ -42,6 +42,8 @@ var divEditDataSekolah = new Vue({
             if(nilaiData === ''){
                 pesanUmumApp('warning', 'Isi field!!', 'Harap isi semua field ... !!');
             }else{
+                $('#divLoading').show();
+                $('.btnPref').addClass('disabled');
                 $.post(rToUpdateDataSekolah, dataSend, function(data){
                     pesanUmumApp('success', 'Sukses update ...', 'Data berhasil di update ...');
                     app.dataSekolahAtc();
@@ -58,5 +60,5 @@ var divEditDataSekolah = new Vue({
 // INISIALISASI 
 $('#tblDataSekolah').dataTable();
 $('#divEditDataSekolah').hide();
-
+$('#divLoading').hide();
 // FUNCTION 

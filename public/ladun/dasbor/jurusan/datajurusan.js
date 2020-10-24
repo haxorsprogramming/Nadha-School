@@ -9,8 +9,9 @@ var divDataJurusan = new Vue({
     methods : {
         tambahJurusanAtc : function ()
         {
-           $("#divFormTambahJurusan").show();
-           $("#divDataJurusan").hide();
+            $("#divLoading").show();
+            // $("#divFormTambahJurusan").show();
+            // $("#divDataJurusan").hide();
         }
     }
 });
@@ -18,5 +19,5 @@ var divDataJurusan = new Vue({
 // INISIALISASI 
 $("#tblDataJurusan").dataTable();
 $("#divFormTambahJurusan").hide();
-
+$("#divLoading").hide();
 // FUNCTION 

@@ -45,9 +45,11 @@
                     <label>Nilai Data</label>
                     <input type="text" class="form-control" id="txtNilaiData">
                 </div>
-                <a href="#!" class="btn btn-primary btn-icon icon-left" @click="updateAtc"><i class="fas fa-file-export"></i> Update</a>
+                <a href="#!" class="btn btn-primary btn-icon icon-left btnPref" @click="updateAtc">
+                    <i class="fas fa-file-export"></i> Update <img src="{{ asset('ladun/dasbor/loading.svg') }}" width="20" id="divLoading">
+                </a>
                 &nbsp;&nbsp;
-                <a href="#!" class="btn btn-warning btn-icon icon-left" @click="kembaliAtc"><i class="fas fa-chevron-circle-left"></i> Kembali</a>
+                <a href="#!" class="btn btn-warning btn-icon icon-left btnPref" @click="kembaliAtc"><i class="fas fa-chevron-circle-left"></i> Kembali</a>
             </div>
         </div>
     </div>

@@ -1,7 +1,10 @@
 <div class="card card-primary" id="divDataJurusan">
     <div class="card-body">
         <div style="margin-bottom: 20px;">
-            <a href="#!" class="btn btn-primary btn-icon icon-left" @click="tambahJurusanAtc"><i class="fas fa-plus-circle"></i> Tambah Jurusan</a>
+            <a href="#!" class="btn btn-primary btn-icon icon-left" @click="tambahJurusanAtc">
+                <i class="fas fa-plus-circle"></i> Tambah Jurusan
+                <img src="{{ asset('ladun/dasbor/loading.svg') }}" width="20" id="divLoading">
+            </a>
         </div>
         <table class="table" id="tblDataJurusan">
             <thead>

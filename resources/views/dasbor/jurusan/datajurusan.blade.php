@@ -9,8 +9,7 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Kode Jurusan</th>
-                    <th>Nama Jurusan</th>
+                    <th>Jurusan</th>
                     <th>Prefix</th>
                     <th>Deks</th>
                     <th></th>
@@ -18,10 +17,23 @@
             </thead>
             <tbody>
                 @foreach($dataJurusan as $jurusan)
+                <?php 
+
+                    $kdJurusan = $jurusan -> kd_jurusan;
+
+                    if(file_exists("ladun/dasbor/img/logo_jurusan/".$kdJurusan.".jpg")){
+                        $namaFile = $kdJurusan;
+                    }else{
+                        $namaFile = "default";
+                    }
+
+                ?>
                 <tr>
                     <td>{{ $loop -> iteration }}</td>
-                    <td>{{ $jurusan -> kd_jurusan }}</td>
-                    <td>{{ $jurusan -> nama_jurusan }}</td>
+                    <td style="text-align:center;">
+                        <img src="{{ asset('ladun/dasbor/img/logo_jurusan/'.$namaFile.'.jpg') }}" style="width:80px;"><br/>
+                        <b>{{ $jurusan -> nama_jurusan }}</b>
+                    </td>
                     <td>{{ $jurusan -> prefix }}</td>
                     <td>{{ substr($jurusan -> deks, 0, 90) }} ...</td>
                     <td>

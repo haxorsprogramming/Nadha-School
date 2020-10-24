@@ -36,7 +36,9 @@ class sekolahCon extends Controller
 
         $nilaiData = $request->nilaiData;
 
-        DB::table('tbl_data_sekolah')->where('kd_data', $kdData)->update(['caption' => $namaData, 'value' => $nilaiData]);
+        DB::table('tbl_data_sekolah')->where('kd_data', $kdData)->update(
+            ['caption' => $namaData, 'value' => $nilaiData]
+        );
 
         $dr = ['respon' => 'sukses'];
 

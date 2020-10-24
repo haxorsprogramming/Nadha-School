@@ -48,6 +48,7 @@ function prosesTambahJurusan()
     let deks = document.querySelector('#txtDeks').value;
     let dataSend = {'namaJurusan':namaJurusan, 'prefix':prefix, 'deks':deks}
     $.post(rToTambahDataJurusan, dataSend, function(data){
+        // console.log(data);
         pesanUmumApp('success', 'Sukses simpan ...', 'Data jurusan baru berhasil di tambahkan ...');
         app.jurusanAtc();
     });

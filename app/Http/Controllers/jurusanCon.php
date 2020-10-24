@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\JurusanMdl;
 
@@ -19,17 +20,20 @@ class jurusanCon extends Controller
 
     public function tambahdatajurusan(Request $request)
     {
-        // {'namaJurusan':namaJurusan, 'prefix':prefix, 'deks':deks}
         $kdJurusan = rand(10001, 19999);
+
         $namaJurusan = $request -> namaJurusan;
+        
         $prefix = $request -> prefix;
+        
         $deks = $request -> deks;
 
         DB::table('tbl_jurusan')->insert(
             ['kd_jurusan' => $kdJurusan, 'nama_jurusan' => $namaJurusan, 'prefix' => $prefix, 'deks' => $deks, 'active' => '1']
         );
-        
+
         $dr = [ 'status' =>  'sukses' ];
+        
         return \Response::json($dr);
     }
 

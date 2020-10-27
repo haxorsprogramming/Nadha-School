@@ -16,18 +16,25 @@
                 </tr>
             </thead>
             <tbody>
+
                 @foreach($dataJurusan as $jurusan)
+                
                 <?php 
 
                     $kdJurusan = $jurusan -> kd_jurusan;
 
                     if(file_exists("ladun/dasbor/img/logo_jurusan/".$kdJurusan.".jpg")){
+
                         $namaFile = $kdJurusan;
+
                     }else{
+
                         $namaFile = "default";
+
                     }
 
                 ?>
+                
                 <tr>
                     <td>{{ $loop -> iteration }}</td>
                     <td style="text-align:center;">

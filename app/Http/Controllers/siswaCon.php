@@ -8,7 +8,7 @@ use App\SiswaMdl;
 class siswaCon extends Controller
 {
     public function datasiswa()
-    {
+    {   
         return view('dasbor.siswa.datasiswa');
     }
 }

@@ -23,23 +23,23 @@
             <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="form-group">
                     <label>Nama Siswa</label>
-                    <input type="text" class="form-control" id='txtNamaResto' disabled>
+                    <input type="text" class="form-control" id='txtNamaResto'>
                 </div>
                 <div class="form-group">
                     <label>Alamat Restoran </label>
-                    <input type="text" class="form-control" id='txtAlamatResto' disabled>
+                    <input type="text" class="form-control" id='txtAlamatResto'>
                 </div>
                 <div class="form-group">
                     <label>Nama Owner</label>
-                    <input type="text" class="form-control" id='txtNamaOwnser' disabled>
+                    <input type="text" class="form-control" id='txtNamaOwnser'>
                 </div>
                 <div class="form-group">
                     <label>Nomor Handphone Restoran</label>
-                    <input type="text" class="form-control" id='txtHpRestoran' disabled>
+                    <input type="text" class="form-control" id='txtHpRestoran'>
                 </div>
                 <div class="form-group">
                     <label>Email Restoran</label>
-                    <input type="text" class="form-control" id='txtEmailRestoran' disabled>
+                    <input type="text" class="form-control" id='txtEmailRestoran'>
                 </div>
             </div>
             <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">

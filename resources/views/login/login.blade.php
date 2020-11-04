@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -26,7 +27,7 @@
         <!-- Main Container -->
         <main id="main-container">
             <!-- Page Content -->
-            <div class="bg-image" style='background-image: url("{{ asset('ladun/login/assets/media/photos/cover_'.$pic.'.jpg') }}");'>
+            <div class="bg-image" style="background-image: url('{{$pathcover}}')">
                 <div class="row mx-0 bg-black-op">
                     <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                         <div class="p-30 invisible" data-toggle="appear">
@@ -45,8 +46,8 @@
                                 <div class="teksTengah">
                                     <img src="{{ asset('ladun/default/img/nadha_school.jpg') }}" class="wd200">
                                 </div>
-                                <h1 class="h3 font-w700 mt-30 mb-10">Welcome to NadhaSchool</h1>
-                                <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
+                                <!-- <h1 class="h3 font-w700 mt-30 mb-10">Welcome to NadhaSchool</h1>
+                                <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2> -->
                             </div>
 
                             <div class="js-validation-signin px-30" id="divForm">

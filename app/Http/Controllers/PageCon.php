@@ -18,8 +18,15 @@ class PageCon extends Controller
     {
         $arrPic = ['1','2'];
         $pic = Arr::random($arrPic);
+        $pathPic = asset('ladun/login/assets/media/photos/cover_'.$pic.'.jpg');
+        return view('login.login', ['pic' => $pic, 'pathcover' => $pathPic]);
+    }
 
-        return view('login.login', ['pic' => $pic]);
+    public function tes()
+    {
+        $arrPic = ['1','2'];
+        $pic = Arr::random($arrPic);
+        echo asset('ladun/login/assets/media/photos/'.$pic.'.jpg');
     }
 
     public function logOut(Request $request)

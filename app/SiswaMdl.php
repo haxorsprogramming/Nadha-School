@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiswaMdl extends Model
 {
-    protected $table = 'tbl_siswa';
+    protected $table = 'tbl_profil_siswa';
 }

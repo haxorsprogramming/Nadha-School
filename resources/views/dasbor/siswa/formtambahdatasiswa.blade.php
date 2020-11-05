@@ -23,7 +23,7 @@
             <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="form-group">
                     <label>Nama Siswa</label>
-                    <input type="text" class="form-control" id='txtNamaResto'>
+                    <input type="text" class="form-control" id='txtNamaSiswa'>
                 </div>
                 <div class="form-group">
                     <label>Alamat Restoran </label>

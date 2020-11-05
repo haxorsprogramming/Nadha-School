@@ -9,6 +9,7 @@ var divDataSiswa = new Vue({
         {
            $("#divDataSiswa").hide();
            $('#divTambahDataSiswa').show();
+           document.querySelector('#txtNamaSiswa').focus();
         }
     }
 });

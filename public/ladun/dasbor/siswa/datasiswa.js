@@ -13,5 +13,19 @@ var divDataSiswa = new Vue({
         }
     }
 });
+
+var divTambahDataSiswa = new Vue({
+    el : '#divTambahDataSiswa',
+    data : {
+
+    },
+    methods : {
+        simpanAtc : function ()
+        {
+            
+        }
+    }
+});
+
 // INISIALISASI 
 $('#divTambahDataSiswa').hide();

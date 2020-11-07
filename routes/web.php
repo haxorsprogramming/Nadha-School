@@ -34,6 +34,8 @@ Route::group(['middleware' => 'CekUser'], function () {
     // DATA DAERAH 
     Route::get('/daerah/provinsi','daerahCon@provinsi');
     Route::get('/daerah/provinsi/{idprovinsi}','daerahCon@provinsidetail');
+    Route::get('/daerah/kabupaten/{idkabupaten}','daerahCon@kabupatendetail');
+    Route::get('/daerah/kecamatan/{idkecamatan}','daerahCon@kecamatandetail');
 });
 
 // LOGOUT 

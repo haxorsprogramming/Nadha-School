@@ -1,3 +1,6 @@
+// ROUTE 
+var rToGetProvinsi = server + "daerah/provinsi";
+
 // VUE OBJECT 
 var divDataSiswa = new Vue({
     el : '#divDataSiswa',
@@ -29,3 +32,7 @@ var divTambahDataSiswa = new Vue({
 
 // INISIALISASI 
 $('#divTambahDataSiswa').hide();
+
+$.get(rToGetProvinsi, function (data){
+    console.log(data);
+});

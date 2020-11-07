@@ -31,6 +31,9 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::get('/tahunajaran/datatahunajaran', 'tahunAjaranCon@datatahunajaran');
     // DATA MATA PELAJARAN 
     Route::get('/tes/tes_1', 'PageCon@tes');
+    // DATA DAERAH 
+    Route::get('/daerah/provinsi','daerahCon@provinsi');
+    Route::get('/daerah/provinsi/{idprovinsi}','daerahCon@provinsidetail');
 });
 
 // LOGOUT 

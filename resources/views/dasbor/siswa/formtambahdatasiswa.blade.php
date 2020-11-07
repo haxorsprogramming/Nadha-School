@@ -19,33 +19,49 @@
     </ul>
 
     <div class="tab-content" id="myTabContent">
-        <div class="col-12 col-sm-6 col-lg-6">
+        <div class="rows">
+
             <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="form-group">
-                    <label>Nama Siswa</label>
-                    <input type="text" class="form-control" id='txtNamaSiswa'>
+
+                <div class="col-6 col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Nama Siswa</label>
+                        <input type="text" class="form-control" id='txtNamaSiswa'>
+                    </div>
+                    <div class="form-group">
+                        <label>NISN (Nomor Induk Siswa Nasional)</label>
+                        <input type="text" class="form-control" id='txtNisn'>
+                    </div>
+                    <div class="form-group">
+                        <label>NIS (Nomor Induk Siswa)</label>
+                        <input type="text" class="form-control" id='txtNis'>
+                    </div>
+                    <div class="form-group">
+                        <label>Tempat Lahir</label>
+                        <input type="text" class="form-control" id='txtTempatLahir'>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control" id='txtTanggalLahir'>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>NISN (Nomor Induk Siswa Nasional)</label>
-                    <input type="text" class="form-control" id='txtNisn'>
+
+                <div class="col-6 col-sm-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Provinsi Lahir</label>
+                        <select class="form-control">
+                            @foreach($provinsi as $prov)
+                                <option value="{{ $prov -> id_prov }}">{{ $prov -> nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>NIS (Nomor Induk Siswa)</label>
-                    <input type="text" class="form-control" id='txtNis'>
-                </div>
-                <div class="form-group">
-                    <label>Tempat Lahir</label>
-                    <input type="text" class="form-control" id='txtTempatLahir'>
-                </div>
-                <div class="form-group">
-                    <label>Tanggal Lahir</label>
-                    <input type="date" class="form-control" id='txtTanggalLahir'>
-                </div>
-            </div>
-            <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
             </div>
+
         </div>
+
+
     </div>
 
     <div>

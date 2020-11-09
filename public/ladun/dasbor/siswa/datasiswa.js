@@ -1,6 +1,7 @@
 // ROUTE 
 var rToGetProvinsi = server + "daerah/provinsi";
 var rToGetKabupaten = server + "daerah/provinsi/";
+var rToGetKecamatan = server + "daerah/kabupaten/";
 
 // VUE OBJECT 
 var divDataSiswa = new Vue({
@@ -55,6 +56,13 @@ function provinsiPilih()
     $('#frgKabupatenLahir').show();
 }
 
+function kabupatenPilih()
+{
+    let idKabupaten = document.querySelector('#txtKabupatenLahir').value;
+
+    getKecamatan(idKabupaten);
+}
+
 function getKabupaten(idProvinsi)
 {
     clearProvinsi();
@@ -65,6 +73,13 @@ function getKabupaten(idProvinsi)
         function renderKabupaten(item, index){
             divTambahDataSiswa.kabupaten.push({ nama:kabupaten[index].nama, id_kab:kabupaten[index].id_kab });
         }
+    });
+}
+
+function getKecamatan(idKabupaten)
+{
+    $.get(rToGetKecamatan+idKabupaten, function(data){
+        console.log(data);
     });
 }
 

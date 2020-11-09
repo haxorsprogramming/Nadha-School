@@ -49,10 +49,14 @@
                 <div class="col-6 col-sm-6 col-lg-6">
                     <div class="form-group">
                         <label>Provinsi Lahir</label>
-                        <select class="form-control">
-                            @foreach($provinsi as $prov)
-                                <option value="{{ $prov -> id_prov }}">{{ $prov -> nama }}</option>
-                            @endforeach
+                        <select class="form-control" onchange="provinsiPilih()" id="txtProvinsiLahir">
+                           <option v-for="prov in provinsi" v-bind:value="prov.id_prov">@{{ prov.nama }}</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="frgKabupatenLahir">
+                        <label>Kabupaten Lahir</label>
+                        <select class="form-control" id="txtKabupatenLahir">
+                           <option v-for="kab in kabupaten">@{{ kab.nama }}</option>
                         </select>
                     </div>
                 </div>

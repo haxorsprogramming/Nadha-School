@@ -2,12 +2,14 @@
 var rToGetProvinsi = server + "daerah/provinsi";
 var rToGetKabupaten = server + "daerah/provinsi/";
 var rToGetKecamatan = server + "daerah/kabupaten/";
+var rToGetDesa = server + "daerah/kecamatan/";
 
 // VUE OBJECT 
 var divDataSiswa = new Vue({
     el : '#divDataSiswa',
     data : {
-
+        modul : 'datasiswa',
+        path : []
     },
     methods : {
         tambahSiswaAtc : function ()

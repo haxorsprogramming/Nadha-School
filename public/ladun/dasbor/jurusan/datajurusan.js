@@ -2,7 +2,7 @@
 var rToTambahDataJurusan = server + 'jurusan/datajurusan/tambah';
 
 // MESSAGE 
-var msgSuksesUpdate = 'Data jurusan baru berhasil di tambahkan, silahkan atur detail jurusan (logo, struktur, visi misi, dll ) ...'
+var msgSuksesUpdate = 'Data jurusan baru berhasil di tambahkan, silahkan atur detail jurusan (logo, struktur, visi misi, dll ) ...';
 
 // VUE OBJECT 
 var divDataJurusan = new Vue({
@@ -51,7 +51,6 @@ function prosesTambahJurusan()
     let deks = document.querySelector('#txtDeks').value;
     let dataSend = {'namaJurusan':namaJurusan, 'prefix':prefix, 'deks':deks}
     $.post(rToTambahDataJurusan, dataSend, function(data){
-        // console.log(data);
         pesanUmumApp('success', 'Sukses simpan ...', msgSuksesUpdate);
         app.jurusanAtc();
     });

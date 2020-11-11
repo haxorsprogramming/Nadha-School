@@ -59,6 +59,12 @@
                            <option v-for="kab in kabupaten" v-bind:value="kab.id_kab">@{{ kab.nama }}</option>
                         </select>
                     </div>
+                    <div class="form-group" id="frgKecamatanLahir">
+                        <label>Kecamatan Lahir</label>
+                        <select class="form-control" id="txtKecamatanLahir">
+                            <option v-for="kec in kecamatan">@{{ kec.nama }}</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>

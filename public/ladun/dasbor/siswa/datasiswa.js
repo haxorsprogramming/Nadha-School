@@ -26,7 +26,8 @@ var divTambahDataSiswa = new Vue({
     data : {
         provinsi : [],
         kabupaten : [],
-        kecamatan : []
+        kecamatan : [],
+        desa : []
     },
     methods : {
         simpanAtc : function ()
@@ -39,6 +40,7 @@ var divTambahDataSiswa = new Vue({
 // INISIALISASI 
 $('#divTambahDataSiswa').hide();
 $('#frgKabupatenLahir').hide();
+$('#frgKecamatanLahir').hide();
 
 $.get(rToGetProvinsi, function (data){
     let provinsi = data.provinsi;
@@ -61,13 +63,13 @@ function provinsiPilih()
 function kabupatenPilih()
 {
     let idKabupaten = document.querySelector('#txtKabupatenLahir').value;
-
     getKecamatan(idKabupaten);
+    $('#frgKecamatanLahir').show();
 }
 
 function getKabupaten(idProvinsi)
 {
-    clearProvinsi();
+    clearKabupaten();
 
     $.get(rToGetKabupaten+idProvinsi, function(data){
         let kabupaten = data.kabupaten;
@@ -80,16 +82,30 @@ function getKabupaten(idProvinsi)
 
 function getKecamatan(idKabupaten)
 {
+    clearKecamatan();
     $.get(rToGetKecamatan+idKabupaten, function(data){
-        console.log(data);
+        let kecamatan = data.kecamatan;
+        kecamatan.forEach(renderKecamatan);
+        function renderKecamatan(item, index){
+            divTambahDataSiswa.kecamatan.push({ nama:kecamatan[index].nama });
+        }
     });
 }
 
-function clearProvinsi()
+function clearKabupaten()
 {
     let jlhItem = divTambahDataSiswa.kabupaten.length;
     var i;
     for(i = 0; i < jlhItem; i++){
         divTambahDataSiswa.kabupaten.splice(0,1);
+    }
+}
+
+function clearKecamatan()
+{
+    let jlhItem = divTambahDataSiswa.kecamatan.length;
+    var i;
+    for(i = 0; i < jlhItem; i++){
+        divTambahDataSiswa.kecamatan.splice(0,1);
     }
 }

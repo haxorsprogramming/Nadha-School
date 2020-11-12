@@ -49,6 +49,10 @@
                             <option v-for="des in desa" v-bind:value="des.id_desa">@{{ des.nama }}</option>
                         </select>
                     </div>
+                    <div class="form-group" id="frgAlamatLahir">
+                        <label>Alamat Lahir</label>
+                        <textarea class="form-control" style="resize:none;"></textarea>
+                    </div>
                 </div>
 
             </div>

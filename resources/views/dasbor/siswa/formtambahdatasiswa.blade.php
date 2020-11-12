@@ -22,8 +22,11 @@
 
     @include('dasbor.siswa.dataumum')
 
+    @include('dasbor.siswa.alamatkontak')
+
     </div>
 
+    <hr/>
     <div>
         <a href="#!" class="btn btn-primary btn-icon icon-left" @click="simpanAtc"><i class="fas fa-save"></i> Simpan</a>
     </div>

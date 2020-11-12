@@ -67,6 +67,12 @@ function kabupatenPilih()
     $('#frgKecamatanLahir').show();
 }
 
+function kecamatanPilih()
+{
+    let idKecamatan = document.querySelector('#txtKecamatanLahir').value;
+    getDesa(idKecamatan);
+}
+
 function getKabupaten(idProvinsi)
 {
     clearKabupaten();
@@ -87,7 +93,18 @@ function getKecamatan(idKabupaten)
         let kecamatan = data.kecamatan;
         kecamatan.forEach(renderKecamatan);
         function renderKecamatan(item, index){
-            divTambahDataSiswa.kecamatan.push({ nama:kecamatan[index].nama });
+            divTambahDataSiswa.kecamatan.push({ nama:kecamatan[index].nama, id_kec:kecamatan[index].id_kec });
+        }
+    });
+}
+
+function getDesa(idKecamatan)
+{
+    $.get(rToGetDesa+idKecamatan, function(data){
+        let desa = data.kelurahan;
+        desa.forEach(renderDesa);
+        function renderDesa(item, index){
+            console.log(desa[index].nama);
         }
     });
 }

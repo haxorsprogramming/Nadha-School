@@ -61,8 +61,8 @@
                     </div>
                     <div class="form-group" id="frgKecamatanLahir">
                         <label>Kecamatan Lahir</label>
-                        <select class="form-control" id="txtKecamatanLahir">
-                            <option v-for="kec in kecamatan">@{{ kec.nama }}</option>
+                        <select class="form-control" onchange="kecamatanPilih()" id="txtKecamatanLahir">
+                            <option v-for="kec in kecamatan" v-bind:value="kec.id_kec">@{{ kec.nama }}</option>
                         </select>
                     </div>
                 </div>

@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class absensiCon extends Controller
 {
-    //
+    public function dataAbsensi()
+    {
+        
+    }
 }

@@ -2,6 +2,7 @@
 
     <div class="row">
         <a href="#!" class="btn btn-primary btn-icon icon-left" @click="tambahSiswaAtc">Tambah Siswa</a>
+        <hr/>
     </div>
 
 </div>

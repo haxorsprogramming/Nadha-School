@@ -7,6 +7,9 @@
                 <label>Alamat Siswa</label>
                 <input type="text" class="form-control" id='txtAlamat'>
             </div>
+            <div class="form-group">
+
+            </div>
         </div>
 
     </div>

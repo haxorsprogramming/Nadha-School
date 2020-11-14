@@ -16,4 +16,9 @@ class siswaCon extends Controller
 
         return view('dasbor.siswa.siswa', ['provinsi' => $provinsi]);
     }
+
+    public function cekValidasi()
+    {
+        $siswa = SiswaMdl::all();
+    }
 }

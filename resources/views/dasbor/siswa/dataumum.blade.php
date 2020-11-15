@@ -24,7 +24,19 @@
                     </div>
                     <div class="form-group">
                         <label>Agama</label>
-                        <input type="text" class="form-control" id="txtAgama">
+                        <select class="form-control">
+                            @foreach($agama as $ag)
+                                <option>{{ $ag }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Golongan Darah</label>
+                        <select class="form-control">
+                            @foreach($golonganDarah as $darah)
+                                <option>{{ $darah }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
 

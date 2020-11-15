@@ -2,7 +2,7 @@
 
     <div class="row">
 
-        <div class="col-6 col-sm-6 col-lg-6">
+        <div class="col-12 col-sm-6 col-lg-6">
             <div class="form-group">
                 <label>Alamat Siswa</label>
                 <textarea placeholder="Alamat siswa" class="form-control" style="resize:none;"></textarea>
@@ -33,10 +33,18 @@
             </div>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-6">
+        <div class="col-12 col-sm-6 col-lg-6">
             <div class="form-group">
                 <label>Email</label>
                 <input type="text" class="form-control" id='txtEmail'>
+            </div>
+            <div class="form-group">
+                <label>No Hp</label>
+                <input type="text" class="form-control" id='txtNoHp'>
+            </div>
+            <div class="form-group">
+                <label>No Whatsapp</label>
+                <input type="text" class="form-control" id='txtWhatsapp'>
             </div>
         </div>
 

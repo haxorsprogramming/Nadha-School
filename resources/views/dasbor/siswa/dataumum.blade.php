@@ -1,7 +1,7 @@
 <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="row">
 
-                <div class="col-6 col-sm-6 col-lg-6">
+                <div class="col-12 col-sm-6 col-lg-6">
                     <div class="form-group">
                         <label>Nama Siswa</label>
                         <input type="text" class="form-control" id='txtNamaSiswa'>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-6 col-lg-6">
+                <div class="col-12 col-sm-6 col-lg-6">
                     <div class="form-group">
                         <label>Provinsi Lahir</label>
                         <select class="form-control" onchange="provinsiPilih()" id="txtProvinsiLahir">

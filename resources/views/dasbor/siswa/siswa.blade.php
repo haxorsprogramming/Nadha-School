@@ -10,4 +10,8 @@
 
 </div>
 
+<div id="divNulledSiswa">
+
+</div>
+
 <script src="{{ asset('ladun/dasbor/siswa/datasiswa.js') }}"></script>

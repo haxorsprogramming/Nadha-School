@@ -22,6 +22,10 @@
                         <label>Tanggal Lahir</label>
                         <input type="date" class="form-control" id='txtTanggalLahir'>
                     </div>
+                    <div class="form-group">
+                        <label>Agama</label>
+                        <input type="text" class="form-control" id="txtAgama">
+                    </div>
                 </div>
 
                 <div class="col-6 col-sm-6 col-lg-6">
@@ -32,7 +36,7 @@
                         </select>
                     </div>
                     <div class="form-group" id="frgKabupatenLahir">
-                        <label>Kabupaten Lahir</label>
+                        <label>Kabupaten / Kota Lahir</label>
                         <select class="form-control" onchange="kabupatenPilih()" id="txtKabupatenLahir">
                             <option v-for="kab in kabupaten" v-bind:value="kab.id_kab">@{{ kab.nama }}</option>
                         </select>
@@ -44,7 +48,7 @@
                         </select>
                     </div>
                     <div class="form-group" id="frgDesaLahir">
-                        <label>Desa Lahir</label>
+                        <label>Desa / Kelurahan Lahir</label>
                         <select class="form-control" id="txtDesaLahir">
                             <option v-for="des in desa" v-bind:value="des.id_desa">@{{ des.nama }}</option>
                         </select>

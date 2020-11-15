@@ -36,6 +36,8 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::get('/daerah/provinsi/{idprovinsi}','daerahCon@provinsidetail');
     Route::get('/daerah/kabupaten/{idkabupaten}','daerahCon@kabupatendetail');
     Route::get('/daerah/kecamatan/{idkecamatan}','daerahCon@kecamatandetail');
+    // UTILITY
+    Route::get('/utility/getAgama', 'utilityCon@getAgama');
 });
 
 // LOGOUT 

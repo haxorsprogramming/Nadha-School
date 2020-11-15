@@ -20,5 +20,7 @@ class siswaCon extends Controller
     public function cekValidasi()
     {
         $siswa = SiswaMdl::all();
+
+        $i = 0;
     }
 }

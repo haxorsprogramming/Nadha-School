@@ -24,17 +24,17 @@
                     </div>
                     <div class="form-group">
                         <label>Agama</label>
-                        <select class="form-control">
+                        <select class="form-control" id="txtAgama">
                             @foreach($agama as $ag)
-                                <option>{{ $ag }}</option>
+                                <option value="{{ $ag }}">{{ $ag }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Golongan Darah</label>
-                        <select class="form-control">
+                        <select class="form-control" id="txtGolonganDarah">
                             @foreach($golonganDarah as $darah)
-                                <option>{{ $darah }}</option>
+                                <option value="{{ $darah }}">{{ $darah }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -66,8 +66,8 @@
                         </select>
                     </div>
                     <div class="form-group" id="frgAlamatLahir">
-                        <label>Alamat Lahir</label>
-                        <textarea class="form-control" style="resize:none;"></textarea>
+                        <label>Alamat Lahir <small>(Masukkan No. rumah, nama jalan secara lengkap)</small></label>
+                        <textarea class="form-control" style="resize:none;" placeholder="Alamat lahir"></textarea>
                     </div>
                 </div>
 

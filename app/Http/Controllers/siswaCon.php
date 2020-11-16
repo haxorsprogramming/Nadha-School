@@ -25,7 +25,7 @@ class siswaCon extends Controller
     {   
         $siswa = SiswaMdl::all();   
         
-        $provinsi = DB::table('tbl_provinsi')->get();
+        $provinsi = DB::table('tbl_provinsi') -> get();
 
         $agama = $this -> utilityCon -> getAgama();
 

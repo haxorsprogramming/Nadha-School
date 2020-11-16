@@ -31,7 +31,7 @@ class PageCon extends Controller
 
     public function logOut(Request $request)
     {
-        $request->session()->flush();
+        $request -> session() -> flush();
 
         return redirect('login');
     }

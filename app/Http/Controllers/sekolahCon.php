@@ -19,9 +19,9 @@ class sekolahCon extends Controller
 
     public function detaildatasekolah(Request $request)
     {
-        $kodeData = $request->id;
+        $kodeData = $request -> id;
 
-        $dataDetail = SekolahMdl::where('kd_data', $kodeData)->first();
+        $dataDetail = SekolahMdl::where('kd_data', $kodeData) -> first();
 
         $dr = ['respon' =>  $dataDetail];
 
@@ -30,13 +30,13 @@ class sekolahCon extends Controller
 
     public function updatedatasekolah(Request $request)
     {
-        $namaData = $request->captionData;
+        $namaData = $request -> captionData;
 
-        $kdData = $request->kdData;
+        $kdData = $request -> kdData;
 
-        $nilaiData = $request->nilaiData;
+        $nilaiData = $request -> nilaiData;
 
-        DB::table('tbl_data_sekolah')->where('kd_data', $kdData)->update(
+        DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(
             ['caption' => $namaData, 'value' => $nilaiData]
         );
 

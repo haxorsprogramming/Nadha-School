@@ -26,7 +26,6 @@ class loginCon extends Controller
             }else{
                 $st = 'error';
             }
-
         }else{
             $st = 'error';
         }

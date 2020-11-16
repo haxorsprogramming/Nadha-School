@@ -33,7 +33,7 @@ var divTambahDataSiswa = new Vue({
         simpanAtc : function ()
         {
             let idDesa = document.querySelector('#txtDesaLahir').value;
-            divNulledSiswa.tesNulled();
+            divNulledSiswa.tesNulled(idDesa);
         }
     }
 });
@@ -44,9 +44,9 @@ var divNulledSiswa = new Vue({
 
     },
     methods : {
-        tesNulled : function()
+        tesNulled : function(idDesa)
         {
-            console.log("Data .. ");
+            console.log(idDesa);
         }
     }
 });

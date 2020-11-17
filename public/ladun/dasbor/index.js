@@ -92,6 +92,16 @@ function progStop()
   NProgress.done();
 }
 
+function dimStart()
+{
+  $("#loading-ajax").show();
+}
+
+function dimStop()
+{
+  $("#loading-ajax").hide();
+}
+
 function logOutConfirm()
 {
     Swal.fire({

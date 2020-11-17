@@ -9,25 +9,25 @@
             </div>
             <div class="form-group">
                 <label>Provinsi</label>
-                <select id="txtAlamat" class="form-control">
+                <select id="txtAlamat" class="form-control" onchange="divNulledSiswa.provSPilih()">
                     <option v-for="prov in provinsi" v-bind:value="prov.id_prov">@{{ prov.nama }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Kabupaten / Kota</label>
-                <select id="txtAlamat" class="form-control">
-
+                <select id="txtKabupaten" class="form-control" onchange="divNulledSiswa.kabSPilih()">
+                    <option v-for="kab in kabS" v-bind:value="kab.id_kab">@{{ kab.nama }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Kecamatan</label>
-                <select id="txtAlamat" class="form-control">
+                <select id="txtKecamatan" class="form-control">
 
                 </select>
             </div>
             <div class="form-group">
                 <label>Desa / Kelurahan</label>
-                <select id="txtAlamat" class="form-control">
+                <select id="txtDesa" class="form-control">
 
                 </select>
             </div>

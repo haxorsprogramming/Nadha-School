@@ -97,6 +97,9 @@
                     <div id="divUtama">
 
                     </div>
+
+                    <div id="loading-ajax" style="display:none"></div>
+
                 </section>
 
             </div>

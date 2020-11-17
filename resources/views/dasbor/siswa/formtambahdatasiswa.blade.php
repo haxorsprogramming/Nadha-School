@@ -11,20 +11,19 @@
             <a class="nav-link" id="keluarga-tab" data-toggle="tab" href="#keluarga" role="tab" aria-controls="keluarga" aria-selected="false">Keluarga</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="firebase-tab" data-toggle="tab" href="#firebase" role="tab" aria-controls="firebase" aria-selected="false">Pendidikan Sebelumnya</a>
+            <a class="nav-link" id="fisik-tab" data-toggle="tab" href="#fisik" role="tab" aria-controls="fisik" aria-selected="false">Fisik</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Fisik</a>
+            <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Pendidikan Sebelumnya</a>
         </li>
     </ul>
 
     <div class="tab-content" id="myTabContent">
 
-    @include('dasbor.siswa.dataumum')
-
-    @include('dasbor.siswa.alamatkontak')
-
-    @include('dasbor.siswa.keluarga')
+    @include('dasbor.siswa.formtambahsiswa.dataumum')
+    @include('dasbor.siswa.formtambahsiswa.alamatkontak')
+    @include('dasbor.siswa.formtambahsiswa.keluarga')
+    @include('dasbor.siswa.formtambahsiswa.fisik')
 
     </div>
 

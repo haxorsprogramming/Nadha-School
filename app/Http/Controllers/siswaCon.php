@@ -31,7 +31,12 @@ class siswaCon extends Controller
 
         $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
 
-        return view('dasbor.siswa.siswa', ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua]);
+        $capOrangTuaPisah = "Alamat orang tua / wali (jika orang tua sudah cerai, masukkan alamat orang tua yang tinggal dengan siswa)";
+
+        $dr =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua, 'capOrangTuaPisah' => $capOrangTuaPisah];
+
+        return view('dasbor.siswa.siswa', $dr);
+
     }
 
     public function cekValidasi()

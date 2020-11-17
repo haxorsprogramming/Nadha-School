@@ -41,6 +41,10 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="form-group" id="frgAlamatLahir">
+                        <label>Alamat Lahir <small>(Masukkan No. rumah, nama jalan secara lengkap)</small></label>
+                        <textarea class="form-control" style="resize:none;" placeholder="Alamat lahir"></textarea>
+                    </div>
                     <div class="form-group">
                         <label>Provinsi Lahir</label>
                         <select class="form-control" onchange="provinsiPilih()" id="txtProvinsiLahir">
@@ -65,10 +69,7 @@
                             <option v-for="des in desa" v-bind:value="des.id_desa">@{{ des.nama }}</option>
                         </select>
                     </div>
-                    <div class="form-group" id="frgAlamatLahir">
-                        <label>Alamat Lahir <small>(Masukkan No. rumah, nama jalan secara lengkap)</small></label>
-                        <textarea class="form-control" style="resize:none;" placeholder="Alamat lahir"></textarea>
-                    </div>
+                    
                 </div>
 
             </div>

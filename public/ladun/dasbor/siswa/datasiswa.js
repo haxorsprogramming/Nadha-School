@@ -36,7 +36,7 @@ var divTambahDataSiswa = new Vue({
         simpanAtc : function ()
         {
             let idDesa = document.querySelector('#txtDesaLahir').value;
-            divNulledSiswa.tesNulled(idDesa);
+            
         }
     }
 });
@@ -50,6 +50,8 @@ var divNulledSiswa = new Vue({
         provSPilih : function ()
         {
             this.clrSKab();
+            this.clrKec();
+            this.clrDes();
             dimStart();
             let idProvinsi = document.querySelector('#txtAlamat').value;
             $.get(rToGetKabupaten+idProvinsi, function(data){
@@ -63,7 +65,32 @@ var divNulledSiswa = new Vue({
         },
         kabSPilih : function ()
         {
+            this.clrKec();
+            this.clrDes();
+            dimStart();
             let idKabupaten = document.querySelector('#txtKabupaten').value;
+            $.get(rToGetKecamatan+idKabupaten, function(data){
+                let kecamatan = data.kecamatan;
+                kecamatan.forEach(renderKecamatan);
+                function renderKecamatan(item, index){
+                    divTambahDataSiswa.kecS.push({ nama:kecamatan[index].nama, id_kec:kecamatan[index].id_kec });
+                }
+                dimStop();
+            })
+        },
+        kecSPilih : function ()
+        {
+            this.clrDes();
+            dimStart();
+            let idKecamatan = document.querySelector('#txtKecamatan').value;
+            $.get(rToGetDesa+idKecamatan, function(data){
+                let desa = data.kelurahan;
+                desa.forEach(renderDesa);
+                function renderDesa(item, index){
+                    divTambahDataSiswa.desS.push({ nama:desa[index].nama, id_desa:desa[index].id_kel });
+                }
+                dimStop();
+            });
         },
         clrSKab : function ()
         {
@@ -71,6 +98,22 @@ var divNulledSiswa = new Vue({
             var i;
             for(i = 0; i < jlhItem; i++){
                 divTambahDataSiswa.kabS.splice(0, 1);
+            }
+        },
+        clrKec : function ()
+        {
+            let jlhItem = divTambahDataSiswa.kecS.length;
+            var i;
+            for(i = 0; i < jlhItem; i++){
+                divTambahDataSiswa.kecS.splice(0, 1);
+            }
+        },
+        clrDes : function ()
+        {
+            let jlhItem = divTambahDataSiswa.desS.length;
+            var i;
+            for(i = 0; i < jlhItem; i++){
+                divTambahDataSiswa.desS.splice(0, 1);
             }
         }
     }
@@ -81,7 +124,6 @@ $('#divTambahDataSiswa').hide();
 
 $.get(rToGetProvinsi, function (data){
     let provinsi = data.provinsi;
-
     provinsi.forEach(renderProvinsi);
     function renderProvinsi(item, index){
         divTambahDataSiswa.provinsi.push({ nama:provinsi[index].nama, id_prov:provinsi[index].id_prov });

@@ -21,14 +21,14 @@
             </div>
             <div class="form-group">
                 <label>Kecamatan</label>
-                <select id="txtKecamatan" class="form-control">
-
+                <select id="txtKecamatan" class="form-control" onchange="divNulledSiswa.kecSPilih()">
+                    <option v-for="kec in kecS" v-bind:value="kec.id_kec">@{{ kec.nama }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>Desa / Kelurahan</label>
                 <select id="txtDesa" class="form-control">
-
+                    <option v-for="des in desS" v-bind:value="des.id_desa">@{{ des.nama }}</option>
                 </select>
             </div>
         </div>

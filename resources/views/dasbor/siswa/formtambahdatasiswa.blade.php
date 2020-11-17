@@ -14,7 +14,10 @@
             <a class="nav-link" id="fisik-tab" data-toggle="tab" href="#fisik" role="tab" aria-controls="fisik" aria-selected="false">Fisik</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Pendidikan Sebelumnya</a>
+            <a class="nav-link" id="informasidaftar-tab" data-toggle="tab" href="#informasidaftar" role="tab" aria-controls="other" aria-selected="false">Informasi Pendaftaran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="fotoprofil-tab" data-toggle="tab" href="#fotoprofil" role="tab" aria-controls="fotoprofil" aria-selected="false">Foto Siswa & Proview Data</a>
         </li>
     </ul>
 
@@ -24,6 +27,8 @@
     @include('dasbor.siswa.formtambahsiswa.alamatkontak')
     @include('dasbor.siswa.formtambahsiswa.keluarga')
     @include('dasbor.siswa.formtambahsiswa.fisik')
+    @include('dasbor.siswa.formtambahsiswa.informasipendaftaran')
+    @include('dasbor.siswa.formtambahsiswa.fotoprofil')
 
     </div>
 

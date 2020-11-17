@@ -1,6 +1,6 @@
 // ROUTE 
-var rToGetDetailSekolah = server + 'sekolah/datasekolah/detail';
-var rToUpdateDataSekolah = server + 'sekolah/datasekolah/update';
+var rToGetDetailSekolah = server + "sekolah/datasekolah/detail";
+var rToUpdateDataSekolah = server + "sekolah/datasekolah/update";
 // VUE OBJECT 
 var divDataSekolah = new Vue({
     el : '#divDataSekolah',
@@ -61,4 +61,5 @@ var divEditDataSekolah = new Vue({
 $('#tblDataSekolah').dataTable();
 $('#divEditDataSekolah').hide();
 $('#divLoading').hide();
+
 // FUNCTION 

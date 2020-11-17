@@ -1,13 +1,13 @@
 // ROUTE 
-const beranda = 'dashboard/beranda';
-const datasekolah = 'sekolah/datasekolah';
-const datasiswa = 'siswa/datasiswa';
-const datarombel = 'rombel/datarombel';
-const datatahunajaran = 'tahunajaran/datatahunajaran';
-const datasemester = 'semester/datasemester';
-const datajurusan = 'jurusan/datajurusan';
+const beranda = "dashboard/beranda";
+const datasekolah = "sekolah/datasekolah";
+const datasiswa = "siswa/datasiswa";
+const datarombel = "rombel/datarombel";
+const datatahunajaran = "tahunajaran/datatahunajaran";
+const datasemester = "semester/datasemester";
+const datajurusan = "jurusan/datajurusan";
 
-const rToLogout = server + 'logout';
+const rToLogout = server + "logout";
 
 // VUE OBJECT 
 var app = new Vue({

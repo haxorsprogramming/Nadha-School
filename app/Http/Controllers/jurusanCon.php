@@ -32,7 +32,7 @@ class jurusanCon extends Controller
             ['kd_jurusan' => $kdJurusan, 'nama_jurusan' => $namaJurusan, 'prefix' => $prefix, 'deks' => $deks, 'active' => '1']
         );
 
-        $dr = [ 'status' =>  'sukses' ];
+        $dr = ['status' => 'sukses'];
         
         return \Response::json($dr);
     }

@@ -14,7 +14,7 @@ class daerahCon extends Controller
     public function provinsi()
     {
         $provinsi = ProvinsiMdl::all();
-        $dr = [ 'provinsi' =>  $provinsi ];
+        $dr = ['provinsi' => $provinsi];
         return \Response::json($dr);
     }
 

@@ -8,7 +8,7 @@
             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Alamat & Kontak</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Keluarga</a>
+            <a class="nav-link" id="keluarga-tab" data-toggle="tab" href="#keluarga" role="tab" aria-controls="keluarga" aria-selected="false">Keluarga</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="firebase-tab" data-toggle="tab" href="#firebase" role="tab" aria-controls="firebase" aria-selected="false">Pendidikan Sebelumnya</a>
@@ -23,6 +23,8 @@
     @include('dasbor.siswa.dataumum')
 
     @include('dasbor.siswa.alamatkontak')
+
+    @include('dasbor.siswa.keluarga')
 
     </div>
 

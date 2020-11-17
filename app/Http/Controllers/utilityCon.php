@@ -19,4 +19,10 @@ class utilityCon extends Controller
         return $golonganDarah;
     }
 
+    public function getStatusOrangTua()
+    {
+        $statusOrangTua = array('Lengkap', 'Yatim (Tidak ada ayah)', 'Piatu (Tidak ada ibu)', 'Yatim Piatu (Tidak ada ayah & ibu)', 'Orang tua angkat');
+        return $statusOrangTua;
+    }
+
 }

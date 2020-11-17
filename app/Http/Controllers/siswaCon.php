@@ -29,7 +29,9 @@ class siswaCon extends Controller
 
         $golonganDarah = $this -> utilityCon -> getGolonganDarah();
 
-        return view('dasbor.siswa.siswa', ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah]);
+        $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
+
+        return view('dasbor.siswa.siswa', ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua]);
     }
 
     public function cekValidasi()

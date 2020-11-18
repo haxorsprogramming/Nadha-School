@@ -17,7 +17,7 @@
             <a class="nav-link" id="informasidaftar-tab" data-toggle="tab" href="#informasidaftar" role="tab" aria-controls="other" aria-selected="false">Informasi Pendaftaran</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="fotoprofil-tab" data-toggle="tab" href="#fotoprofil" role="tab" aria-controls="fotoprofil" aria-selected="false">Foto Siswa & Proview Data</a>
+            <a class="nav-link" id="fotoprofil-tab" data-toggle="tab" href="#fotoprofil" role="tab" aria-controls="fotoprofil" aria-selected="false">Foto Siswa & Preview Data</a>
         </li>
     </ul>
 

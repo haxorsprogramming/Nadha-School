@@ -1,6 +1,7 @@
 @php 
 $capOrangTuaPisah = "Alamat orang tua / wali (jika orang tua sudah cerai, masukkan alamat orang tua yang tinggal dengan siswa)";
 @endphp
+
 <div class="tab-pane fade show" id="keluarga" role="tabpanel" aria-labelledby="keluarga-tab">
 
     <div class="row">

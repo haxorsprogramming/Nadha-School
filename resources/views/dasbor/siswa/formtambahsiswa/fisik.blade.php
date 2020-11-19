@@ -1,3 +1,7 @@
+@php 
+
+@endphp 
+
 <div class="tab-pane fade show" id="fisik" role="tabpanel" aria-labelledby="fisik-tab">
 
     <div class="row">

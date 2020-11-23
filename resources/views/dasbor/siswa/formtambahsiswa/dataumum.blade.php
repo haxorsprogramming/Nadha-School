@@ -4,7 +4,7 @@
                 <div class="col-12 col-sm-6 col-lg-6">
                     <div class="form-group">
                         <label>Nama Siswa</label>
-                        <input type="text" class="form-control" id='txtNamaSiswa'>
+                        <input type="text" class="form-control" id="txtNamaSiswa" v-model="namaSiswa">
                     </div>
                     <div class="form-group">
                         <label>NISN (Nomor Induk Siswa Nasional)</label>

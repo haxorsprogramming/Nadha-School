@@ -31,14 +31,12 @@ var divTambahDataSiswa = new Vue({
         kabS : [],
         kecS : [],
         desS : [],
-        p_foto : 0,
-        l_foto : 0
+        namaSiswa : ''
     },
     methods : {
         simpanAtc : function ()
         {
             let idDesa = document.querySelector('#txtDesaLahir').value;
-            console.log(this.p_foto);
         }
     }
 });
@@ -137,8 +135,6 @@ $.get(rToGetProvinsi, function (data){
 // FUNCTION 
 function getImg()
 {
-    dimStart();
-    $('#txtTempatFoto').removeClass('imudef');
     // $('#txtTempatFoto').hide();
     var sampul = document.querySelector('#txtFoto');
     var imgPrev = document.querySelector('.imgPrev');
@@ -148,19 +144,8 @@ function getImg()
     fileGambar.onload = function(e){
         let hasil = e.target.result;
         imgPrev.src = hasil;
-        let lebar = imgPrev.clientWidth;
-        let panjang = imgPrev.clientHeight;
-        divTambahDataSiswa.p_foto = panjang;
-        divTambahDataSiswa.l_foto = lebar;
-        setTimeout(cekUkuranGambarUpload(), 1100);
     }
     
-}
-
-function cekUkuranGambarUpload()
-{
-    $('#txtTempatFoto').addClass('imudef');
-    dimStop();
 }
 
 function provinsiPilih()

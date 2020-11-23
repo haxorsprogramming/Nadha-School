@@ -74,3 +74,12 @@
 .imudef{
   width:200px;
 }
+
+.teks-tengah{
+  text-align: center;
+}
+
+/* MARGIN & PADDING */
+.mrg20{
+  margin-top:50px;
+}

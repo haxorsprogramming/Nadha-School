@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/datatables.min.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" src="{{ asset('ladun/lib_js/croppr/croppr.css') }}"/>
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/nadharesto.css') }}">
+    <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/nadhaschool.css') }}">
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/stisla/css/components.css') }}">
     <link rel="stylesheet" href="{{ asset('ladun/dasbor/nProg/nprogress.css') }}" />
 
@@ -121,6 +121,7 @@
         <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="{{ asset('ladun/lib_js/croppr/croppr.js') }}"></script>
         <!-- Firebase  -->
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.0/firebase-firestore.js"></script>

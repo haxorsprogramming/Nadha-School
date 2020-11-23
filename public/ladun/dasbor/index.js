@@ -7,6 +7,7 @@ const datatahunajaran = "tahunajaran/datatahunajaran";
 const datasemester = "semester/datasemester";
 const datajurusan = "jurusan/datajurusan";
 
+
 const rToLogout = server + "logout";
 
 // VUE OBJECT 

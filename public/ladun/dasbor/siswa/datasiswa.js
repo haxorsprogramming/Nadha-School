@@ -130,7 +130,28 @@ $.get(rToGetProvinsi, function (data){
 
 });
 
+
 // FUNCTION 
+function getImg()
+{
+    $('#txtTempatFoto').removeClass('imudef');
+    $('#txtTempatFoto').hide();
+    var sampul = document.querySelector('#txtFoto');
+    var imgPrev = document.querySelector('.imgPrev');
+    var fileGambar = new FileReader();
+    fileGambar.readAsDataURL(sampul.files[0]);
+
+    fileGambar.onload = function(e){
+        let hasil = e.target.result;
+        imgPrev.src = hasil;
+        let lebar = imgPrev.clientWidth;
+        let panjang = imgPrev.clientHeight;
+        console.log(lebar+"-"+panjang);    
+        $('#txtTempatFoto').addClass('imudef');
+        $('#txtTempatFoto').show();
+    }
+}
+
 function provinsiPilih()
 {
     let idProvinsi = document.querySelector('#txtProvinsiLahir').value;

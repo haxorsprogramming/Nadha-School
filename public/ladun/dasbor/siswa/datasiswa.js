@@ -30,13 +30,23 @@ var divTambahDataSiswa = new Vue({
         desa : [],
         kabS : [],
         kecS : [],
-        desS : [],
-        namaSiswa : ''
+        desS : []
     },
     methods : {
         simpanAtc : function ()
         {
-            let idDesa = document.querySelector('#txtDesaLahir').value;
+            let namaSiswa = document.querySelector('#txtNamaSiswa').value;
+            let nisn = document.querySelector('#txtNisn').value;
+            let nis = document.querySelector('#txtNis').value;
+            let tanggalLahir = document.querySelector('#txtTanggalLahir').value;
+            let agama = document.querySelector('#txtAgama').value;
+            let golonganDarah = document.querySelector('#txtGolonganDarah').value;
+            let alamatLahir = document.querySelector('#txtAlamatLahir').value;
+            let provinsiLahir = document.querySelector('#txtProvinsiLahir').value;
+            let kabupatenLahir = document.querySelector('#txtKabupatenLahir').value;
+            let kecamatanLahir = document.querySelector('#txtKecamatanLahir').value;
+            let desaLahir = document.querySelector('#txtDesaLahir').value;
+
         }
     }
 });
@@ -133,6 +143,11 @@ $.get(rToGetProvinsi, function (data){
 
 
 // FUNCTION 
+$("#frmTambahDataSiswa").on('submit', function(e){
+    e.preventDefault();
+    console.log("Submit");
+});
+
 function getImg()
 {
     // $('#txtTempatFoto').hide();

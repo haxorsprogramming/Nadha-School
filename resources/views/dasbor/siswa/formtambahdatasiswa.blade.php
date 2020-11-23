@@ -17,10 +17,10 @@
             <a class="nav-link" id="informasidaftar-tab" data-toggle="tab" href="#informasidaftar" role="tab" aria-controls="other" aria-selected="false">Informasi Pendaftaran</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="fotoprofil-tab" data-toggle="tab" href="#fotoprofil" role="tab" aria-controls="fotoprofil" aria-selected="false">Foto Siswa & Preview Data</a>
+            <a class="nav-link" id="fotoprofil-tab" data-toggle="tab" href="#fotoprofil" role="tab" aria-controls="fotoprofil" aria-selected="false">Foto Siswa</a>
         </li>
     </ul>
-
+    <form enctype="multipart/form-data" id='frmTambahDataSiswa'>
     <div class="tab-content" id="myTabContent">
 
     @include('dasbor.siswa.formtambahsiswa.dataumum')
@@ -31,7 +31,7 @@
     @include('dasbor.siswa.formtambahsiswa.fotoprofil')
 
     </div>
-
+    </form>
     <hr/>
     <div>
         <a href="#!" class="btn btn-primary btn-icon icon-left" @click="simpanAtc"><i class="fas fa-save"></i> Simpan</a>

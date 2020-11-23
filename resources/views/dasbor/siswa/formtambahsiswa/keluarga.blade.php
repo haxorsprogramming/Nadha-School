@@ -9,7 +9,7 @@ $capOrangTuaPisah = "Alamat orang tua / wali (jika orang tua sudah cerai, masukk
         <div class="col-12 col-sm-6 col-lg-6">
             <div class="form-group">
                 <label>Status orang tua</label>
-                <select class="form-control" id="txtStatusOrangTua">
+                <select class="form-control" id="txtStatusOrangTua" name="txtStatusOrangTua">
                     @php $no = 1; @endphp
                     @foreach($statusOrangTua as $stOrangTua)
                     <option value="{{ $no }}">{{ $stOrangTua }}</option>
@@ -19,11 +19,11 @@ $capOrangTuaPisah = "Alamat orang tua / wali (jika orang tua sudah cerai, masukk
             </div>
             <div class="form-group">
                 <label>Nama Ayah</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="txtNamaAyah" name="txtNamaAyah">
             </div>
             <div class="form-group">
                 <label>Nama Ibu</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="txtNamaIbu" name="txtNamaIbu">
             </div>
 
         </div>
@@ -31,15 +31,15 @@ $capOrangTuaPisah = "Alamat orang tua / wali (jika orang tua sudah cerai, masukk
         <div class="col-12 col-sm-6 col-lg-6">
             <div class="form-group">
                 <label>Nama Wali</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="txtNamaWali" name="txtNamaWali">
             </div>
             <div class="form-group">
                 <label>No Hp Orang Tua / Wali</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="txtHpOrangTua" name="txtHpOrangTua">
             </div>
             <div class="form-group">
                 <label>Alamat Orang Tua / Wali</label>
-                <textarea placeholder="{{ $capOrangTuaPisah }}" class="form-control" style="resize:none;"></textarea>
+                <textarea placeholder="{{ $capOrangTuaPisah }}" class="form-control" style="resize:none;" id="txtAlamatOrangTua" name="txtAlamatOrangTua"></textarea>
             </div>
         </div>
 

@@ -46,7 +46,15 @@ var divTambahDataSiswa = new Vue({
             let kabupatenLahir = document.querySelector('#txtKabupatenLahir').value;
             let kecamatanLahir = document.querySelector('#txtKecamatanLahir').value;
             let desaLahir = document.querySelector('#txtDesaLahir').value;
-
+            let alamatSiswa = document.querySelector('#txtAlamatSiswa').value;
+            let provinsi = document.querySelector('#txtProvinsi').value;
+            let kabupaten = document.querySelector('#txtKabupaten').value;
+            let kecamatan = document.querySelector('#txtKecamatan').value;
+            let desa = document.querySelector('#txtDesa').value;
+            let email = document.querySelector('#txtEmail').value;
+            let hp = document.querySelector('#txtNoHp').value;
+            let wa = document.querySelector('#txtWhatsapp').value;
+            
         }
     }
 });

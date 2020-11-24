@@ -37,7 +37,10 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::get('/daerah/kabupaten/{idkabupaten}','daerahCon@kabupatendetail');
     Route::get('/daerah/kecamatan/{idkecamatan}','daerahCon@kecamatandetail');
     // UTILITY
+    
 });
 
+// TEST
+Route::post('/test/allow','utilityCon@testallow');
 // LOGOUT 
 Route::get('/logout', 'PageCon@logout');

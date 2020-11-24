@@ -25,4 +25,14 @@ class utilityCon extends Controller
         return $statusOrangTua;
     }
 
+    public function testallow(Request $request)
+    {
+        $nama = $request -> nama;
+        $foto = $request -> file('foto');
+        $tujuan_upload = 'ladun';
+        $foto -> move($tujuan_upload, $foto -> getClientOriginalName());
+        $dr = [ 'status' =>  $nama, 'foto' => $foto];
+        return \Response::json($dr);
+    }
+
 }

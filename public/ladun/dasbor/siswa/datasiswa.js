@@ -54,7 +54,32 @@ var divTambahDataSiswa = new Vue({
             let email = document.querySelector('#txtEmail').value;
             let hp = document.querySelector('#txtNoHp').value;
             let wa = document.querySelector('#txtWhatsapp').value;
-            
+            let statusOrtu = document.querySelector('#txtStatusOrangTua').value;
+            let namaAyah = document.querySelector('#txtNamaAyah').value;
+            let namaIbu = document.querySelector('#txtNamaIbu').value;
+            let namaWali = document.querySelector('#txtNamaWali').value;
+            let hpOrtu = document.querySelector('#txtHpOrangTua').value;
+            let alamatOrtu = document.querySelector('#txtAlamatOrangTua').value;
+            let tinggiBadan = document.querySelector('#txtTinggiBadan').value;
+            let beratBadan = document.querySelector('#txtBeratBadan').value;
+            let berkacamata = document.querySelector('#txtBerkacamata').value;
+            let butaWarna = document.querySelector('#txtButaWarna').value;
+            let asalSekolah = document.querySelector('#txtAsalSekolah').value;
+            let noIjazah = document.querySelector('#txtNoIjazah').value;
+            let statusMasuk = document.querySelector('#txtStatusMasuk').value;
+            let noTesMasuk = document.querySelector('#txtNoTesMasuk').value;
+            let tanggalMasuk = document.querySelector('#txtTanggalMasuk').value;
+
+            if(namaSiswa === '' || nisn === '' || nis === '' || alamatLahir === '' || kabupatenLahir === '' || kecamatanLahir === '' || desaLahir === '' || alamatSiswa === '' || kabupaten === '' || kecamatan === '' || desa === ''){
+                pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
+            }else{
+                if(email === '' || hp === '' || wa === ''){
+                    pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
+                }else{
+
+                }
+            }
+
         }
     }
 });

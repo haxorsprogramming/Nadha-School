@@ -13,18 +13,18 @@
             </div>
             <div class="form-group">
                 <label>Status Masuk</label>
-                <select class="form-control" id="txtStatusMasuk" name="txtNoIjazah">
+                <select class="form-control" id="txtStatusMasuk" name="txtStatusMasuk">
                     <option value='siswabaru'>Siswa baru</option>
                     <option value='pindahan'>Pindahan</option>
                 </select>
             </div>
             <div class="form-group">
                 <label>No Tes Masuk</label>
-                <input type="text" class="form-control" id="txtTesMasuk" name="txtTesMasuk">
+                <input type="text" class="form-control" id="txtNoTesMasuk" name="txtNoTesMasuk">
             </div>
             <div class="form-group">
                 <label>Tanggal Masuk</label>
-                <input type="date" class="form-control" id="txtTanggalMasuk" name="txtTesMasuk">
+                <input type="date" class="form-control" id="txtTanggalMasuk" name="txtTanggalMasuk">
             </div>
 
         </div>

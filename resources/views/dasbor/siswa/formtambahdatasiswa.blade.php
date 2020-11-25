@@ -21,18 +21,18 @@
         </li>
     </ul>
     <form enctype="multipart/form-data" id='frmTambahDataSiswa'>
-    <div class="tab-content" id="myTabContent">
+        <div class="tab-content" id="myTabContent">
 
-    @include('dasbor.siswa.formtambahsiswa.dataumum')
-    @include('dasbor.siswa.formtambahsiswa.alamatkontak')
-    @include('dasbor.siswa.formtambahsiswa.keluarga')
-    @include('dasbor.siswa.formtambahsiswa.fisik')
-    @include('dasbor.siswa.formtambahsiswa.informasipendaftaran')
-    @include('dasbor.siswa.formtambahsiswa.fotoprofil')
+            @include('dasbor.siswa.formtambahsiswa.dataumum')
+            @include('dasbor.siswa.formtambahsiswa.alamatkontak')
+            @include('dasbor.siswa.formtambahsiswa.keluarga')
+            @include('dasbor.siswa.formtambahsiswa.fisik')
+            @include('dasbor.siswa.formtambahsiswa.informasipendaftaran')
+            @include('dasbor.siswa.formtambahsiswa.fotoprofil')
 
-    </div>
+        </div>
     </form>
-    <hr/>
+    <hr />
     <div>
         <a href="#!" class="btn btn-primary btn-icon icon-left" @click="simpanAtc"><i class="fas fa-save"></i> Simpan</a>
     </div>

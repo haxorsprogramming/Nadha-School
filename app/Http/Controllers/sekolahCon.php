@@ -11,7 +11,6 @@ class sekolahCon extends Controller
     public function datasekolah()
     {
         $dataSekolah = SekolahMdl::all();
-
         $data = ['dataSekolah' =>  $dataSekolah];
 
         return view('dasbor.sekolah.datasekolah', $data);
@@ -20,9 +19,7 @@ class sekolahCon extends Controller
     public function detaildatasekolah(Request $request)
     {
         $kodeData = $request -> id;
-
         $dataDetail = SekolahMdl::where('kd_data', $kodeData) -> first();
-
         $dr = ['respon' =>  $dataDetail];
 
         return \Response::json($dr);
@@ -31,9 +28,7 @@ class sekolahCon extends Controller
     public function updatedatasekolah(Request $request)
     {
         $namaData = $request -> captionData;
-
         $kdData = $request -> kdData;
-
         $nilaiData = $request -> nilaiData;
 
         DB::table('tbl_data_sekolah') -> where('kd_data', $kdData) -> update(
@@ -41,7 +36,6 @@ class sekolahCon extends Controller
         );
 
         $dr = ['respon' => 'sukses'];
-
         return \Response::json($dr);
     }
 }

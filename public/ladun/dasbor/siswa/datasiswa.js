@@ -3,6 +3,7 @@ var rToGetProvinsi = server + "daerah/provinsi";
 var rToGetKabupaten = server + "daerah/provinsi/";
 var rToGetKecamatan = server + "daerah/kabupaten/";
 var rToGetDesa = server + "daerah/kecamatan/";
+var rToTambahSiswa = server + "siswa/datasiswa/tambah";
 
 // VUE OBJECT 
 var divDataSiswa = new Vue({
@@ -73,10 +74,14 @@ var divTambahDataSiswa = new Vue({
             if(namaSiswa === '' || nisn === '' || nis === '' || alamatLahir === '' || kabupatenLahir === '' || kecamatanLahir === '' || desaLahir === '' || alamatSiswa === '' || kabupaten === '' || kecamatan === '' || desa === ''){
                 pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
             }else{
-                if(email === '' || hp === '' || wa === ''){
+                if(email === '' || hp === '' || wa === '' || namaAyah === '' || namaIbu === '' || namaWali === '' || hpOrtu === '' || alamatOrtu === ''){
                     pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
                 }else{
-
+                    if(tinggiBadan === '' || beratBadan === '' || asalSekolah === '' || noIjazah === '' || noTesMasuk === '' || tanggalMasuk === ''){
+                        pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
+                    }else{
+                        $("#frmTambahDataSiswa").submit();
+                    }
                 }
             }
 
@@ -96,7 +101,7 @@ var divNulledSiswa = new Vue({
             this.clrKec();
             this.clrDes();
             dimStart();
-            let idProvinsi = document.querySelector('#txtAlamat').value;
+            let idProvinsi = document.querySelector('#txtProvinsi').value;
             $.get(rToGetKabupaten+idProvinsi, function(data){
                 let kabupaten = data.kabupaten;
                 kabupaten.forEach(renderKabupaten);
@@ -178,7 +183,21 @@ $.get(rToGetProvinsi, function (data){
 // FUNCTION 
 $("#frmTambahDataSiswa").on('submit', function(e){
     e.preventDefault();
-    console.log("Submit");
+    $.ajax({
+        type: "POST",
+        url : rToTambahSiswa,
+        data : new FormData(this),
+        dataType : 'json',
+        contentType : false,
+        cache : false,
+        processData : false,
+        beforeSend : function(){
+
+        },
+        success : function(data){
+            console.log(data);
+        }
+    });
 });
 
 function getImg()

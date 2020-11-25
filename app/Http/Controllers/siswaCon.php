@@ -30,7 +30,12 @@ class siswaCon extends Controller
         $dr =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua];
 
         return view('dasbor.siswa.siswa', $dr);
+    }
 
+    public function tambahdatasiswa(Request $request)
+    {
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
     }
 
     public function cekValidasi()

@@ -12,20 +12,15 @@ class jurusanCon extends Controller
     public function datajurusan(Request $request)
     {
         $dataJurusan = JurusanMdl::all();
-        
         $data = ['dataJurusan' => $dataJurusan];
-
         return view('dasbor.jurusan.datajurusan', $data);
     }
 
     public function tambahdatajurusan(Request $request)
     {
         $kdJurusan = rand(10001, 19999);
-
         $namaJurusan = $request -> namaJurusan;
-        
         $prefix = $request -> prefix;
-        
         $deks = $request -> deks;
 
         DB::table('tbl_jurusan') -> insert(
@@ -33,7 +28,6 @@ class jurusanCon extends Controller
         );
 
         $dr = ['status' => 'sukses'];
-        
         return \Response::json($dr);
     }
 

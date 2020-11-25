@@ -12,9 +12,7 @@ class rombelCon extends Controller
     public function datarombel()
     {
         $dataJurusan = JurusanMdl::all();
-        
         $dataRombel = RombelMdl::all();
-
         $data = ['datajurusan' => $dataJurusan, 'datarombel' => $dataRombel];
 
         return view('dasbor.rombel.datarombel', $data);
@@ -23,11 +21,8 @@ class rombelCon extends Controller
     public function tambahdatarombel(Request $request)
     {
         $kdRombel = rand(20001, 29999);
-
         $namaRombel = $request -> namaRombel;
-
         $jurusan = $request -> jurusan;
-        
         $deks = $request -> deks;
 
         DB::table('tbl_rombel') -> insert(
@@ -35,7 +30,6 @@ class rombelCon extends Controller
         );
 
         $dr = [ 'status' =>  'sukses' ];
-        
         return \Response::json($dr);
 
     }

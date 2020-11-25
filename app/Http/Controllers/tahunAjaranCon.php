@@ -11,7 +11,6 @@ class tahunAjaranCon extends Controller
     public function datatahunajaran(Request $request)
     {
         $dataTahunAjaran = TahunAjaranMdl::all();
-
         $data = [ 'datatahunajaran' => $dataTahunAjaran ];
 
         return view('dasbor.tahunajaran.datatahunajaran', $data);

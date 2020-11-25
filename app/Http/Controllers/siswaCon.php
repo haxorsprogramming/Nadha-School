@@ -24,13 +24,9 @@ class siswaCon extends Controller
     public function datasiswa()
     {   
         $provinsi = DB::table('tbl_provinsi') -> get();
-
         $agama = $this -> utilityCon -> getAgama();
-
         $golonganDarah = $this -> utilityCon -> getGolonganDarah();
-
         $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
-
         $dr =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua];
 
         return view('dasbor.siswa.siswa', $dr);
@@ -40,7 +36,6 @@ class siswaCon extends Controller
     public function cekValidasi()
     {
         $siswa = SiswaMdl::all();
-
         $i = 0;
     }
 }

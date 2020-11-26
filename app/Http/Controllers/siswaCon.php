@@ -10,65 +10,67 @@ use App\SiswaMdl;
 
 // Import another controller 
 use App\Http\Controllers\utilityCon;
+use App\Http\Controllers\siswaHelpCon;
 
 class siswaCon extends Controller
 {
 
     protected $utilityCon;
 
-    public function __construct(utilityCon $utilityCon)
+    public function __construct(utilityCon $utilityCon, siswaHelpCon $siswaHelpCon)
     {
         $this -> utilityCon = $utilityCon;
+        $this -> siswaHelpCon = $siswaHelpCon;
     }
 
     public function datasiswa()
     {   
-        $provinsi = DB::table('tbl_provinsi') -> get();
-        $agama = $this -> utilityCon -> getAgama();
-        $golonganDarah = $this -> utilityCon -> getGolonganDarah();
+        $provinsi       = DB::table('tbl_provinsi') -> get();
+        $agama          = $this -> utilityCon -> getAgama();
+        $golonganDarah  = $this -> utilityCon -> getGolonganDarah();
         $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
 
-        $dr =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua];
+        $dr             =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua];
         return view('dasbor.siswa.siswa', $dr);
     }
 
     public function tambahdatasiswa(Request $request)
     {
        
-        $namaSiswa = $request -> txtNamaSiswa;
-        $nisn = $request -> txtNisn;
-        $nis = $request -> txtNis;
-        $tglLahir = $request -> txtTanggalLahir;
-        $agama = $request -> txtAgama;
-        $golDarah = $request -> txtGolonganDarah;
-        $alamatLhr = $request -> txtAlamatLahir;
-        $provLhr = $request -> txtProvinsiLahir;
-        $kabLhr = $request -> txtKabupatenLahir;
-        $kecLhr = $request -> txtKecamatanLahir;
-        $desLhr = $request -> txtDesaLahir; 
-        $alamat = $request -> txtAlamatSiswa;
-        $prov = $request -> txtProvinsi;
-        $kab = $request -> txtKabupaten;
-        $kec = $request -> txtKecamatan;
-        $des = $request -> txtDesa;
-        $email = $request -> txtEmail;
-        $hp = $request -> txtNoHp;
-        $wa = $request -> txtWhatsapp;
-        $statusOrtu = $request -> txtStatusOrangTua;
-        $ayah =  $request -> txtNamaAyah;
-        $ibu = $request -> txtNamaIbu;
-        $wali = $request -> txtNamaWali;
-        $hpOrtu = $request -> txtHpOrangTua;
-        $alamatOrtu = $request -> txtAlamatOrangTua;
-        $tinggiBadan = $request -> txtTinggiBadan;
-        $beratBadan = $request -> txtBeratBadan;
-        $berkacamata = $request -> txtBerkacamata;
-        $butaWarna = $request -> txtButaWarna;
-        $asalSekolah = $request -> txtAsalSekolah;
-        $noIjazah = $request -> txtNoIjazah;
-        $statusMasuk = $request -> txtStatusMasuk;
-        $noTesMasuk = $request -> txtNoTesMasuk;
-        $tanggalMasuk = $request -> txtTanggalMasuk;
+        $namaSiswa      = $request -> txtNamaSiswa;
+        $nisn           = $request -> txtNisn;
+        $nis            = $request -> txtNis;
+        $tglLahir       = $request -> txtTanggalLahir;
+        $agama          = $request -> txtAgama;
+        $golDarah       = $request -> txtGolonganDarah;
+        $alamatLhr      = $request -> txtAlamatLahir;
+        $provLhr        = $request -> txtProvinsiLahir;
+        $kabLhr         = $request -> txtKabupatenLahir;
+        $kecLhr         = $request -> txtKecamatanLahir;
+        $desLhr         = $request -> txtDesaLahir; 
+        $alamat         = $request -> txtAlamatSiswa;
+        $prov           = $request -> txtProvinsi;
+        $kab            = $request -> txtKabupaten;
+        $kec            = $request -> txtKecamatan;
+        $des            = $request -> txtDesa;
+        $email          = $request -> txtEmail;
+        $hp             = $request -> txtNoHp;
+        $wa             = $request -> txtWhatsapp;
+        $statusOrtu     = $request -> txtStatusOrangTua;
+        $ayah           = $request -> txtNamaAyah;
+        $ibu            = $request -> txtNamaIbu;
+        $wali           = $request -> txtNamaWali;
+        $hpOrtu         = $request -> txtHpOrangTua;
+        $alamatOrtu     = $request -> txtAlamatOrangTua;
+        $tinggiBadan    = $request -> txtTinggiBadan;
+        $beratBadan     = $request -> txtBeratBadan;
+        $berkacamata    = $request -> txtBerkacamata;
+        $butaWarna      = $request -> txtButaWarna;
+        $asalSekolah    = $request -> txtAsalSekolah;
+        $noIjazah       = $request -> txtNoIjazah;
+        $statusMasuk    = $request -> txtStatusMasuk;
+        $noTesMasuk     = $request -> txtNoTesMasuk;
+        $tanggalMasuk   = $request -> txtTanggalMasuk;
         DB::table('tbl_profil_siswa') -> insert([
             'username' => $email, 'nis' => $nis, 'nisn' => $nisn, 'nama_lengkap' => $namaSiswa, 'jenis_kelamin' => 'L', 'tanggal_lahir' => $tglLahir,
             'alamat_lahir' => $alamatLhr, 'desa_lahir' => $desLhr, 'kecamatan_lahir' => $kecLhr, 'kabupaten_lahir' => $kabLhr, 'provinsi_lahir' => $provLhr,
@@ -87,7 +89,7 @@ class siswaCon extends Controller
 
     public function cekValidasi()
     {
-        $siswa = SiswaMdl::all();
-        $i = 0;
+        $cek = $this -> siswaHelpCon -> oper("aditia darma nst");
+        echo $cek;
     }
 }

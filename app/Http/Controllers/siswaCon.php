@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-
 // Import model 
 use App\SiswaMdl;
 
@@ -88,11 +87,11 @@ class siswaCon extends Controller
         // $foto -> move($tujuan_upload, $foto -> getClientOriginalName());
         $statusNis = $this -> siswaHelpCon -> cekNis($nis);
         if($statusNis == false){
-
+            $statusProses = 'success';
         }else{
-
+            $statusProses = 'data_exist';
         }
-        $dr             = ['status' => $statusNis];
+        $dr             = ['status' => $statusProses];
         return \Response::json($dr);
     }
 

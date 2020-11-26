@@ -12,7 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        // ROUTE YANG TIDAK PERLU CSRF
         '/test/allow'
     ];
 }

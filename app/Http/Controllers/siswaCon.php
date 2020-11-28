@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use DataTables;
 
 // Import model 
 use App\SiswaMdl;
@@ -23,14 +24,20 @@ class siswaCon extends Controller
         $this -> siswaHelpCon = $siswaHelpCon;
     }
 
+    public function getDataSiswa()
+    {
+        return Datatables::of(SiswaMdl::all()) -> make(true);
+    }
+
     public function datasiswa()
     {   
         $provinsi       = DB::table('tbl_provinsi') -> get();
         $agama          = $this -> utilityCon -> getAgama();
         $golonganDarah  = $this -> utilityCon -> getGolonganDarah();
         $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
+        $siswa = SiswaMdl::all();
 
-        $dr             =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua];
+        $dr             =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua, 'siswa' => $siswa];
         return view('dasbor.siswa.siswa', $dr);
     }
 

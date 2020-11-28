@@ -4,6 +4,7 @@ var rToGetKabupaten = server + "daerah/provinsi/";
 var rToGetKecamatan = server + "daerah/kabupaten/";
 var rToGetDesa = server + "daerah/kecamatan/";
 var rToTambahSiswa = server + "siswa/datasiswa/tambah";
+var rToGetDataSiswa = server + "siswa/getdatasiswa";
 
 // VUE OBJECT 
 var divDataSiswa = new Vue({
@@ -175,6 +176,19 @@ var divNulledSiswa = new Vue({
 // INISIALISASI 
 $('#divTambahDataSiswa').hide();
 $('#divLoading').hide();
+
+$('#tblDataSiswa').dataTable({
+    processing: true,
+        serverSide: true,
+        ajax: rToGetDataSiswa,
+        columns: [
+            { data: 'nis', name: 'nis' },
+            { data: 'nama_lengkap', name: 'nama_lengkap' },
+            { data: 'jenis_kelamin', name: 'jenis_kelamin' },
+            { data : 'no_tes_masuk', name : 'no_tes_masuk'},
+            { data : 'agama', name : 'agama'}
+        ]
+});
 
 $.get(rToGetProvinsi, function (data){
     let provinsi = data.provinsi;

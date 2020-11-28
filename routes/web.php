@@ -19,6 +19,7 @@ Route::group(['middleware' => 'CekUser'], function () {
     Route::post('/sekolah/datasekolah/update', 'sekolahCon@updatedatasekolah');
     // DATA SISWA 
     Route::get('/siswa/datasiswa', 'siswaCon@datasiswa');
+    Route::get('/siswa/getdatasiswa', 'siswaCon@getDataSiswa');
     Route::post('/siswa/datasiswa/tambah','siswaCon@tambahdatasiswa');
     // DATA JURUSAN 
     Route::get('/jurusan/datajurusan','jurusanCon@datajurusan');

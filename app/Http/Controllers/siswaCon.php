@@ -39,7 +39,7 @@ class siswaCon extends Controller
             $nested[] = $ds['nama_lengkap'];
             $nested[] = "Komputer";
             $nested[] = "XII";
-            $nested[] = "<a href='#!' class='btn btn-primary btn-sm btn-icon icon-left'><i class='fas fa-search-plus'></i></a>";
+            $nested[] = "<a href='#!' class='btn btn-primary btn-sm btn-icon icon-left btnDetail' data-id='".$ds['nis']."'><i class='fas fa-search-plus'></i></a>";
             $data[] = $nested;
         }
 
@@ -71,38 +71,8 @@ class siswaCon extends Controller
         // get form data 
         $nisn           = $request -> txtNisn;
         $nis            = $request -> txtNis;
-        $namaSiswa      = $request -> txtNamaSiswa;
-        $tglLahir       = $request -> txtTanggalLahir;
-        $agama          = $request -> txtAgama;
-        $golDarah       = $request -> txtGolonganDarah;
-        $alamatLhr      = $request -> txtAlamatLahir;
-        $provLhr        = $request -> txtProvinsiLahir;
-        $kabLhr         = $request -> txtKabupatenLahir;
-        $kecLhr         = $request -> txtKecamatanLahir;
-        $desLhr         = $request -> txtDesaLahir; 
-        $alamat         = $request -> txtAlamatSiswa;
-        $prov           = $request -> txtProvinsi;
-        $kab            = $request -> txtKabupaten;
-        $kec            = $request -> txtKecamatan;
-        $des            = $request -> txtDesa;
         $email          = $request -> txtEmail;
         $hp             = $request -> txtNoHp;
-        $wa             = $request -> txtWhatsapp;
-        $statusOrtu     = $request -> txtStatusOrangTua;
-        $ayah           = $request -> txtNamaAyah;
-        $ibu            = $request -> txtNamaIbu;
-        $wali           = $request -> txtNamaWali;
-        $hpOrtu         = $request -> txtHpOrangTua;
-        $alamatOrtu     = $request -> txtAlamatOrangTua;
-        $tinggiBadan    = $request -> txtTinggiBadan;
-        $beratBadan     = $request -> txtBeratBadan;
-        $berkacamata    = $request -> txtBerkacamata;
-        $butaWarna      = $request -> txtButaWarna;
-        $asalSekolah    = $request -> txtAsalSekolah;
-        $noIjazah       = $request -> txtNoIjazah;
-        $statusMasuk    = $request -> txtStatusMasuk;
-        $noTesMasuk     = $request -> txtNoTesMasuk;
-        $tanggalMasuk   = $request -> txtTanggalMasuk;
         // foto 
         $foto           = $request -> file('txtFoto');
         $tipeFile       = $foto -> getClientOriginalExtension();
@@ -119,13 +89,44 @@ class siswaCon extends Controller
                 if($dataInti == 'data_valid'){
                     // save ke database 
                     DB::table('tbl_profil_siswa') -> insert([
-                        'username' => $email, 'nis' => $nis, 'nisn' => $nisn, 'nama_lengkap' => $namaSiswa, 'jenis_kelamin' => 'L', 'tanggal_lahir' => $tglLahir,
-                        'alamat_lahir' => $alamatLhr, 'desa_lahir' => $desLhr, 'kecamatan_lahir' => $kecLhr, 'kabupaten_lahir' => $kabLhr, 'provinsi_lahir' => $provLhr,
-                        'alamat' => $alamat, 'desa' => $des, 'kecamatan' => $kec, 'kabupaten' => $kab, 'provinsi' => $prov, 'golongan_darah' => $golDarah, 'agama' => $agama,
-                        'tinggi_badan' => $tinggiBadan, 'berat_badan' => $beratBadan, 'buta_warna' => $butaWarna, 'berkacamata' => $berkacamata, 'jurusan' => '-', 
-                        'periode_masuk' => '-', 'angkatan' => '-', 'asal_sekolah' => $asalSekolah, 'no_tes_masuk' => $noTesMasuk, 'no_ijazah' => $noIjazah, 'status_masuk' => $statusMasuk,
-                        'no_hp' => $hp, 'email' => $email, 'status_orang_tua' => $statusOrtu, 'ayah' => $ayah, 'ibu' => $ibu, 'wali' => $wali, 'alamat_orang_tua' => $alamatOrtu,
-                        'no_hp_orang_tua' => $hpOrtu, 'foto_profil' => $namaFile
+                        'username' => $email, 
+                        'nis' => $nis, 
+                        'nisn' => $nisn, 
+                        'nama_lengkap' => $request -> txtNamaSiswa, 
+                        'jenis_kelamin' => $request -> txtJenisKelamin, 
+                        'tanggal_lahir' => $request -> txtTanggalLahir,
+                        'alamat_lahir' => $request -> txtAlamatLahir,
+                        'desa_lahir' => $request -> txtDesaLahir, 
+                        'kecamatan_lahir' => $request -> txtKecamatanLahir, 
+                        'kabupaten_lahir' => $request -> txtKabupatenLahir, 
+                        'provinsi_lahir' => $request -> txtProvinsiLahir,
+                        'alamat' => $request -> txtAlamatSiswa, 
+                        'desa' => $request -> txtDesa, 
+                        'kecamatan' => $request -> txtKecamatan, 
+                        'kabupaten' => $request -> txtKabupaten, 
+                        'provinsi' => $request -> txtProvinsi, 
+                        'golongan_darah' => $request -> txtGolonganDarah, 
+                        'agama' => $request -> txtAgama,
+                        'tinggi_badan' => $request -> txtTinggiBadan, 
+                        'berat_badan' => $request -> txtBeratBadan, 
+                        'buta_warna' => $request -> txtButaWarna, 
+                        'berkacamata' => $request -> txtBerkacamata, 
+                        'jurusan' => '-', 
+                        'periode_masuk' => '-', 
+                        'angkatan' => '-', 
+                        'asal_sekolah' => $request -> txtAsalSekolah, 
+                        'no_tes_masuk' => $request -> txtNoTesMasuk, 
+                        'no_ijazah' => $request -> txtNoIjazah, 
+                        'status_masuk' => $request -> txtStatusMasuk,
+                        'no_hp' => $hp, 
+                        'email' => $email, 
+                        'status_orang_tua' => $request -> txtStatusOrangTua, 
+                        'ayah' => $request -> txtNamaAyah, 
+                        'ibu' => $request -> txtNamaIbu, 
+                        'wali' => $request -> txtNamaWali, 
+                        'alamat_orang_tua' => $request -> txtAlamatOrangTua,
+                        'no_hp_orang_tua' => $request -> txtHpOrangTua, 
+                        'foto_profil' => $namaFile
                     ]);
                     // upload foto 
                     $foto -> move($tujuan_upload, $namaFile);
@@ -133,7 +134,6 @@ class siswaCon extends Controller
                 }else{
                     $dr = ['status' => 'error_data_duplicate'];
                 }
-                
             }else{
                 $dr = ['status' => 'error_file_size'];
             }

@@ -19,6 +19,10 @@ var divDataSiswa = new Vue({
            $("#divDataSiswa").hide();
            $('#divTambahDataSiswa').show();
            document.querySelector('#txtNamaSiswa').focus();
+        },
+        detailAtc : function (nis)
+        {
+            console.log(nis);
         }
     }
 });
@@ -201,6 +205,11 @@ $.get(rToGetProvinsi, function (data){
 
 
 // FUNCTION 
+$('#tblDataSiswa').on('click','.btnDetail', function(){
+    let nis = $(this).data('id');
+    divDataSiswa.detailAtc(nis);
+});
+
 $("#frmTambahDataSiswa").on('submit', function(e){
     e.preventDefault();
     $.ajax({

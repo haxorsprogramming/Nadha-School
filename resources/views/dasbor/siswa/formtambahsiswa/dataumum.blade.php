@@ -37,6 +37,13 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="form-group" id="frgJenisKelamin">
+                        <label>Jenis kelamin</label>
+                        <select name="txtJenisKelamin" id="txtJenisKelamin" class="form-control">
+                            <option value="L">Laki - laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </div>
                     <div class="form-group" id="frgAlamatLahir">
                         <label>Alamat Lahir <small>(Masukkan No. rumah, nama jalan secara lengkap)</small></label>
                         <textarea class="form-control" id="txtAlamatLahir" name="txtAlamatLahir" style="resize:none;" placeholder="Alamat lahir"></textarea>

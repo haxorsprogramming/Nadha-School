@@ -31,7 +31,8 @@ var divTambahDataSiswa = new Vue({
         desa : [],
         kabS : [],
         kecS : [],
-        desS : []
+        desS : [],
+        capBtnSimpan : 'Simpan'
     },
     methods : {
         simpanAtc : function ()
@@ -70,14 +71,14 @@ var divTambahDataSiswa = new Vue({
             let statusMasuk = document.querySelector('#txtStatusMasuk').value;
             let noTesMasuk = document.querySelector('#txtNoTesMasuk').value;
             let tanggalMasuk = document.querySelector('#txtTanggalMasuk').value;
-
+            let foto = document.querySelector('#txtFoto').value;
             if(namaSiswa === '' || nisn === '' || nis === '' || alamatLahir === '' || kabupatenLahir === '' || kecamatanLahir === '' || desaLahir === '' || alamatSiswa === '' || kabupaten === '' || kecamatan === '' || desa === ''){
                 pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
             }else{
                 if(email === '' || hp === '' || wa === '' || namaAyah === '' || namaIbu === '' || namaWali === '' || hpOrtu === '' || alamatOrtu === ''){
                     pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
                 }else{
-                    if(tinggiBadan === '' || beratBadan === '' || asalSekolah === '' || noIjazah === '' || noTesMasuk === '' || tanggalMasuk === ''){
+                    if(tinggiBadan === '' || beratBadan === '' || asalSekolah === '' || noIjazah === '' || noTesMasuk === '' || tanggalMasuk === '' || foto === ''){
                         pesanUmumApp('warning', 'Isi field!!!', 'Harap isi semua field...');
                     }else{
                         $("#frmTambahDataSiswa").submit();
@@ -85,6 +86,10 @@ var divTambahDataSiswa = new Vue({
                 }
             }
 
+        },
+        kembaliAtc : function ()
+        {
+            app.dataSiswaAtc();
         }
     }
 });
@@ -169,6 +174,7 @@ var divNulledSiswa = new Vue({
 
 // INISIALISASI 
 $('#divTambahDataSiswa').hide();
+$('#divLoading').hide();
 
 $.get(rToGetProvinsi, function (data){
     let provinsi = data.provinsi;
@@ -192,27 +198,38 @@ $("#frmTambahDataSiswa").on('submit', function(e){
         cache : false,
         processData : false,
         beforeSend : function(){
-
+            $('#divLoading').show();
+            $('#btnSimpan').addClass('disabled');
         },
         success : function(data){
            switch(data.status){
                 case 'error_file_type' :
                    pesanUmumApp('warning', 'Error', 'Tipe foto tidak diperbolehkan, harus jpg!!');
+                   endStatUpload();
                    break;
                 case 'error_file_size' :
                     pesanUmumApp('warning', 'Error', 'Ukuran foto tidak diperbolehkan, harus dibawah 2Mb!!');
+                    endStatUpload();
                     break;
                 case 'error_data_duplicate' :
                     pesanUmumApp('warning', 'Data error', 'Data duplikasi tidak diperbolehkan (nis, nisn, email, & no handphone) ...');
+                    endStatUpload();
                     break;
                 case 'success_save_data' : 
                     pesanUmumApp('success', 'Sukses', 'Data siswa baru berhasil ditambahkan..');
+                    app.dataSiswaAtc();
                     break;
                 default : 
            }
         }
     });
 });
+
+function endStatUpload()
+{
+    $('#divLoading').hide();
+    $('#btnSimpan').removeClass('disabled');
+}
 
 function getImg()
 {

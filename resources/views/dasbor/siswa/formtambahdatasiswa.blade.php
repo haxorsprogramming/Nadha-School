@@ -34,7 +34,13 @@
     </form>
     <hr />
     <div>
-        <a href="#!" class="btn btn-primary btn-icon icon-left" @click="simpanAtc"><i class="fas fa-save"></i> Simpan</a>
+        <a href="#!" class="btn btn-primary btn-icon icon-left" id="btnSimpan" @click="simpanAtc">
+            <i class="fas fa-save"></i> <img src="{{ asset('ladun/dasbor/loading.svg') }}" width="20" id="divLoading"> @{{capBtnSimpan}}
+        </a>
+        &nbsp;&nbsp;
+        <a href="#!" class="btn btn-warning btn-icon icon-left" id="btnKembali" @click="kembaliAtc">
+            <i class="fas fa-reply"></i> Kembali
+        </a>
     </div>
 
 </div>

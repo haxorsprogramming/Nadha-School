@@ -10,8 +10,8 @@
         <table class="table" id="tblDataSiswa">
             <thead>
                 <tr>
-                    <th>NIS</th>
-                    <th>Siswa</th>
+                    <th>Nis</th>
+                    <th>Nama</th>
                     <th>Jurusan</th>
                     <th>Kelas</th>
                     <th>Aksi</th>

@@ -24,9 +24,34 @@ class siswaCon extends Controller
         $this -> siswaHelpCon = $siswaHelpCon;
     }
 
-    public function getDataSiswa()
+    public function getDataSiswa(Request $request)
     {
-        return Datatables::of(SiswaMdl::all()) -> make(true);
+        $requestData = $request;
+        $columns = array(0 => 'nama', 1 => 'alamat', 2 => 'no_hp', 3 => 'last_visit');
+        $dataSiswa = SiswaMdl::skip($requestData['start']) -> take($requestData['length']) -> get();
+        $totalSiswa = SiswaMdl::count();
+
+        $data = array();
+
+        foreach($dataSiswa as $ds){
+            $nested = array();
+            $nested[] = $ds['nis'];
+            $nested[] = $ds['nama_lengkap'];
+            $nested[] = "Komputer";
+            $nested[] = "XII";
+            $nested[] = "<a href='#!' class='btn btn-primary btn-sm btn-icon icon-left'><i class='fas fa-search-plus'></i></a>";
+            $data[] = $nested;
+        }
+
+        $json_data = array(
+            "draw"            => intval( $requestData['draw'] ),  
+            "recordsTotal"    => intval( $totalSiswa ), 
+            "recordsFiltered" => intval( $totalSiswa ), 
+            "data"            => $data 
+        );
+
+        return \Response::json($json_data);
+
     }
 
     public function datasiswa()

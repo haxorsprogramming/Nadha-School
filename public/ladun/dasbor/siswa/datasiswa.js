@@ -195,7 +195,21 @@ $("#frmTambahDataSiswa").on('submit', function(e){
 
         },
         success : function(data){
-            console.log(data);
+           switch(data.status){
+                case 'error_file_type' :
+                   pesanUmumApp('warning', 'Error', 'Tipe foto tidak diperbolehkan, harus jpg!!');
+                   break;
+                case 'error_file_size' :
+                    pesanUmumApp('warning', 'Error', 'Ukuran foto tidak diperbolehkan, harus dibawah 2Mb!!');
+                    break;
+                case 'error_data_duplicate' :
+                    pesanUmumApp('warning', 'Data error', 'Data duplikasi tidak diperbolehkan (nis, nisn, email, & no handphone) ...');
+                    break;
+                case 'success_save_data' : 
+                    pesanUmumApp('success', 'Sukses', 'Data siswa baru berhasil ditambahkan..');
+                    break;
+                default : 
+           }
         }
     });
 });

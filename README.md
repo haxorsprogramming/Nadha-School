@@ -64,6 +64,9 @@
 
 <br/>
 
+<b>Prasyarat Sistem</b>
+
+<li> Limit php upload max 20 MB</li>
   
 
 <h3><b>Aplikasi ini sedang dalam pengembangan, akan kami update jika sudah rilis</b></h3>

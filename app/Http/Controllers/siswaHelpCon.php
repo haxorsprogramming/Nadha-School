@@ -9,15 +9,21 @@ use App\SiswaMdl;
 
 class siswaHelpCon extends Controller
 {
-    
-    public function cekNis($nis)
+    public function cekData($nis, $nisn, $email, $hp)
     {
-        $totalNis = SiswaMdl::where('nis', $nis) -> count();
-        if($totalNis > 0){
-            return true;
+        $nis = SiswaMdl::where('nis', $nis) -> count();
+        $nisn = SiswaMdl::where('nisn', $nisn) -> count();
+        $email = SiswaMdl::where('email', $email) -> count();
+        $hp = SiswaMdl::where('no_hp', $hp) -> count();
+
+        $total = $nis + $nisn + $email + $hp;
+
+        if($total > 0){
+            return 'data_duplicate';
         }else{
-            return false;
+            return 'data_valid';
         }
+
     }
 
 }

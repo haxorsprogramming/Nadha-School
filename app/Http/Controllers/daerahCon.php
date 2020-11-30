@@ -39,4 +39,10 @@ class daerahCon extends Controller
         return \Response::json($dr);
     }
 
+    public function getnamadesa($iddesa)
+    {
+        $desa = KelurahanMdl::where('id_kel', $iddesa) -> first();
+        return $desa;
+    }
+
 }

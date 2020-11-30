@@ -7,32 +7,22 @@ use Illuminate\Http\Request;
 class utilityCon extends Controller
 {
 
-    public function getAgama()
+    public function get_agama()
     {
         $agama = array('Islam', 'Protestan', 'Katolik', 'Hindu', 'Buddha', 'Kepercayaan kepada Tuham YME');
         return $agama;
     }
 
-    public function getGolonganDarah()
+    public function get_golongan_darah()
     {
         $golonganDarah = array('AB-', 'B-', 'AB+', 'A-', 'O-', 'B+', 'A+', 'O+');
         return $golonganDarah;
     }
 
-    public function getStatusOrangTua()
+    public function get_status_orang_tua()
     {
         $statusOrangTua = array('Lengkap', 'Yatim (Tidak ada ayah)', 'Piatu (Tidak ada ibu)', 'Yatim Piatu (Tidak ada ayah & ibu)', 'Orang tua angkat');
         return $statusOrangTua;
-    }
-
-    public function testallow(Request $request)
-    {
-        $nama = $request -> nama;
-        $foto = $request -> file('foto');
-        $tujuan_upload = 'ladun';
-        $foto -> move($tujuan_upload, $foto -> getClientOriginalName());
-        $dr = [ 'status' =>  $nama, 'foto' => $foto];
-        return \Response::json($dr);
     }
 
 }

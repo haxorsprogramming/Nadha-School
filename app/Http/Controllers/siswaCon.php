@@ -12,16 +12,18 @@ use App\SiswaMdl;
 // Import another controller 
 use App\Http\Controllers\utilityCon;
 use App\Http\Controllers\siswaHelpCon;
+use App\Http\Controllers\daerahCon;
 
 class siswaCon extends Controller
 {
 
     protected $utilityCon;
 
-    public function __construct(utilityCon $utilityCon, siswaHelpCon $siswaHelpCon)
+    public function __construct(utilityCon $utilityCon, siswaHelpCon $siswaHelpCon, daerahCon $daerahCon)
     {
         $this -> utilityCon = $utilityCon;
         $this -> siswaHelpCon = $siswaHelpCon;
+        $this -> daerahCon = $daerahCon;
     }
 
     public function getDataSiswa(Request $request)
@@ -56,13 +58,13 @@ class siswaCon extends Controller
 
     public function datasiswa()
     {   
-        $provinsi       = DB::table('tbl_provinsi') -> get();
-        $agama          = $this -> utilityCon -> getAgama();
-        $golonganDarah  = $this -> utilityCon -> getGolonganDarah();
-        $statusOrangTua = $this -> utilityCon -> getStatusOrangTua();
+        $provinsi = DB::table('tbl_provinsi') -> get();
+        $agama = $this -> utilityCon -> get_agama();
+        $golongan_darah = $this -> utilityCon -> get_golongan_darah();
+        $status_orang_tua = $this -> utilityCon -> get_status_orang_tua();
         $siswa = SiswaMdl::all();
 
-        $dr             =  ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golonganDarah, 'statusOrangTua' => $statusOrangTua, 'siswa' => $siswa];
+        $dr = ['provinsi' => $provinsi, 'agama' => $agama, 'golonganDarah' => $golongan_darah, 'statusOrangTua' => $status_orang_tua, 'siswa' => $siswa];
         return view('dasbor.siswa.siswa', $dr);
     }
 
@@ -146,7 +148,13 @@ class siswaCon extends Controller
 
     public function detailsiswa($nis)
     {
-        return view('dasbor.siswa.detailsiswa');
+        $siswa = SiswaMdl::where('nis', $nis) -> first();
+
+        $desa_lahir = $this -> daerahCon -> getnamadesa($siswa -> desa_lahir);
+
+        $dr = ['nis' => $nis, 'siswa' => $siswa, 'desa_lahir' => $desa_lahir];
+
+        return view('dasbor.siswa.detailsiswa', $dr);
     }
 
     public function cekValidasi()

@@ -24,7 +24,6 @@ class siswaHelpCon extends Controller
         }else{
             return 'data_valid';
         }
-
     }
 
 }

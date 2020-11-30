@@ -5,7 +5,7 @@ var rToGetKecamatan = server + "daerah/kabupaten/";
 var rToGetDesa = server + "daerah/kecamatan/";
 var rToTambahSiswa = server + "siswa/datasiswa/tambah";
 var rToGetDataSiswa = server + "siswa/getdatasiswa";
-
+var rToDetailSiswa = "siswa/detailsiswa/";
 // VUE OBJECT 
 var divDataSiswa = new Vue({
     el : '#divDataSiswa',
@@ -22,7 +22,7 @@ var divDataSiswa = new Vue({
         },
         detailAtc : function (nis)
         {
-            console.log(nis);
+            renderMenu(rToDetailSiswa+nis, 'Detail Siswa');
         }
     }
 });

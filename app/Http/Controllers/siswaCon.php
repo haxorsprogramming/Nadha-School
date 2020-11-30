@@ -144,6 +144,11 @@ class siswaCon extends Controller
         return \Response::json($dr);
     }
 
+    public function detailsiswa($nis)
+    {
+        return view('dasbor.siswa.detailsiswa');
+    }
+
     public function cekValidasi()
     {
         $cek = $this -> siswaHelpCon -> oper("aditia darma nst");

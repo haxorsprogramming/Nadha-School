@@ -1,6 +1,7 @@
 <?php  
 $namaSiswa = $siswa -> nama_lengkap;
 $bahan = explode(" ", $namaSiswa);
+$tanggal_lahir = date("j F Y", strtotime($siswa -> tanggal_lahir));
 $namaDepan = $bahan[0];
 ?>
 <div class="row">
@@ -34,7 +35,7 @@ $namaDepan = $bahan[0];
                         <div class="text-muted d-inline font-weight-normal"><div class="slash"></div> {{ $siswa -> email }}</div>
                     </div>
                     <div>
-                        {{ $namaDepan }}, tinggal di {{ $desa_lahir -> nama }}
+                        {{ $namaDepan }}, lahir di {{ $desa_lahir -> nama }} - {{kabupaten_lahir -> nama}}, pada {{ $tanggal_lahir }}
                     </div>
                 </div>
             </div>
@@ -49,7 +50,7 @@ $namaDepan = $bahan[0];
         </div>
     </div>
     
-    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
         <div class="card card-primary" id="divDetailSiswa">
             <div class="card-header">
                 <h6>Statistik</h6>

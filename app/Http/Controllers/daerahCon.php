@@ -45,4 +45,10 @@ class daerahCon extends Controller
         return $desa;
     }
 
+    public function getnamakabupaten($idkabupaten)
+    {
+        $kabupaten = KabupatenMdl::where('id_kab', $idkabupaten) -> first();
+        return $kabupaten;
+    }
+
 }

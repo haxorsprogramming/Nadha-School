@@ -149,10 +149,9 @@ class siswaCon extends Controller
     public function detailsiswa($nis)
     {
         $siswa = SiswaMdl::where('nis', $nis) -> first();
-
         $desa_lahir = $this -> daerahCon -> getnamadesa($siswa -> desa_lahir);
-
-        $dr = ['nis' => $nis, 'siswa' => $siswa, 'desa_lahir' => $desa_lahir];
+        $kabupaten_lahir = $this -> daerahCon -> getnamakabupaten($siswa -> kabupaten_lahir);
+        $dr = ['nis' => $nis, 'siswa' => $siswa, 'desa_lahir' => $desa_lahir, 'kabupaten_lahir' => 'iree'];
 
         return view('dasbor.siswa.detailsiswa', $dr);
     }

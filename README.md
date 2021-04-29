@@ -1,7 +1,7 @@
 
 <p  align="center">
 
-<img  src="https://s3-id-jkt-1.kilatstorage.id/nadhamedia/logo/nadha_school_logo.jpg"  width="300px">
+<img  src="https://s3-id-jkt-1.kilatstorage.id/nadhamedia/logo/nadha_shop_logo.png"  width="300px">
 
 </p>
 

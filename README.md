@@ -1,7 +1,7 @@
 
 <p  align="center">
 
-<img  src='http://asset.justhasnah.my.id/screenshoot/Logo_Project/nadha_school_logo.jpg'  width='300px'>
+<img  src="https://s3-id-jkt-1.kilatstorage.id/nadhamedia/logo/nadha_school_logo.jpg"  width="300px">
 
 </p>
 
@@ -28,7 +28,9 @@
 
 <b>Teknologi yang digunakan</b>
 
-<a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/html-5.png" width="100px"></a> <a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/javascript.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/bootstrap.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/stisla.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/vue.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/php.jpg" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/laravel.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/mysql.png" width="100px"></a><a href="#!"><img src="http://asset.justhasnah.my.id/logo_dev/firebase.png" width="100px"></a>
+<li> HTML, CSS, Javascript (Bootstrap, Jquery)</li>
+
+<li> Vue Js</li>
 
 <br/>
 

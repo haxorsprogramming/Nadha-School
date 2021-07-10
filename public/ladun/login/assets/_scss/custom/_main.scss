@@ -1,0 +1,49 @@
+//
+// Custom Main
+//
+// Add your own styles or override existing ones
+//
+// This file is included last, so you have access
+// to all Bootstrap and Codebase functions/mixins/styles etc
+// --------------------------------------------------
+
+// If you have many custom styles, you can create and import additional files
+// For example you can create _component1.scss and include it as follows:
+// @import 'component1';
+
+.img-status {
+    position: relative;
+    display: inline-block;
+
+    &-indicator {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        border: 2px solid $white;
+        border-radius: 5px;
+        z-index: 1;
+    }
+}
+
+.chat-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .025);
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
